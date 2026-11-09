@@ -44,7 +44,7 @@ for mpath in manifests:
 
 def upload(item):
     path, expected = item
-    for attempt in range(4):
+    for attempt in range(5):
         # Digest comparison makes retries safe even if the last response was lost.
         existing = next((a for a in api(f'repos/{args.repo}/releases/{release_id}/assets?per_page=100')
                          if a['name'] == path.name), None)
@@ -53,6 +53,9 @@ def upload(item):
                 print(f'VERIFIED {path.name}', flush=True)
                 return
             raise RuntimeError(f'Remote asset differs or is incomplete: {path.name}; not overwritten')
+        if attempt == 4:
+            break
+        print(f'UPLOADING {path.name}', flush=True)
         result = subprocess.run(['gh', 'release', 'upload', args.tag, str(path),
                                  '--repo', args.repo], capture_output=True, text=True)
         if result.returncode == 0:
@@ -64,7 +67,11 @@ def upload(item):
 
 with ThreadPoolExecutor(max_workers=args.jobs) as pool:
     for completed in as_completed([pool.submit(upload, item) for item in files.values()]):
-        completed.result()
+        try:
+            completed.result()
+        except Exception as error:
+            print(f'UPLOAD ERROR: {error}', flush=True)
+            raise
 # Manifests become visible only after all data parts have been verified.
 for path in manifests:
     upload((path, digest(path)))

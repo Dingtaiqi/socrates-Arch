@@ -52,6 +52,9 @@ python ci/upload-seeds.py seed-assets --jobs 4
 
 首次上传中断时，重跑上传工具即可。工具核对 GitHub 返回的 SHA256，跳过已完成的
 相同附件；同名而内容不同的附件会报错，不会覆盖。它只向草稿 Release 上传。
+如果强行终止上传，GitHub 可能留下 `starter` 状态的未完成占位附件；工具会报告
+`incomplete`。先确认没有其他上传仍在运行，再只删除报告中对应的未完成附件并重跑，
+不要删除已经 `uploaded` 且哈希匹配的附件。
 如果电脑已有 HTTP 代理，GitHub CLI 可能需要在本次终端单独设置
 `HTTPS_PROXY`；不用改变全局网络配置，也不要把代理账号写进仓库。
 上传完毕后去 Actions 手动运行上述工作流。工作流使用仓库自带的
