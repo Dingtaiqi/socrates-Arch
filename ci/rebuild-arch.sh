@@ -19,7 +19,8 @@ if aarch64-linux-gnu-readelf -l "$work/minit" | grep -q INTERP; then
 fi
 cp arch/kde-start.sh "$work/launcher"
 debugfs -R "dump /system/etc/arch/persist.uuid $work/persist.uuid" "$image"
-test "$(cat "$work/persist.uuid")" = fad4bd59-96f1-4c6c-8791-d31c87b82264
+# The shipped config has CRLF; native init also strips CR/LF when reading it.
+test "$(tr -d '\r\n' <"$work/persist.uuid")" = fad4bd59-96f1-4c6c-8791-d31c87b82264
 # Read back every write: debugfs can report command errors with exit code zero.
 replace_file() {
     local source=$1 target=$2
