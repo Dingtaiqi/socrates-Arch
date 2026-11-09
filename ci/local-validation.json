@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-10",
+  "actionlint": {"version": "1.7.7", "workflows_passed": 3},
+  "shell_syntax": "passed: rebuild-arch.sh, release.sh, kde-start.sh",
+  "archive_unit_tests": {"passed": 4, "scope": "roundtrip, overwrite refusal, corruption/missing part, pin/path checks, expanded checksum mismatch"},
+  "full_image_roundtrips": [
+    {"name": "evox-b66.img", "raw_bytes": 2791727104, "compressed_bytes": 1511509365, "parts": 2, "sha256": "a1ccf41d14c3f52678860041f16335b64589485032b2f11973e65c373e8d4e2c", "restored_sha256_matches": true},
+    {"name": "arch-kde-v4.img", "raw_bytes": 3221225472, "compressed_bytes": 1375935744, "parts": 2, "sha256": "4e044e6358f8a76000fa3ab2325de96c412dfee87907d4db57bca62ca4494d19", "restored_sha256_matches": true}
+  ],
+  "cloud_build": "not run at time of this local verification; inspect Actions for later results",
+  "new_device_tests": "none; phone was not connected or rebooted by this work"
+}
