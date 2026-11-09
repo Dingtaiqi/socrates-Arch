@@ -28,6 +28,8 @@ replace_file() {
     debugfs -w -R "set_inode_field $target mode 0100755" "$image"
     debugfs -R "dump $target $work/readback" "$image"
     cmp "$source" "$work/readback"
+    debugfs -R "stat $target" "$image" >"$work/inode"
+    grep -Eq 'Mode:[[:space:]]+0755([[:space:]]|$)' "$work/inode"
     rm "$work/readback"
 }
 replace_file "$work/minit" /system/bin/init
