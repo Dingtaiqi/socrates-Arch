@@ -179,7 +179,8 @@ def main():
                         raise ValueError("Existing seed part differs")
                 print(f"SEED ALREADY VERIFIED {kind}", flush=True)
             else:
-                pack(args.workspace / item["local"], args.output, item["name"], item)
+                pack(args.workspace / item["local"], args.output, item["name"], item,
+                     part_size=64 * 1024 * 1024)
     elif args.command == "fetch":
         fetch(args.kind, args.output)
     elif args.command == "pack":

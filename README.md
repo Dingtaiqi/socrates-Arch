@@ -24,7 +24,8 @@ Gwenview、Okular；没有浏览器。Wi-Fi、扬声器、电源/音量键及亮
 
 Actions artifact 默认会过期；这里只用它临时留存失败日志。
 镜像、分卷校验清单、源码副本、构建日志及提交号都放进 **Release 附件**。
-每卷最多 1 GiB，低于 GitHub 单附件 2 GiB 的上限。
+云端结果每卷最多 1 GiB；首次导入的种子按 64 MiB 小卷上传，方便重试。
+两者都低于 GitHub 单附件 2 GiB 的上限。
 
 原样备份仍含设备配套的厂商文件和历史调试设置（例如 EvoX 的 ADB 授权配置），
 因此工作流只创建 **草稿 Release**：仓库协作者可见，不自动公开发布。
@@ -46,13 +47,13 @@ gh auth login
 
 ```powershell
 gh release create verified-seeds-20261110 --repo Dingtaiqi/socrates-Arch --target main --draft --title "Verified image seeds 2026-11-10" --notes "Pinned EvoX b66 and Arch KDE v4 system images. No userdata."
-Get-ChildItem seed-assets -File | ForEach-Object {
-    gh release upload verified-seeds-20261110 $_.FullName --repo Dingtaiqi/socrates-Arch
-    if ($LASTEXITCODE -ne 0) { throw "Upload failed: $($_.Name)" }
-}
+python ci/upload-seeds.py seed-assets --jobs 4
 ```
 
-首次上传中断时，保留已经上传的附件；不要覆盖同名、不同内容的附件。
+首次上传中断时，重跑上传工具即可。工具核对 GitHub 返回的 SHA256，跳过已完成的
+相同附件；同名而内容不同的附件会报错，不会覆盖。它只向草稿 Release 上传。
+如果电脑已有 HTTP 代理，GitHub CLI 可能需要在本次终端单独设置
+`HTTPS_PROXY`；不用改变全局网络配置，也不要把代理账号写进仓库。
 上传完毕后去 Actions 手动运行上述工作流。工作流使用仓库自带的
 `GITHUB_TOKEN` 下载草稿附件并保存新草稿，不需要添加服务器 SSH secret。
 每次结果使用独立 run ID / attempt 命名，不覆盖原始种子。

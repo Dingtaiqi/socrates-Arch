@@ -2,7 +2,7 @@ __pycache__/
 *.pyc
 inputs/
 out/
-seed-assets/
+seed-assets*/
 *.img
 *.erofs
 *.part[0-9]*
