@@ -6,6 +6,13 @@
 当前提供的是**已验证镜像归档，以及基于既有 Arch 系统快照的 init 重建**。
 不把它称为 EvoX / Arch 全部软件的从零源码构建。
 
+**2026-11-10：两条云端镜像流程已实际运行成功。**
+[Arch 重建记录](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42663629383) ·
+[EvoX 归档记录](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42664525906) ·
+[镜像下载（登录后查看草稿 Release）](https://github.com/Dingtaiqi/socrates-Arch/releases)。
+两份原始镜像也已保存，44 个种子分卷和 2 份清单全部通过远端 SHA256 核验。
+详细结果见 [云端验证记录](docs/cloud-validation-2026-11-10.json)。
+
 ## 工作流
 
 | Actions 名称 | 做什么 | 真机验证状态 |
