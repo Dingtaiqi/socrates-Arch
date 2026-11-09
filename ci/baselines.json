@@ -1,0 +1,15 @@
+{
+  "seed_release": "verified-seeds-20261110",
+  "evox": {
+    "name": "evox-b66.img",
+    "bytes": 2791727104,
+    "sha256": "a1ccf41d14c3f52678860041f16335b64589485032b2f11973e65c373e8d4e2c",
+    "local": "dsu/evox_socrates_base66.img"
+  },
+  "arch": {
+    "name": "arch-kde-v4.img",
+    "bytes": 3221225472,
+    "sha256": "4e044e6358f8a76000fa3ab2325de96c412dfee87907d4db57bca62ca4494d19",
+    "local": "_work/kde_dsu/rootfs_artifacts/kde-apps-system-3g-final-20261109.img"
+  }
+}

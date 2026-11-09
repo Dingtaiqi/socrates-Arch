@@ -1,0 +1,43 @@
+name: EvoX b66 - verify and archive
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: evox-image
+  cancel-in-progress: false
+jobs:
+  image:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install image tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y e2fsprogs
+          mkdir -p inputs out
+          python3 -m unittest discover -s ci -p 'test_*.py'
+      - name: Retrieve, validate and package b66
+        shell: bash
+        run: |
+          set -euo pipefail
+          {
+            python3 ci/bundle.py fetch evox inputs/system.img
+            e2fsck -fn inputs/system.img
+            python3 ci/bundle.py pack inputs/system.img out --name evox-b66.img
+          } 2>&1 | tee out/build.log
+      - name: Save image, hashes and sources to a draft Release
+        run: bash ci/release.sh evox archive
+      - name: Keep failure logs briefly
+        if: failure()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: evox-failure-${{ github.run_id }}-${{ github.run_attempt }}
+          path: out/build.log
+          if-no-files-found: ignore
+          retention-days: 7

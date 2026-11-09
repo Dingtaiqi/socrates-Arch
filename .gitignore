@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+inputs/
+out/
+seed-assets/
+*.img
+*.erofs
+*.part[0-9]*
+*.log

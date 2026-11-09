@@ -1,0 +1,31 @@
+name: Check image tooling
+on:
+  push:
+    paths: ['ci/**', 'arch/**', '.github/workflows/**']
+  pull_request:
+    paths: ['ci/**', 'arch/**', '.github/workflows/**']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - run: |
+          python3 -m unittest discover -s ci -p 'test_*.py'
+          bash -n ci/rebuild-arch.sh ci/release.sh
+          sh -n arch/kde-start.sh
+      - name: Cross-compile the ARM64 native init
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc-aarch64-linux-gnu
+          aarch64-linux-gnu-gcc -O2 -static -Wall -Wextra -o /tmp/minit-kde arch/minit_kde.c
+          aarch64-linux-gnu-readelf -h /tmp/minit-kde | grep 'Machine:.*AArch64'
+          if aarch64-linux-gnu-readelf -l /tmp/minit-kde | grep -q INTERP; then
+            echo 'Init unexpectedly needs a dynamic loader' >&2
+            exit 1
+          fi

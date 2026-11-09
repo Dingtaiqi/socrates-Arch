@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-10",
+  "repository": "Dingtaiqi/socrates-Arch",
+  "sources": {
+    "minit_kde.c": {
+      "bytes": 46624,
+      "sha256": "82420075c9344b2af63d2c1326a0a83c4ed87552e205f6a39c4b266e43d5b848"
+    },
+    "kde-start.sh": {
+      "bytes": 5099,
+      "sha256": "b00d92683f7a714345cd38f7eaeae22dace605efb7f86ecc4c3a3675f95dd424"
+    }
+  },
+  "baseline": {
+    "seed_release": "verified-seeds-20261110",
+    "evox": {
+      "name": "evox-b66.img",
+      "bytes": 2791727104,
+      "sha256": "a1ccf41d14c3f52678860041f16335b64589485032b2f11973e65c373e8d4e2c",
+      "local": "dsu/evox_socrates_base66.img"
+    },
+    "arch": {
+      "name": "arch-kde-v4.img",
+      "bytes": 3221225472,
+      "sha256": "4e044e6358f8a76000fa3ab2325de96c412dfee87907d4db57bca62ca4494d19",
+      "local": "_work/kde_dsu/rootfs_artifacts/kde-apps-system-3g-final-20261109.img"
+    }
+  },
+  "hardware_scope": "socrates, stock Android kernel, Android slot a",
+  "contents": "system images only; persistent userdata not archived"
+}
