@@ -55,6 +55,9 @@ python3 evox/restore-source.py ../evox-test-restore --groups 0,1
 当前工作树包含历史 b66 后的实验改动，源码构建产物也不等同于历史 b66 镜像。
 当前工作树的 `m init` 已于 2026-11-10 实际通过，耗时 4 分 29 秒；
 重新编译并链接了 init 和关联的 fs_mgr 组件。
+原工作树的 `m systemimage` 也已实际通过，监督进程记录耗时 202 秒，产物
+986,390,528 B；SHA256 和范围见源码构建验证记录。该产物为普通 system 分区，
+并非已合并的 DSU 镜像，也未验证完整 `m evolution` 或全新环境全量编译。
 
 ## Arch
 
