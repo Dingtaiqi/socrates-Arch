@@ -3,8 +3,8 @@
 目标仓库：`Dingtaiqi/socrates-Arch`。全部镜像工作流在 GitHub 的
 `ubuntu-24.04` 运行，不依赖原构建服务器或连接手机。
 
-当前提供的是**已验证镜像归档，以及基于既有 Arch 系统快照的 init 重建**。
-不把它称为 EvoX / Arch 全部软件的从零源码构建。
+当前支持已验证镜像归档、公开 Arch 底包上的 native init 重建，以及 Mesa Turnip
+ARM64 KGSL 驱动的源码编译。EvoX 完整源码快照仍在迁出。
 
 **2026-11-10：两条云端镜像流程已实际运行成功。**
 [Arch 重建记录](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42663629383) ·
@@ -23,6 +23,32 @@
 `build.sh`。迁出完成后将提交校验索引并公开源码附件；使用方法和实测边界见
 [从源码快照构建](docs/BUILD_FROM_SNAPSHOT.md)。原始手机镜像仍保留为草稿。
 
+## 克隆后编译 Arch
+
+公开构建底包与 GPU 编译环境已经上传，以下两条入口均已在 GitHub 云端实际通过：
+
+```bash
+git clone https://github.com/Dingtaiqi/socrates-Arch.git
+cd socrates-Arch
+sudo apt-get update
+sudo apt-get install -y build-essential binutils-aarch64-linux-gnu pkg-config \
+  qemu-user-static bison flex xz-utils python3 e2fsprogs erofs-utils gcc-aarch64-linux-gnu
+# 编译 native init，生成新的 system 镜像文件。
+bash build.sh arch-image /build/new-arch.img
+# 独立从 Mesa 源码编译 KGSL Vulkan 驱动。
+bash build.sh arch-turnip /build/arch-inputs /build/new-turnip
+```
+
+镜像入口使用公开、去个人化的固定 Arch Linux ARM 用户空间，保留现有桌面运行库；
+KDE/Qt 等来自二进制软件包。GPU 入口生成独立驱动包。
+默认数据卷 UUID 为占位值；部署前可用 `PERSIST_UUID` 指定已有、带正确标记的数据卷。
+构建过程只生成文件，不创建 userdata 或操作手机。
+
+[GPU 源码编译通过](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42822210400) ·
+[公开输入镜像重建通过](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42823028203) ·
+[构建底包](https://github.com/Dingtaiqi/socrates-Arch/releases/tag/arch-public-base-42779960846)。
+新构建产物尚未做真机复验，记录见 [源码构建验证](docs/source-build-validation-2026-11-10.json)。
+
 ## 工作流
 
 | Actions 名称 | 做什么 | 真机验证状态 |
@@ -30,6 +56,8 @@
 | EvoX b66 - verify and archive | 下载固定 b66 → 全部 SHA256 校验 → 只读 ext4 检查 → gzip 分卷 → 草稿 Release | 原镜像的历史验收；不新增兼容性承诺 |
 | Arch KDE - archive or rebuild / archive | 原样保存已验收的 KDE system 镜像，恢复后 SHA256 不变 | 桌面、触摸、应用及重启持久化已经实测 |
 | Arch KDE - archive or rebuild / rebuild | 在已验收底包中交叉编译并替换 native init、更新桌面启动脚本，保留 EROFS rootfs 和 userdata UUID | 离线检查通过后，仍需独立真机验证 |
+| Build Arch image from public inputs | 从公开底包下载、校验并编译 native init，保存新镜像与日志 | 云端通过；新镜像未做真机验证 |
+| Build ARM64 Turnip from source | 固定 Mesa 源码和编译环境，生成 AArch64 KGSL Vulkan 驱动包 | 云端通过；新驱动未做真机验证 |
 | Check image tooling | 分卷往返、损坏检测、路径检查、脚本语法、ARM64 init 静态交叉编译 | 不操作手机 |
 
 Arch 桌面为 KWin / Zink / Turnip Adreno 740，1440×3200 @ 60 Hz；
@@ -45,8 +73,9 @@ Actions artifact 默认会过期；这里只用它临时留存失败日志。
 两者都低于 GitHub 单附件 2 GiB 的上限。
 
 原样备份仍含设备配套的厂商文件和历史调试设置（例如 EvoX 的 ADB 授权配置），
-因此工作流只创建 **草稿 Release**：仓库协作者可见，不自动公开发布。
-这不是去个人化的公开发行镜像。仓库源码与镜像附件分开存放；不要提交整个旧工作区。
+因此历史原样备份保留为 **草稿 Release**：仓库协作者可见，不自动公开发布。
+去个人化的构建底包、源码和编译环境已经单独公开，新编译的产物保存到草稿供复验。
+仓库源码与镜像附件分开存放；不要提交整个旧工作区。
 本仓库不包含 userdata、SSH 密钥、服务端密码或刷机脚本。
 
 ## 首次导入（只需要一次）
@@ -118,8 +147,8 @@ EvoX 原工程来自 Evolution-X manifest `cnb`，设备为 socrates，历史 lu
 完整 Android 构建的官方基准至少需要 400 GB 可用磁盘；普通 GitHub Linux
 runner 标称存储 14 GB，托管作业最长 6 小时。因此这里没有添加一个必然资源不足的
 全量 EvoX 编译作业。以后要从源码更新 ROM，需要补齐补丁仓库，并用资源足够的
-付费托管 runner 或自托管机器。Arch 的全新 rootfs / Mesa 构建也需进一步固定软件包、
-工具链和厂商运行时来源；当前 rebuild 明确是快照之上的 native init 构建。
+付费托管 runner 或自托管机器。Arch 已能从公开的固定底包编译 native init，并独立
+从 Mesa 源码编译驱动；完整 KDE/Qt 用户空间仍使用已经保存的二进制发行版快照。
 
 参考：[GitHub runner 资源](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)、
 [作业限制](https://docs.github.com/en/actions/reference/limits)、

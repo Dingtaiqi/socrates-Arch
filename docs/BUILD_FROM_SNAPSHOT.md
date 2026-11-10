@@ -59,8 +59,8 @@ python3 evox/restore-source.py /build/test-restore --groups 0,1
 
 `bash build.sh arch-support OUTPUT_DIR` 可从源码交叉编译当前 DRM 兼容层和重启工具。
 Mesa 26.2.6 原始源码、Turnip KGSL 构建配方和工具链记录已经保存。
-原构建环境的 GCC 12、Python 构建工具、glslang、Arch 头文件/动态库也在迁出。
-`arch/build-inputs.json` 发布后，可在 Linux 上执行：
+原构建环境的 GCC 12、Python 构建工具、glslang、Arch 头文件/动态库已保存并公开，
+清单为 `arch/build-inputs.json`。可在 Linux 上执行：
 
 ```bash
 sudo apt-get install -y build-essential binutils-aarch64-linux-gnu pkg-config \
@@ -75,5 +75,18 @@ bash build.sh arch-turnip /build/arch-inputs /build/new-turnip
 现有 Arch 镜像工作流会在固定二进制 rootfs 上编译 native init；KDE、Qt、glibc
 等使用 Arch Linux ARM 软件包。厂商触摸运行时和固件只有二进制材料。
 
-Arch 完整桌面的公开、去个人化构建底包尚未发布；原始镜像种子仍为草稿附件。
-因此当前不能宣称匿名 clone 后就能从零生成相同 Arch 桌面镜像。
+公开、去个人化底包已发布，清单为 `arch/build-base.json`。镜像重建入口：
+
+```bash
+sudo apt-get install -y e2fsprogs erofs-utils gcc-aarch64-linux-gnu
+bash build.sh arch-image /build/new-arch.img
+# 需要使用现有数据卷时，在构建命令前设置 PERSIST_UUID=<该卷UUID>。
+```
+
+该入口无需原构建服务器或私有种子，下载的分卷、还原后镜像和内置 EROFS 均检查 SHA256，
+然后从仓库源码编译 native init 并回读核对写入结果。没有指定数据卷时使用占位 UUID。
+原始镜像种子继续保留为草稿。
+
+2026-11-10 的 GPU 源码编译与公开输入镜像重建均已在 GitHub 云端通过，
+具体提交、产物和校验值见 [源码构建验证](source-build-validation-2026-11-10.json)。
+本次未操作手机，新生成的镜像和驱动尚未做真机复验。

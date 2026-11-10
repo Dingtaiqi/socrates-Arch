@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-10",
+  "repository": "Dingtaiqi/socrates-Arch",
+  "phone_operations": false,
+  "turnip": {
+    "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42822210400",
+    "result": "success",
+    "commit": "e8a332c2f1efffd7efb535175f01be3c4cfed348",
+    "source": "Mesa 26.2.6",
+    "target": "AArch64, freedreno KGSL",
+    "release_tag": "turnip-42822210400-1",
+    "artifact": "turnip-26.2.6-kgsl-aarch64.tar.gz",
+    "bytes": 3546565,
+    "sha256": "08ca98b07a8eb4e5dba2b08d3f81a3461a8b208df8ce641319c46e3d5d3d5422",
+    "device_tested": false
+  },
+  "arch_image": {
+    "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42823028203",
+    "result": "success",
+    "commit": "6f3bfe7eedc294f23bc7a8c49475591f809eeec9",
+    "scope": "Native init from source, fixed public Arch Linux ARM binary userspace",
+    "public_inputs": true,
+    "release_tag": "arch-source-42823028203-1",
+    "raw_bytes": 3221225472,
+    "raw_sha256": "d5224df4770469fd91d4ee723a97962798a2cdf13953afdd5e7fb7eaadabe4c1",
+    "device_tested": false
+  },
+  "evox": {
+    "current_checkout_lunch": "passed",
+    "current_checkout_init_build": "passed, 269 seconds",
+    "fresh_restore_fixture_repositories": 11,
+    "local_patch_projects": 7,
+    "local_files_verified": 17,
+    "full_source_transfer": "in_progress",
+    "fresh_full_rom_build_verified": false
+  }
+}
