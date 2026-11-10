@@ -16,8 +16,11 @@ try:
                    allow_agent=False, look_for_keys=False, timeout=15,
                    banner_timeout=30, auth_timeout=30)
     client.get_transport().set_keepalive(20)
+    program = os.environ.get('SERVER_UPLOAD_PROGRAM', 'upload_sources_v2.py')
+    if program not in ('upload_sources_v2.py', 'upload_full_sources.py'):
+        raise SystemExit('Unsupported server upload program')
     stdin, stdout, stderr = client.exec_command(
-        'python3 -u /home/qinghuo/source_exports_20261110/upload_sources_v2.py', timeout=180)
+        'python3 -u /home/qinghuo/source_exports_20261110/' + program, timeout=180)
     stdin.write(json.dumps({'token': os.environ['GH_TOKEN'],
                             'repository': os.environ['GITHUB_REPOSITORY'],
                             'run_id': os.environ['GITHUB_RUN_ID'],
