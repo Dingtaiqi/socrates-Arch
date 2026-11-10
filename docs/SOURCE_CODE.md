@@ -4,6 +4,9 @@
 逐文件来源、内容 SHA256、脱敏计数见 [source-catalog.json](source-catalog.json)。
 目录中的历史脚本用于追溯，不是按字典序运行就能复现最终镜像的流水线。
 
+完整 Android 源码和 Arch 编译环境的迁出正在进行。新恢复/编译入口和当前实测范围见
+[从源码快照构建](BUILD_FROM_SNAPSHOT.md)。以下小型归档的记录不代表完整大快照已经上传完毕。
+
 2026-11-10 已上传 548 份本地源码/补丁，并逐文件核对下载后的源码压缩包。
 [源码归档工作流](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42739908386)
 和 [ARM64 支持组件交叉编译](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42739907246)
@@ -68,11 +71,13 @@ Actions 中的 **Archive porting source code** 会下载并校验原始 Mesa 源
 
 `Archive porting source code` 会在 GitHub 云端复用并校验这份服务器备份，
 与原有 Git 源码包和完整 Mesa 源码一起保存；构建机到期后也不再依赖它下载这些材料。
-本次迁出工作流使用的临时 SSH 连接 secrets 已删除；工作流代码保留供以后重新配置主机时使用。
+小型归档完成后曾删除对应临时 SSH 连接 secrets；完整大快照迁出期间已重新配置临时 secrets，
+仍需在全部服务器直传任务结束后清理。
 
 ## 复现边界
 
-没有把全部未修改的 Android 上游源码树重复镜像到仓库；它们由固定 commit ID 引用。
+这份小型归档没有保存全部未修改的 Android 上游源码树，而是由固定 commit ID 引用。
+后续完整快照会另存完整浅层 Git 对象和 LFS 输入；进度及恢复方式见上方构建文档。
 恢复时需按 manifest 同步对应项目，再按 `projects.json` 应用补丁和新增文件。
 服务器上实际使用的完整导出程序保存在 `evox/capture-server-sources.py`，
 其中路径和输出目录是本次迁出配置。下述简版工具也可在源码服务器本地使用：

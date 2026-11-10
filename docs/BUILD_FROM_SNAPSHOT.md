@@ -52,11 +52,26 @@ python3 evox/restore-source.py /build/test-restore --groups 0,1
 原完整工作树的 socrates lunch/配置检查通过。服务器剩余空间不足以再放一整套源码
 和新的完整编译输出，因此尚未证明全新环境全量编译成功。
 当前工作树包含历史 b66 后的实验改动，源码构建产物也不等同于历史 b66 镜像。
+当前工作树的 `m init` 已于 2026-11-10 实际通过，耗时 4 分 29 秒；
+重新编译并链接了 init 和关联的 fs_mgr 组件。
 
 ## Arch
 
 `bash build.sh arch-support OUTPUT_DIR` 可从源码交叉编译当前 DRM 兼容层和重启工具。
 Mesa 26.2.6 原始源码、Turnip KGSL 构建配方和工具链记录已经保存。
+原构建环境的 GCC 12、Python 构建工具、glslang、Arch 头文件/动态库也在迁出。
+`arch/build-inputs.json` 发布后，可在 Linux 上执行：
+
+```bash
+sudo apt-get install -y build-essential binutils-aarch64-linux-gnu pkg-config \
+  qemu-user-static bison flex xz-utils python3
+bash build.sh arch-turnip /build/arch-inputs /build/new-turnip
+```
+
+`Build ARM64 Turnip from source` Actions 使用同一入口编译 ARM64 KGSL Vulkan 驱动，
+将驱动、构建参数、工具链清单、源码提交号和日志保存到新的草稿 Release。
+输入目录只包含编译工具与库，不包含用户根目录、网络连接配置或完整系统镜像。
+
 现有 Arch 镜像工作流会在固定二进制 rootfs 上编译 native init；KDE、Qt、glibc
 等使用 Arch Linux ARM 软件包。厂商触摸运行时和固件只有二进制材料。
 

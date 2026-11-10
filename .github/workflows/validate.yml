@@ -17,7 +17,7 @@ jobs:
           persist-credentials: false
       - run: |
           python3 -m unittest discover -s ci -p 'test_*.py'
-          bash -n ci/rebuild-arch.sh ci/release.sh build.sh evox/build-source.sh
+          bash -n ci/rebuild-arch.sh ci/release.sh build.sh evox/build-source.sh arch/build-turnip-portable.sh
           sh -n arch/kde-start.sh
       - name: Cross-compile the ARM64 native init
         run: |
