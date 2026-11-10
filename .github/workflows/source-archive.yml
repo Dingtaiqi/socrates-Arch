@@ -1,0 +1,30 @@
+name: Archive porting source code
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: source-archive
+  cancel-in-progress: false
+jobs:
+  sources:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Archive sources and verify upstream Mesa
+        run: python3 ci/archive-sources.py
+      - name: Preserve source archives in a draft Release
+        shell: bash
+        run: |
+          set -euo pipefail
+          tag="sources-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          printf '%s\n' 'Arch/EvoX porting source history and full verified Mesa 26.2.6 source. Full Android checkout is still incomplete; see source-archive.json and docs/SOURCE_CODE.md.' > out/source-notes.md
+          gh release create "$tag" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --draft --title "Porting source archive / $GITHUB_RUN_ID" --notes-file out/source-notes.md
+          gh release upload "$tag" out/source-archive/* --repo "$GITHUB_REPOSITORY"
+          echo "Source archives saved: $tag" >> "$GITHUB_STEP_SUMMARY"

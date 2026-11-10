@@ -1,0 +1,752 @@
+[
+  {
+    "name": "a52dec",
+    "version": "0.8.0-3",
+    "filename": "a52dec-0.8.0-3-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 41888,
+    "installed_size": 217433,
+    "sha256": "22241fc7f47ed38b706fc3341ed596170a847423df02d01702b7b4fef4faa608",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/a52dec-0.8.0-3-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "ark",
+    "version": "26.08.3-1",
+    "filename": "ark-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 1496364,
+    "installed_size": 6067259,
+    "sha256": "d00f15dd65219903dd27d065802d5d9334e19da54369fae36b7b900f25223275",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ark-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "baloo-widgets",
+    "version": "26.08.3-1",
+    "filename": "baloo-widgets-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 137868,
+    "installed_size": 691744,
+    "sha256": "489dcef1ae3d2e6bafb8b46a6b6bbdf6ff082a88e499a836b416df627a34fdf5",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/baloo-widgets-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "benchmark",
+    "version": "1.10.0-1",
+    "filename": "benchmark-1.10.0-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 222420,
+    "installed_size": 901736,
+    "sha256": "05f9eb18e6df9ac448c47ccb03e63b1d7fd6135bf381ae56b7c3e6a4f1d61d03",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/benchmark-1.10.0-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "cjson",
+    "version": "1.7.19-1",
+    "filename": "cjson-1.7.19-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 26824,
+    "installed_size": 167720,
+    "sha256": "3d303d194b6b96103718441345acd16a269f31f450a493e353cf8518cc0299d9",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/cjson-1.7.19-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "discount",
+    "version": "3.0.2.0-1",
+    "filename": "discount-3.0.2.0-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 78068,
+    "installed_size": 440519,
+    "sha256": "105461b2427ce5a9d7c48972c9aefef12fe6286182001534eb873dcf420c9c0f",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/discount-3.0.2.0-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "djvulibre",
+    "version": "3.5.30.1-1",
+    "filename": "djvulibre-3.5.30.1-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 979388,
+    "installed_size": 4272891,
+    "sha256": "5bb7dca21f2e99bcc239f6c9dfcf98b313c887a38277d15f69a7944542bbe452",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/djvulibre-3.5.30.1-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "dolphin",
+    "version": "26.08.3-1",
+    "filename": "dolphin-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 4925144,
+    "installed_size": 18079953,
+    "sha256": "229002d1540724170f4ecf4933c7c16d55793da56e4d654832d9935707efd940",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/dolphin-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "faad2",
+    "version": "2.11.4-1",
+    "filename": "faad2-2.11.4-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 183120,
+    "installed_size": 692303,
+    "sha256": "e29b332322d39a5cd95468c3c3e7cd498147d1248401be137b4b4987ce09d930",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/faad2-2.11.4-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "ghostscript",
+    "version": "10.08.0-1",
+    "filename": "ghostscript-10.08.0-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 20363900,
+    "installed_size": 43731837,
+    "sha256": "6683a30410e8b6e32d1d6fb43013fa17117b4092ec32cae04a2ca0bbfc2a9008",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ghostscript-10.08.0-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "gwenview",
+    "version": "26.08.3-1",
+    "filename": "gwenview-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 6794880,
+    "installed_size": 12587604,
+    "sha256": "cfa4de1413a781156d4fa74badc996c42dff54373ecb6e6c12537d24ea008033",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gwenview-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "ijs",
+    "version": "0.35-7",
+    "filename": "ijs-0.35-7-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 51736,
+    "installed_size": 267691,
+    "sha256": "47d59b1255b7dd72ccf3997f669295c9d3b8f89170d0056807c5b1ecb2f235f1",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ijs-0.35-7-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "jbig2dec",
+    "version": "0.20-1",
+    "filename": "jbig2dec-0.20-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 56496,
+    "installed_size": 156713,
+    "sha256": "394cb9671936db5e1cf8f6e43294e66c82952b8677a8c4537527877606aef29f",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/jbig2dec-0.20-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "kaccounts-integration",
+    "version": "26.08.3-1",
+    "filename": "kaccounts-integration-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 145128,
+    "installed_size": 836040,
+    "sha256": "f6cb7c1e9c1c5a8d3544490494017d56c2d12cba799a5353ccc10d4be9fc520b",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kaccounts-integration-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "kate",
+    "version": "26.08.3-1",
+    "filename": "kate-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 10757300,
+    "installed_size": 40228987,
+    "sha256": "3489c443ed38e77b78c7d802e77f0e635d8f97918f20311719035fb34c987d31",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kate-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "kcolorpicker",
+    "version": "0.3.1-6",
+    "filename": "kcolorpicker-0.3.1-6-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 24948,
+    "installed_size": 145729,
+    "sha256": "7eddc9225a4100b10422da6c6327b44a236abbdcee69bddd296f00f40a55b5fd",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kcolorpicker-0.3.1-6-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "kimageannotator",
+    "version": "0.7.2-2",
+    "filename": "kimageannotator-0.7.2-2-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 365364,
+    "installed_size": 2032190,
+    "sha256": "fce15f878a6a66aada636bf7fb88631414e9d46ebd014e47023970dd6b14304f",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kimageannotator-0.7.2-2-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libaccounts-glib",
+    "version": "1.27-3",
+    "filename": "libaccounts-glib-1.27-3-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 115112,
+    "installed_size": 1120599,
+    "sha256": "8c1fb06db578aeba056d8713c2bceb123f8b2c2b83b8925e9c8c98761cfeae15",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libaccounts-glib-1.27-3-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libaccounts-qt",
+    "version": "1.17-2",
+    "filename": "libaccounts-qt-1.17-2-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 53000,
+    "installed_size": 231237,
+    "sha256": "ebbb2216919b592d9fc8e7bbcedb18d51f92482456988c1e0169de98490f8aa5",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libaccounts-qt-1.17-2-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libebml",
+    "version": "1.4.7-1",
+    "filename": "libebml-1.4.7-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 67960,
+    "installed_size": 285618,
+    "sha256": "3159b80221938eddf99dd0aab731861e0064d51131ab04fbdfbe4109586a4d30",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libebml-1.4.7-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libidn",
+    "version": "1.44-1",
+    "filename": "libidn-1.44-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 296072,
+    "installed_size": 984047,
+    "sha256": "f5c4dcea4f294108c173ff4054f498e6d5729d06695a88c6c65be1184a67be9f",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libidn-1.44-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libkdcraw",
+    "version": "26.08.3-1",
+    "filename": "libkdcraw-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 38984,
+    "installed_size": 176023,
+    "sha256": "870bb5559c1a27eb4cb077dec3e963b694d26ddea63df30f011c5a1c25ddd506",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libkdcraw-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libmatroska",
+    "version": "1.7.2-2",
+    "filename": "libmatroska-1.7.2-2-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 115516,
+    "installed_size": 920467,
+    "sha256": "4a26a6b9fd1163157e5deaa290336c66161858c5c26d562a4bd4deb6b2dcee9e",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libmatroska-1.7.2-2-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libnotify",
+    "version": "0.8.9-1",
+    "filename": "libnotify-0.8.9-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 39384,
+    "installed_size": 234078,
+    "sha256": "d84bdc960cc5aafd99ad5bd7df454f83dd534da7a8a9a87cb5fda88b2bbec44b",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libnotify-0.8.9-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libpaper",
+    "version": "2.2.8-1",
+    "filename": "libpaper-2.2.8-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 49912,
+    "installed_size": 343669,
+    "sha256": "b5ef8ad6e73e2667365a45fe947ef11099553cd8fc456ba55ae85e6cc79d1438",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libpaper-2.2.8-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "librist",
+    "version": "0.2.20-1",
+    "filename": "librist-0.2.20-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 159540,
+    "installed_size": 1015545,
+    "sha256": "77f06b0a9b64baf083298c4911f39564e124be81dfb3e5354c5597e48cc70d3e",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/librist-0.2.20-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libshout",
+    "version": "1:2.4.6-5",
+    "filename": "libshout-1:2.4.6-5-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 66664,
+    "installed_size": 259741,
+    "sha256": "4a3ca9096e6f311a36828798f85318fcac4a020385fc3c733b3b1157d953fb33",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libshout-1:2.4.6-5-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libspectre",
+    "version": "0.2.12-2",
+    "filename": "libspectre-0.2.12-2-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 29488,
+    "installed_size": 96299,
+    "sha256": "008855c484fee576f32c9678c0e8939ed1861698461a6d6e1c799bb769825cf8",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libspectre-0.2.12-2-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libvlc",
+    "version": "3.0.24-1",
+    "filename": "libvlc-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 666408,
+    "installed_size": 2439841,
+    "sha256": "136c648f6329a1f73037317a5f3ccb46da9d528f722e6c9c732dca1f05e56bc8",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libvlc-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libxcomposite",
+    "version": "0.4.7-1",
+    "filename": "libxcomposite-0.4.7-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 11676,
+    "installed_size": 77821,
+    "sha256": "37f2d1eb8e2eeef41c0b6cc290aba66ed1783ada5657801929d5390893383978",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxcomposite-0.4.7-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libxdamage",
+    "version": "1.1.7-1",
+    "filename": "libxdamage-1.1.7-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 7376,
+    "installed_size": 71141,
+    "sha256": "c10d529d8e1eb9e518eea2249d4250ea8f7a711f9ec15a644164b94a6b554955",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxdamage-1.1.7-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "mbedtls3",
+    "version": "3.6.7-1",
+    "filename": "mbedtls3-3.6.7-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 1152380,
+    "installed_size": 13430232,
+    "sha256": "82eeddb8a6c4ab63a32d041a19851d7691575dd49b57b9a6c4a7e709d1f26b56",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/mbedtls3-3.6.7-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "okular",
+    "version": "26.08.3-1",
+    "filename": "okular-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 7101676,
+    "installed_size": 21393516,
+    "sha256": "de17c295ec32d3b124ad1993dff838e5d69d88844dc69040363cb928e2babc3d",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/okular-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "openh264",
+    "version": "2.7.0-1",
+    "filename": "openh264-2.7.0-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 439112,
+    "installed_size": 2299304,
+    "sha256": "75c0871481eeefd7e6a717acb53b3a7dc26657c9c4a6620a740861a51d8d1e3d",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/openh264-2.7.0-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "phonon-qt6",
+    "version": "4.12.0-6",
+    "filename": "phonon-qt6-4.12.0-6-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 396544,
+    "installed_size": 2110605,
+    "sha256": "19093588289aa31a61c92798f7568a8ff50122d22b2541ebffc811fc1903a9a8",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/phonon-qt6-4.12.0-6-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "phonon-qt6-vlc",
+    "version": "0.12.0-6",
+    "filename": "phonon-qt6-vlc-0.12.0-6-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 123064,
+    "installed_size": 495666,
+    "sha256": "4bc6c5b14726cfaa15dc39ee758d32fb80d7cc50e7ae4c55fdffe9c125ab35b1",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/phonon-qt6-vlc-0.12.0-6-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "poppler-data",
+    "version": "0.4.12-2",
+    "filename": "poppler-data-0.4.12-2-any.pkg.tar.xz",
+    "repo": "extra",
+    "size": 1605592,
+    "installed_size": 12941097,
+    "sha256": "33133fcac9cc23446a328260baff65e44b75311a3fcd25f06aabdd7ac3d9cfbf",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/poppler-data-0.4.12-2-any.pkg.tar.xz"
+  },
+  {
+    "name": "purpose",
+    "version": "6.31.0-1",
+    "filename": "purpose-6.31.0-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 440776,
+    "installed_size": 3138921,
+    "sha256": "7d07afc4eb3e092de63fb6869c6abc8e4efe607b7d07d1fbdb161ffcd6dc8763",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/purpose-6.31.0-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "qt6-webchannel",
+    "version": "6.12.0-1",
+    "filename": "qt6-webchannel-6.12.0-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 126496,
+    "installed_size": 617228,
+    "sha256": "28747dcd7eb95ff25909c8ec2f145987c7573fe5193c7abb09da6790f6ffd8dc",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-webchannel-6.12.0-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "qt6-webengine",
+    "version": "6.11.3-2",
+    "filename": "qt6-webengine-6.11.3-2-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 85415164,
+    "installed_size": 285654186,
+    "sha256": "43b4a04b3d9a8d193b03498845c6af136d04a307ed430318bf607db7fedd9d2a",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-webengine-6.11.3-2-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "re2",
+    "version": "2:2025.11.05-6",
+    "filename": "re2-2:2025.11.05-6-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 194992,
+    "installed_size": 719385,
+    "sha256": "3b970a665b28815a94bd3695646e7dc42af77b78eb7370c4fea59cfedbb2395c",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/re2-2:2025.11.05-6-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "signond",
+    "version": "8.61-3",
+    "filename": "signond-8.61-3-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 375468,
+    "installed_size": 1662574,
+    "sha256": "cabb6570d92284e049ffbea90a6513c6250e247f0f28f4f5f67b30c03f9e28fb",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/signond-8.61-3-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "signon-kwallet-extension",
+    "version": "26.08.3-1",
+    "filename": "signon-kwallet-extension-26.08.3-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 14016,
+    "installed_size": 68056,
+    "sha256": "b17780404d14f1523cbcb0a4a4a77b3ea183874b7b4d3efdca065ba40ae8a410",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/signon-kwallet-extension-26.08.3-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "signon-plugin-oauth2",
+    "version": "0.25-4",
+    "filename": "signon-plugin-oauth2-0.25-4-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 75276,
+    "installed_size": 339616,
+    "sha256": "cc8b2138cf40c684abffaa005ca509fcceabf5122a645500f78d5f9611039d15",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/signon-plugin-oauth2-0.25-4-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "signon-ui",
+    "version": "0.17+20231016-4",
+    "filename": "signon-ui-0.17+20231016-4-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 103296,
+    "installed_size": 399812,
+    "sha256": "3b8c417a5251f6d6093f561d103aad114ec46a1b707a589a9985aa5185124d2b",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/signon-ui-0.17+20231016-4-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "threadweaver",
+    "version": "6.31.0-1",
+    "filename": "threadweaver-6.31.0-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 77012,
+    "installed_size": 353489,
+    "sha256": "04ce5531a47c4787aecd7df47c5bc94dfd96547cd78d27814cbc27f16da1a58f",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/threadweaver-6.31.0-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "twolame",
+    "version": "0.4.0-4",
+    "filename": "twolame-0.4.0-4-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 79684,
+    "installed_size": 289407,
+    "sha256": "db9230d94c8677035632da0e98f3d20897e97adac61d78999b581ef8190bf949",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/twolame-0.4.0-4-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-a52dec",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-a52dec-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 9124,
+    "installed_size": 67496,
+    "sha256": "6f59d04dcb4e65f1150ba7ecab641618d05910c239b5fb3910656001736ee4af",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-a52dec-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-alsa",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-alsa-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 18444,
+    "installed_size": 135136,
+    "sha256": "ef5ad6f36008db76ace6a103e2d40f1174d1832c4ed13eb2ac69164a3ea8b380",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-alsa-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-archive",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-archive-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 11528,
+    "installed_size": 67736,
+    "sha256": "5b091056f966c28083d77925a30de67dc4e0111fd434753fcb81a522291c01f1",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-archive-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-dav1d",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-dav1d-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 9352,
+    "installed_size": 67496,
+    "sha256": "6d99f10a5c18ec04cb39d5301dafd7e66b5242c99249eebf56655a2e80f953e7",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-dav1d-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-dbus",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-dbus-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 37804,
+    "installed_size": 133336,
+    "sha256": "d23a1df369e0b808408b43ba64bfa72f6aacd6ca4c4a929d1908768c4218cf44",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-dbus-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-dbus-screensaver",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-dbus-screensaver-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 8532,
+    "installed_size": 67496,
+    "sha256": "bddb3f347d455c4f23841ae36248ec0fdad72f0cd0f874406c34afeeb4bb241b",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-dbus-screensaver-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-faad2",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-faad2-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 13608,
+    "installed_size": 67496,
+    "sha256": "d1f82b6ac3068bb7e42846d17212eccd229a672c44227f12f1e04ccf6cc464ea",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-faad2-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-flac",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-flac-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 11788,
+    "installed_size": 67496,
+    "sha256": "7ca01758a7e3d1206f3d280a0a198bddca3c99389979240053b6559a17bbd487",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-flac-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-gnutls",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-gnutls-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 13964,
+    "installed_size": 67568,
+    "sha256": "35fe2bedc6a4e3d96eec360f80ed60a066096000124e74935480ee7877b2038a",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-gnutls-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-inflate",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-inflate-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 8252,
+    "installed_size": 67496,
+    "sha256": "01de3a2a5e21a511ac3335ed7f19e7d3ed9d33f2d763b19d9eabbd27e1e60e7c",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-inflate-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-journal",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-journal-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 7640,
+    "installed_size": 67496,
+    "sha256": "22eb71234ddfbac1a6241acbd81267522e2be82fd432dc15f07ad169beca35fa",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-journal-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-jpeg",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-jpeg-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 11900,
+    "installed_size": 67568,
+    "sha256": "ed0643abbc9a67d4b2577cd65f66dd8a09b04bfc5813b38f5855bf16757350a7",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-jpeg-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-matroska",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-matroska-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 190372,
+    "installed_size": 526464,
+    "sha256": "a87ad7e1fa8eb9b9f27dd69b593259a02f3a5e1f2314c44642cdc9d41c7953c0",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-matroska-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-mpg123",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-mpg123-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 9608,
+    "installed_size": 67496,
+    "sha256": "c222f5cd0820def15a0efc6961fd907e4fc783ca5a3c71400fe617b18c9ca2e3",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-mpg123-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-ogg",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-ogg-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 60600,
+    "installed_size": 200672,
+    "sha256": "2c92840f543455d8e637c25298efdf2455492476e61244a87e449da1d5a0af6a",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-ogg-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-opus",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-opus-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 15272,
+    "installed_size": 67568,
+    "sha256": "65ae8d1b4654511ad0aca35883e584f7591c0efa61dba2eb47a6d1a7637e8f5d",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-opus-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-png",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-png-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 9568,
+    "installed_size": 67496,
+    "sha256": "d0acec17a68478c5697c0e71c264b6d9141b14736b7c03a9088b768c2d9b5333",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-png-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugins-base",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugins-base-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 1982816,
+    "installed_size": 19849640,
+    "sha256": "27f60929ccfe84a0759c6b228886a33ccb89d50b5e6d6a179a246eb13fa8444b",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugins-base-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-shout",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-shout-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 10612,
+    "installed_size": 67568,
+    "sha256": "82ccef528cb9b9ff89be6d2abf5c61c816ce221f05cdf671ecd7711eed57b774",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-shout-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-speex",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-speex-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 18552,
+    "installed_size": 135064,
+    "sha256": "7f51013d78721f64a5e8ca14e5a3c04dbd06debc2fc32b3cf36d57eaebf4422a",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-speex-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-tag",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-tag-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 37748,
+    "installed_size": 133192,
+    "sha256": "afb1680a6fcebe0b690c1a3c4b3d2e145f9d68c31b80d124505077d7d2d756d0",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-tag-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-theora",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-theora-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 14332,
+    "installed_size": 67568,
+    "sha256": "a08e35a6a2b67aa3a8f2bed2863c253e278501c499c68a17681c77f7a02d3dc4",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-theora-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-twolame",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-twolame-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 9916,
+    "installed_size": 67568,
+    "sha256": "08baf5803b223ff0142d3eaa7ae6a148590a8e714e2f1dfad986d6c13c6f73ea",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-twolame-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-vorbis",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-vorbis-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 15828,
+    "installed_size": 67568,
+    "sha256": "cc8507d3be5b67d75e5691a9e1d4a8c61ae3102b5d851268a7c48d70a409edd5",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-vorbis-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-vpx",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-vpx-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 10688,
+    "installed_size": 67568,
+    "sha256": "5861247361ba5fd87397bfd521a387b0588cd58f18b047e958a14cf5d64809fb",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-vpx-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "vlc-plugin-xml",
+    "version": "3.0.24-1",
+    "filename": "vlc-plugin-xml-3.0.24-1-aarch64.pkg.tar.xz",
+    "repo": "extra",
+    "size": 8100,
+    "installed_size": 67496,
+    "sha256": "b1085a0546f57b58dc547eb0c44635dbe101be4abad0265fc4d1dcbaafc1fc15",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vlc-plugin-xml-3.0.24-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "libmicrohttpd",
+    "version": "1.0.10-1",
+    "filename": "libmicrohttpd-1.0.10-1-aarch64.pkg.tar.xz",
+    "repo": "core",
+    "size": 283032,
+    "installed_size": 667515,
+    "sha256": "9b829a70b65b2457bd04ed9fd79795f71d9336a02991640de3e9e5728a2a13ce",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/libmicrohttpd-1.0.10-1-aarch64.pkg.tar.xz"
+  },
+  {
+    "name": "minizip",
+    "version": "1:1.3.2-4",
+    "filename": "minizip-1:1.3.2-4-aarch64.pkg.tar.xz",
+    "repo": "core",
+    "size": 29844,
+    "installed_size": 110206,
+    "sha256": "d4407d34a95348f5c019568b9d7db691193ec2a26fede8a2b30548a9b7a7776f",
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/minizip-1:1.3.2-4-aarch64.pkg.tar.xz"
+  }
+]

@@ -21,7 +21,7 @@ result = {
 }
 Path('out/build-record.json').write_text(json.dumps(result, indent=2) + '\n')
 PY
-tar --exclude='__pycache__' -czf out/build-sources.tar.gz arch ci .github README.md
+tar --exclude='__pycache__' -czf out/build-sources.tar.gz arch evox archive docs ci .github README.md
 (cd out; sha256sum ./*.part* ./*.manifest.json build-record.json build-sources.tar.gz build.log > SHA256SUMS)
 cat >out/RELEASE-NOTES.md <<EOF
 K60 Pro / socrates: $kind, mode=$mode.

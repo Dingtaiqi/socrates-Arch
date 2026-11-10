@@ -1,0 +1,3026 @@
+[
+  {
+    "name": "double-conversion",
+    "version": "3.4.0-1",
+    "size": 52748,
+    "installed_size": 240639,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/double-conversion-3.4.0-1-aarch64.pkg.tar.xz",
+    "filename": "double-conversion-3.4.0-1-aarch64.pkg.tar.xz",
+    "sha256": "f4d8f0db3a79d6cb06174920ec19cc1c1d943b7b019444be91c2685babc2d790"
+  },
+  {
+    "name": "libb2",
+    "version": "0.98.1-3",
+    "size": 17316,
+    "installed_size": 80236,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libb2-0.98.1-3-aarch64.pkg.tar.xz",
+    "filename": "libb2-0.98.1-3-aarch64.pkg.tar.xz",
+    "sha256": "745b552a7d1d8c8d8e675bebfd38834c0ddfad99a413300382677c15c2b60495"
+  },
+  {
+    "name": "libdaemon",
+    "version": "0.14-6",
+    "size": 19340,
+    "installed_size": 96716,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libdaemon-0.14-6-aarch64.pkg.tar.xz",
+    "filename": "libdaemon-0.14-6-aarch64.pkg.tar.xz",
+    "sha256": "b96e8eb1604bf7901feb1addd2882cce2f366b504d919c9fc28a53f8c240243b"
+  },
+  {
+    "name": "avahi",
+    "version": "1:0.9rc5-2",
+    "size": 382112,
+    "installed_size": 2483774,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/avahi-1:0.9rc5-2-aarch64.pkg.tar.xz",
+    "filename": "avahi-1:0.9rc5-2-aarch64.pkg.tar.xz",
+    "sha256": "ef808937dd227d0edca14cd59b6618270f9b7fbedff529eb1df5b89799db2da8"
+  },
+  {
+    "name": "libcups",
+    "version": "2:2.4.20-1",
+    "size": 257476,
+    "installed_size": 992172,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libcups-2:2.4.20-1-aarch64.pkg.tar.xz",
+    "filename": "libcups-2:2.4.20-1-aarch64.pkg.tar.xz",
+    "sha256": "f280995b8d7426dc9f40c70ca8d19dead27aa8a116cfeb94afa0149028709e66"
+  },
+  {
+    "name": "libproxy",
+    "version": "0.5.12-1",
+    "size": 27912,
+    "installed_size": 217656,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libproxy-0.5.12-1-aarch64.pkg.tar.xz",
+    "filename": "libproxy-0.5.12-1-aarch64.pkg.tar.xz",
+    "sha256": "071afd9aaa0dc6f45f5e81e51c9122aacfadf85726962d013fdecb67cbfcec9b"
+  },
+  {
+    "name": "liburing",
+    "version": "2.15-1",
+    "size": 271192,
+    "installed_size": 543140,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/liburing-2.15-1-aarch64.pkg.tar.xz",
+    "filename": "liburing-2.15-1-aarch64.pkg.tar.xz",
+    "sha256": "efb67ef7eed7b30bebebbe9420fbf67bbfd0676c2b731f30e47e544cdb73feaf"
+  },
+  {
+    "name": "libxkbcommon-x11",
+    "version": "1.13.2-1",
+    "size": 38984,
+    "installed_size": 226334,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxkbcommon-x11-1.13.2-1-aarch64.pkg.tar.xz",
+    "filename": "libxkbcommon-x11-1.13.2-1-aarch64.pkg.tar.xz",
+    "sha256": "6f456540140a0abea3ac01502a6bb0419af81851d08d159879091a05962004fd"
+  },
+  {
+    "name": "md4c",
+    "version": "0.6.0-2",
+    "size": 80764,
+    "installed_size": 364659,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/md4c-0.6.0-2-aarch64.pkg.tar.xz",
+    "filename": "md4c-0.6.0-2-aarch64.pkg.tar.xz",
+    "sha256": "14cc79f8a7f0b4c913068cd808717f8db2f6adb097738ade3b2e89b15caccf98"
+  },
+  {
+    "name": "tslib",
+    "version": "1.24-1",
+    "size": 100528,
+    "installed_size": 1891048,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/tslib-1.24-1-aarch64.pkg.tar.xz",
+    "filename": "tslib-1.24-1-aarch64.pkg.tar.xz",
+    "sha256": "ecad1c0c437edf05bdd8feff38a6e2e6c9647589f8eb148c88a51a8dad55f017"
+  },
+  {
+    "name": "xcb-util-renderutil",
+    "version": "0.3.10-2",
+    "size": 9368,
+    "installed_size": 76046,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xcb-util-renderutil-0.3.10-2-aarch64.pkg.tar.xz",
+    "filename": "xcb-util-renderutil-0.3.10-2-aarch64.pkg.tar.xz",
+    "sha256": "87ab6eb530aaf6a2cf25af677ceb4493346ff319bb86e041afb9408e606784e3"
+  },
+  {
+    "name": "xcb-util",
+    "version": "0.4.1-2",
+    "size": 11788,
+    "installed_size": 80241,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xcb-util-0.4.1-2-aarch64.pkg.tar.xz",
+    "filename": "xcb-util-0.4.1-2-aarch64.pkg.tar.xz",
+    "sha256": "acf6f8f974bb4c5aa982eb8e9f7e988704807b3db9d747ce98f6ca1ffaa17b5f"
+  },
+  {
+    "name": "xcb-util-image",
+    "version": "0.4.1-3",
+    "size": 17068,
+    "installed_size": 103390,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xcb-util-image-0.4.1-3-aarch64.pkg.tar.xz",
+    "filename": "xcb-util-image-0.4.1-3-aarch64.pkg.tar.xz",
+    "sha256": "e615d2753b21b48d40317c603a75f41c3a1c5ac06a159a7af2b35708a1cc13a6"
+  },
+  {
+    "name": "xcb-util-cursor",
+    "version": "0.1.6-1",
+    "size": 11580,
+    "installed_size": 74538,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xcb-util-cursor-0.1.6-1-aarch64.pkg.tar.xz",
+    "filename": "xcb-util-cursor-0.1.6-1-aarch64.pkg.tar.xz",
+    "sha256": "8db3ad73de0ad3714b3a25f3f1eceba9c0c60dd2d84c84357fa34fab6106083b"
+  },
+  {
+    "name": "xcb-util-keysyms",
+    "version": "0.4.1-5",
+    "size": 7568,
+    "installed_size": 71069,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xcb-util-keysyms-0.4.1-5-aarch64.pkg.tar.xz",
+    "filename": "xcb-util-keysyms-0.4.1-5-aarch64.pkg.tar.xz",
+    "sha256": "05bd273ab344ea9d8fd44d1688f8ac5aa009071672bbc8b50571c252c39dfe7a"
+  },
+  {
+    "name": "xcb-util-wm",
+    "version": "0.4.2-2",
+    "size": 31348,
+    "installed_size": 279324,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xcb-util-wm-0.4.2-2-aarch64.pkg.tar.xz",
+    "filename": "xcb-util-wm-0.4.2-2-aarch64.pkg.tar.xz",
+    "sha256": "cca68248ca0d4a83382cac35fec66e8965e121d792ab2cb54a048fd7f514b92e"
+  },
+  {
+    "name": "xdg-utils",
+    "version": "1.2.1-2",
+    "size": 60512,
+    "installed_size": 318150,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xdg-utils-1.2.1-2-any.pkg.tar.xz",
+    "filename": "xdg-utils-1.2.1-2-any.pkg.tar.xz",
+    "sha256": "afd760ce97e18f354c5893038327c70b72053c23b41e609c5351c5c22fc84cd8"
+  },
+  {
+    "name": "qt6-translations",
+    "version": "6.12.0-1",
+    "size": 2010144,
+    "installed_size": 16686426,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-translations-6.12.0-1-any.pkg.tar.xz",
+    "filename": "qt6-translations-6.12.0-1-any.pkg.tar.xz",
+    "sha256": "51c3b96236aa9cccd06d27a79d62f76fb9921710ecc30db9612fcb280165bbc2"
+  },
+  {
+    "name": "qt6-base",
+    "version": "6.12.0-3",
+    "size": 15177820,
+    "installed_size": 76792819,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-base-6.12.0-3-aarch64.pkg.tar.xz",
+    "filename": "qt6-base-6.12.0-3-aarch64.pkg.tar.xz",
+    "sha256": "2777135b375ba82250896fa9a993926bf3c05b59dd22217f63d6a1391c1b4c31"
+  },
+  {
+    "name": "attica",
+    "version": "6.31.0-1",
+    "size": 175240,
+    "installed_size": 1056028,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/attica-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "attica-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "3c0f5974ad6525c5d94c205a2250c70c57d8cec0d744e1ca1aa5f614f04a3160"
+  },
+  {
+    "name": "qt6-declarative",
+    "version": "6.12.0-4",
+    "size": 20093416,
+    "installed_size": 156584166,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-declarative-6.12.0-4-aarch64.pkg.tar.xz",
+    "filename": "qt6-declarative-6.12.0-4-aarch64.pkg.tar.xz",
+    "sha256": "a3ba401b1f8d6e8dc6ec59e15b3cb6baa0d4912db26b0df3072168a0f2a5f8ce"
+  },
+  {
+    "name": "kconfig",
+    "version": "6.31.0-1",
+    "size": 496636,
+    "installed_size": 2912383,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kconfig-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kconfig-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "f9f1849aeb0f173196305ec43699855dd4a62e9934009b4bf4774352aecda84a"
+  },
+  {
+    "name": "kcoreaddons",
+    "version": "6.31.0-1",
+    "size": 2370384,
+    "installed_size": 10615823,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kcoreaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kcoreaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "0241e419debd4c3f579f9f6f7b9cadda422375f3c64e0328af329bb61c4a5f74"
+  },
+  {
+    "name": "kcrash",
+    "version": "6.31.0-1",
+    "size": 29256,
+    "installed_size": 88924,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kcrash-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kcrash-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "6db2a66d34123f2ca4d9b1a56d228507fa1408e6abbc4098687cd5fc28be3cd3"
+  },
+  {
+    "name": "kdbusaddons",
+    "version": "6.31.0-1",
+    "size": 72360,
+    "installed_size": 360612,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kdbusaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kdbusaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "c649f971f351917d1c10913c962f8e5238d72b55928fab37a7ed335309f1ecec"
+  },
+  {
+    "name": "libtommath",
+    "version": "1.3.0-2",
+    "size": 44884,
+    "installed_size": 163601,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libtommath-1.3.0-2-aarch64.pkg.tar.xz",
+    "filename": "libtommath-1.3.0-2-aarch64.pkg.tar.xz",
+    "sha256": "9711421cceb72a6d6f2ccebb98f016643aeb0ebed3d8ec248b55e8630329ed35"
+  },
+  {
+    "name": "convertlit",
+    "version": "1.8-13",
+    "size": 46220,
+    "installed_size": 146920,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/convertlit-1.8-13-aarch64.pkg.tar.xz",
+    "filename": "convertlit-1.8-13-aarch64.pkg.tar.xz",
+    "sha256": "b7d027d6a5fb7de813e08f8daad7d99625fdc5c109da5d9df4e2109d82a64a0f"
+  },
+  {
+    "name": "libzip",
+    "version": "1.11.4-1",
+    "size": 258420,
+    "installed_size": 685497,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libzip-1.11.4-1-aarch64.pkg.tar.xz",
+    "filename": "libzip-1.11.4-1-aarch64.pkg.tar.xz",
+    "sha256": "6f108f41399e25a1c20c4deb0b4c89d41d568f810c78104d20628fb7eb241f83"
+  },
+  {
+    "name": "ebook-tools",
+    "version": "0.2.2-9",
+    "size": 24460,
+    "installed_size": 145204,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ebook-tools-0.2.2-9-aarch64.pkg.tar.xz",
+    "filename": "ebook-tools-0.2.2-9-aarch64.pkg.tar.xz",
+    "sha256": "1844d4d09623bdf711ab84ca1a9a42525377bd15e6b6791a6958c27e21e3770a"
+  },
+  {
+    "name": "libinih",
+    "version": "62-2",
+    "size": 19796,
+    "installed_size": 148473,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/libinih-62-2-aarch64.pkg.tar.xz",
+    "filename": "libinih-62-2-aarch64.pkg.tar.xz",
+    "sha256": "c561dff1db53c3b11bcef7e694e6b9dc4b36133ff81038e52777568ba470f1fc"
+  },
+  {
+    "name": "exiv2",
+    "version": "0.28.9-1",
+    "size": 2777400,
+    "installed_size": 17748562,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/exiv2-0.28.9-1-aarch64.pkg.tar.xz",
+    "filename": "exiv2-0.28.9-1-aarch64.pkg.tar.xz",
+    "sha256": "494885f4fb39cd2ddc1cfbf2c6d2a4bb7f3b42ad2209a9838e96d6df86f999bd"
+  },
+  {
+    "name": "alsa-topology-conf",
+    "version": "1.2.5.1-4",
+    "size": 13528,
+    "installed_size": 343788,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/alsa-topology-conf-1.2.5.1-4-any.pkg.tar.xz",
+    "filename": "alsa-topology-conf-1.2.5.1-4-any.pkg.tar.xz",
+    "sha256": "fc04bacda1d93b22135985a71f0f73a8df57880d4d7f03c3368e5717a917d4cf"
+  },
+  {
+    "name": "alsa-ucm-conf",
+    "version": "1.2.16.1-1",
+    "size": 130876,
+    "installed_size": 709032,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/alsa-ucm-conf-1.2.16.1-1-any.pkg.tar.xz",
+    "filename": "alsa-ucm-conf-1.2.16.1-1-any.pkg.tar.xz",
+    "sha256": "7c8748eb29e8bdd1632071410aab1ed19edc0f48ffbe47375a51b5a4bdef8db8"
+  },
+  {
+    "name": "alsa-lib",
+    "version": "1.2.16.1-1",
+    "size": 471232,
+    "installed_size": 1991147,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/alsa-lib-1.2.16.1-1-aarch64.pkg.tar.xz",
+    "filename": "alsa-lib-1.2.16.1-1-aarch64.pkg.tar.xz",
+    "sha256": "fe32910ecf90d24b4662b9d437b3ac8f638786eef3719b558f7f98dc9e299a16"
+  },
+  {
+    "name": "dav1d",
+    "version": "1.5.4-1",
+    "size": 343120,
+    "installed_size": 992444,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/dav1d-1.5.4-1-aarch64.pkg.tar.xz",
+    "filename": "dav1d-1.5.4-1-aarch64.pkg.tar.xz",
+    "sha256": "1bacfe3c1125b7fe32d9fd9cce8fa48fd93aa0daf43608c2f92e6c1418ab9aeb"
+  },
+  {
+    "name": "gsm",
+    "version": "1.0.24-1",
+    "size": 36536,
+    "installed_size": 145882,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gsm-1.0.24-1-aarch64.pkg.tar.xz",
+    "filename": "gsm-1.0.24-1-aarch64.pkg.tar.xz",
+    "sha256": "b7b47c8ebe3d0ef83875af1235fde8b3fa98fbfea930b380e9765c0cf71e3b0e"
+  },
+  {
+    "name": "db5.3",
+    "version": "5.3.28-7",
+    "size": 1044852,
+    "installed_size": 7524087,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/db5.3-5.3.28-7-aarch64.pkg.tar.xz",
+    "filename": "db5.3-5.3.28-7-aarch64.pkg.tar.xz",
+    "sha256": "0a787f952c0f7dd1493db437ab0dc3ffda6053cb6affa4ebf91caff185e586b4"
+  },
+  {
+    "name": "libsamplerate",
+    "version": "0.2.2-3",
+    "size": 989352,
+    "installed_size": 1637167,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libsamplerate-0.2.2-3-aarch64.pkg.tar.xz",
+    "filename": "libsamplerate-0.2.2-3-aarch64.pkg.tar.xz",
+    "sha256": "9292168d3d836579fb1af20ede097470638332bb2691097ea760b7396a1ce6ca"
+  },
+  {
+    "name": "opus",
+    "version": "1.6.1-1",
+    "size": 3946736,
+    "installed_size": 5049281,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/opus-1.6.1-1-aarch64.pkg.tar.xz",
+    "filename": "opus-1.6.1-1-aarch64.pkg.tar.xz",
+    "sha256": "a111defb532e8e7e12815cffa06f59be23e3d5b95539d5588289a467a2a11b1a"
+  },
+  {
+    "name": "jack2",
+    "version": "1.9.22-2",
+    "size": 424508,
+    "installed_size": 2463740,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/jack2-1.9.22-2-aarch64.pkg.tar.xz",
+    "filename": "jack2-1.9.22-2-aarch64.pkg.tar.xz",
+    "sha256": "ad26da61009387cbe9bca7b0f2db3a1eee6e961b32d8b9cf43c93d773e949ed2"
+  },
+  {
+    "name": "mpg123",
+    "version": "1.33.7-1",
+    "size": 424156,
+    "installed_size": 1764948,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/mpg123-1.33.7-1-aarch64.pkg.tar.xz",
+    "filename": "mpg123-1.33.7-1-aarch64.pkg.tar.xz",
+    "sha256": "b7474b336fc068ab1fe324577e296bc80ad10a34cb69cd33969de81d37744275"
+  },
+  {
+    "name": "lame",
+    "version": "4.0-1",
+    "size": 252564,
+    "installed_size": 1291187,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/lame-4.0-1-aarch64.pkg.tar.xz",
+    "filename": "lame-4.0-1-aarch64.pkg.tar.xz",
+    "sha256": "38f9981bc4f9ecb5d42263ea5a2f9c19531364d57b3b34b0bfa6e8d9601fc24f"
+  },
+  {
+    "name": "libunibreak",
+    "version": "7.0-1",
+    "size": 23916,
+    "installed_size": 156691,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libunibreak-7.0-1-aarch64.pkg.tar.xz",
+    "filename": "libunibreak-7.0-1-aarch64.pkg.tar.xz",
+    "sha256": "b76b357272df096180a3cb9e22f8586b0575d9d4e52b58459efff8d1a8f8461a"
+  },
+  {
+    "name": "libass",
+    "version": "0.17.5-1",
+    "size": 103204,
+    "installed_size": 311515,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libass-0.17.5-1-aarch64.pkg.tar.xz",
+    "filename": "libass-0.17.5-1-aarch64.pkg.tar.xz",
+    "sha256": "88cbb23632552210e404ee7ecd35ac62201e707433b7abc2c0a00b4f84a53c95"
+  },
+  {
+    "name": "libraw1394",
+    "version": "2.1.2-4",
+    "size": 46224,
+    "installed_size": 390804,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libraw1394-2.1.2-4-aarch64.pkg.tar.xz",
+    "filename": "libraw1394-2.1.2-4-aarch64.pkg.tar.xz",
+    "sha256": "6b212ae0cbac953c6ee36c2730f03f5ab6aa718e1595d8a8100b05c4a986fb23"
+  },
+  {
+    "name": "libavc1394",
+    "version": "0.5.4-7",
+    "size": 31748,
+    "installed_size": 371895,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libavc1394-0.5.4-7-aarch64.pkg.tar.xz",
+    "filename": "libavc1394-0.5.4-7-aarch64.pkg.tar.xz",
+    "sha256": "70c4c99b1341c7d1d49076ba1c46aee6705510360fe66bd79414f367b20a628f"
+  },
+  {
+    "name": "libbluray",
+    "version": "1.5.1-1",
+    "size": 902920,
+    "installed_size": 1563064,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libbluray-1.5.1-1-aarch64.pkg.tar.xz",
+    "filename": "libbluray-1.5.1-1-aarch64.pkg.tar.xz",
+    "sha256": "5efb15983210a0b1d538b55c076a771d7b45262f3832f30956b50a6d35971003"
+  },
+  {
+    "name": "libogg",
+    "version": "1.3.6-1",
+    "size": 199192,
+    "installed_size": 488625,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libogg-1.3.6-1-aarch64.pkg.tar.xz",
+    "filename": "libogg-1.3.6-1-aarch64.pkg.tar.xz",
+    "sha256": "91a402c06a669649cf463d17788fcd67c1993489008116193a900b19a7ada75e"
+  },
+  {
+    "name": "flac",
+    "version": "1.5.0-1",
+    "size": 276816,
+    "installed_size": 1324734,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/flac-1.5.0-1-aarch64.pkg.tar.xz",
+    "filename": "flac-1.5.0-1-aarch64.pkg.tar.xz",
+    "sha256": "100b54b7c4efbb41f1f18a560825477f9f403b6996a226dd86ca5227f0a6b83e"
+  },
+  {
+    "name": "libvorbis",
+    "version": "1.3.7-4",
+    "size": 168412,
+    "installed_size": 1029595,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libvorbis-1.3.7-4-aarch64.pkg.tar.xz",
+    "filename": "libvorbis-1.3.7-4-aarch64.pkg.tar.xz",
+    "sha256": "22d10826e1b2b72b1c5f69ba116e4a4840197d3f808c37bfa738f9dd8b493118"
+  },
+  {
+    "name": "libsndfile",
+    "version": "1.2.2-4",
+    "size": 297312,
+    "installed_size": 1518171,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libsndfile-1.2.2-4-aarch64.pkg.tar.xz",
+    "filename": "libsndfile-1.2.2-4-aarch64.pkg.tar.xz",
+    "sha256": "5f8995bee55c37fff098d20cc61ca7b1b4a13c4bc2c1181aea493cc267154d61"
+  },
+  {
+    "name": "libbs2b",
+    "version": "3.1.0-11",
+    "size": 16272,
+    "installed_size": 221084,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libbs2b-3.1.0-11-aarch64.pkg.tar.xz",
+    "filename": "libbs2b-3.1.0-11-aarch64.pkg.tar.xz",
+    "sha256": "e96c9d535005847769ace57397fee14d5be3704c6637fcbb39666605b19fea42"
+  },
+  {
+    "name": "libdvdread",
+    "version": "7.1.1-1",
+    "size": 127560,
+    "installed_size": 466409,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libdvdread-7.1.1-1-aarch64.pkg.tar.xz",
+    "filename": "libdvdread-7.1.1-1-aarch64.pkg.tar.xz",
+    "sha256": "e1d686bc1cc9c1a016026757380d59b899120c21a438a197f74678d018efbaa2"
+  },
+  {
+    "name": "libdvdnav",
+    "version": "7.0.0-1",
+    "size": 57352,
+    "installed_size": 209522,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libdvdnav-7.0.0-1-aarch64.pkg.tar.xz",
+    "filename": "libdvdnav-7.0.0-1-aarch64.pkg.tar.xz",
+    "sha256": "b2efacbf84af912d2c758687ed63058361d6bcf073c5ed04a7ae0ddebe42877e"
+  },
+  {
+    "name": "libiec61883",
+    "version": "1.2.0-9",
+    "size": 30756,
+    "installed_size": 240245,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libiec61883-1.2.0-9-aarch64.pkg.tar.xz",
+    "filename": "libiec61883-1.2.0-9-aarch64.pkg.tar.xz",
+    "sha256": "0ce1403ff5e051eb280b7027cc8f671bc58f335604aaa48a5d204b33bc1daae0"
+  },
+  {
+    "name": "giflib",
+    "version": "6.1.3-2",
+    "size": 85008,
+    "installed_size": 538261,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/giflib-6.1.3-2-aarch64.pkg.tar.xz",
+    "filename": "giflib-6.1.3-2-aarch64.pkg.tar.xz",
+    "sha256": "e76eb0af39d3d9bb7a5f792d3040c7524c49bbe69395df54e4193a4510ed2e87"
+  },
+  {
+    "name": "gperftools",
+    "version": "2.19.2-1",
+    "size": 501700,
+    "installed_size": 2601413,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gperftools-2.19.2-1-aarch64.pkg.tar.xz",
+    "filename": "gperftools-2.19.2-1-aarch64.pkg.tar.xz",
+    "sha256": "d0dce83da5e11db74095407f0104ec6b14b8dbbc195ddc0e211670b52dd9b76d"
+  },
+  {
+    "name": "gtest",
+    "version": "1.18.0-1",
+    "size": 362640,
+    "installed_size": 1887426,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gtest-1.18.0-1-aarch64.pkg.tar.xz",
+    "filename": "gtest-1.18.0-1-aarch64.pkg.tar.xz",
+    "sha256": "b89d9d236da04689bf776e8639976a7568957ea4cd11b5035204daf5211f3d7a"
+  },
+  {
+    "name": "highway",
+    "version": "1.4.0-1",
+    "size": 737544,
+    "installed_size": 7236837,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/highway-1.4.0-1-aarch64.pkg.tar.xz",
+    "filename": "highway-1.4.0-1-aarch64.pkg.tar.xz",
+    "sha256": "5679e47d31ae1ecca8b7e18b9a24ce6027ca333c42d9283bbd30ea7fa672ba8f"
+  },
+  {
+    "name": "libjxl",
+    "version": "0.12.0-1",
+    "size": 1243932,
+    "installed_size": 8907449,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libjxl-0.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "libjxl-0.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "fb4a1fdfb0fe1e8434578abcd6c6e84d4e89a9bdb2ed44334f0a1a7a94306c45"
+  },
+  {
+    "name": "libmodplug",
+    "version": "0.8.9.0-7",
+    "size": 150424,
+    "installed_size": 374988,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libmodplug-0.8.9.0-7-aarch64.pkg.tar.xz",
+    "filename": "libmodplug-0.8.9.0-7-aarch64.pkg.tar.xz",
+    "sha256": "b981d39eaa65eab18192c174f2dfafe0cc2579a00d6defbc296cceed2e9a8517"
+  },
+  {
+    "name": "libasyncns",
+    "version": "1:0.8+r3+g68cd5af-3",
+    "size": 16156,
+    "installed_size": 89923,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libasyncns-1:0.8+r3+g68cd5af-3-aarch64.pkg.tar.xz",
+    "filename": "libasyncns-1:0.8+r3+g68cd5af-3-aarch64.pkg.tar.xz",
+    "sha256": "6a06c61c24a5e1c032a62fff088644ea78462c34b6efb2536076506142adba4a"
+  },
+  {
+    "name": "libpulse",
+    "version": "17.0+r134+g77d25a1e6-1",
+    "size": 346176,
+    "installed_size": 1851146,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libpulse-17.0+r134+g77d25a1e6-1-aarch64.pkg.tar.xz",
+    "filename": "libpulse-17.0+r134+g77d25a1e6-1-aarch64.pkg.tar.xz",
+    "sha256": "a1c1915ad1b5035732a5104d9f19621fba297bee36b72cf591988377bc962156"
+  },
+  {
+    "name": "portaudio",
+    "version": "1:19.7.0-4",
+    "size": 91772,
+    "installed_size": 370135,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/portaudio-1:19.7.0-4-aarch64.pkg.tar.xz",
+    "filename": "portaudio-1:19.7.0-4-aarch64.pkg.tar.xz",
+    "sha256": "01aeb9996f9d642008274c59c337b1c9f51e847d6106124752722bcae41bf911"
+  },
+  {
+    "name": "libopenmpt",
+    "version": "0.8.10-1",
+    "size": 1045732,
+    "installed_size": 3459661,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libopenmpt-0.8.10-1-aarch64.pkg.tar.xz",
+    "filename": "libopenmpt-0.8.10-1-aarch64.pkg.tar.xz",
+    "sha256": "770f2f68962b8eb8a3de70b1420610f25cc5b29b1afe516e2346ba98f25037e5"
+  },
+  {
+    "name": "vulkan-icd-loader",
+    "version": "1.4.363.0-1",
+    "size": 164352,
+    "installed_size": 796822,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vulkan-icd-loader-1.4.363.0-1-aarch64.pkg.tar.xz",
+    "filename": "vulkan-icd-loader-1.4.363.0-1-aarch64.pkg.tar.xz",
+    "sha256": "aac2d10b977d9a0e7f7e45a4dd0799aa0256f6df2a32baf8231cd027b342e993"
+  },
+  {
+    "name": "glslang",
+    "version": "1:1.4.363.0-1",
+    "size": 2137988,
+    "installed_size": 14186157,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/glslang-1:1.4.363.0-1-aarch64.pkg.tar.xz",
+    "filename": "glslang-1:1.4.363.0-1-aarch64.pkg.tar.xz",
+    "sha256": "fac61677cf91fce746bb96f4fabfe4042a4c32f1b4d9833acf00bb81f4300c11"
+  },
+  {
+    "name": "shaderc",
+    "version": "2026.4-1",
+    "size": 123840,
+    "installed_size": 816579,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/shaderc-2026.4-1-aarch64.pkg.tar.xz",
+    "filename": "shaderc-2026.4-1-aarch64.pkg.tar.xz",
+    "sha256": "1226fd6b06bb34a1805ce2ff88d439dab1bcaee3e20f3b2054d75336e7757697"
+  },
+  {
+    "name": "libdovi",
+    "version": "3.4.0-1",
+    "size": 239568,
+    "installed_size": 627731,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libdovi-3.4.0-1-aarch64.pkg.tar.xz",
+    "filename": "libdovi-3.4.0-1-aarch64.pkg.tar.xz",
+    "sha256": "5394d3887703918d344bb60ee30f747e14136d6d907a17e7d6a742a4fa6867bc"
+  },
+  {
+    "name": "xxhash",
+    "version": "0.8.4-1",
+    "size": 91556,
+    "installed_size": 488196,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xxhash-0.8.4-1-aarch64.pkg.tar.xz",
+    "filename": "xxhash-0.8.4-1-aarch64.pkg.tar.xz",
+    "sha256": "28a6488aca21b1ddf92475a08c95c45a80baf5c6ac51fdb7a225cf8ae074a1c6"
+  },
+  {
+    "name": "libplacebo",
+    "version": "7.360.1-7",
+    "size": 459504,
+    "installed_size": 1650098,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libplacebo-7.360.1-7-aarch64.pkg.tar.xz",
+    "filename": "libplacebo-7.360.1-7-aarch64.pkg.tar.xz",
+    "sha256": "9230c578b13612b2577b00434a44f8dd93b2cdf40ad097ea7cc9f95127f2443a"
+  },
+  {
+    "name": "bubblewrap",
+    "version": "0.13.1-1",
+    "size": 40528,
+    "installed_size": 148934,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/bubblewrap-0.13.1-1-aarch64.pkg.tar.xz",
+    "filename": "bubblewrap-0.13.1-1-aarch64.pkg.tar.xz",
+    "sha256": "d00ed77381839a07ba254c096242466c46aebe93e4f411842baf72fb24da5329"
+  },
+  {
+    "name": "glycin",
+    "version": "2.2.6-1",
+    "size": 3732328,
+    "installed_size": 17827934,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/glycin-2.2.6-1-aarch64.pkg.tar.xz",
+    "filename": "glycin-2.2.6-1-aarch64.pkg.tar.xz",
+    "sha256": "82cee6b0f7cb53eabf9529bc46b9ad213c196da40b1f8ca285389209132354fd"
+  },
+  {
+    "name": "gdk-pixbuf2",
+    "version": "2.44.8-1",
+    "size": 450220,
+    "installed_size": 3338242,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gdk-pixbuf2-2.44.8-1-aarch64.pkg.tar.xz",
+    "filename": "gdk-pixbuf2-2.44.8-1-aarch64.pkg.tar.xz",
+    "sha256": "3e8b614b8cab4b983129bfd0195673a45a485dc603a4b5b5d4dce7218f649082"
+  },
+  {
+    "name": "librsvg",
+    "version": "2:2.63.4-1",
+    "size": 2031796,
+    "installed_size": 10319711,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/librsvg-2:2.63.4-1-aarch64.pkg.tar.xz",
+    "filename": "librsvg-2:2.63.4-1-aarch64.pkg.tar.xz",
+    "sha256": "c58a784667137bf4dffdba44a9c4934ed48b90394c111d24fe460b5c56d13c0c"
+  },
+  {
+    "name": "libsoxr",
+    "version": "0.1.3-5",
+    "size": 59252,
+    "installed_size": 285337,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libsoxr-0.1.3-5-aarch64.pkg.tar.xz",
+    "filename": "libsoxr-0.1.3-5-aarch64.pkg.tar.xz",
+    "sha256": "c61e55285c17399b1fa70a35524b80049bc34bbc21c6f3e96537e01e7635e8e7"
+  },
+  {
+    "name": "libssh",
+    "version": "0.12.2-1",
+    "size": 233504,
+    "installed_size": 863179,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libssh-0.12.2-1-aarch64.pkg.tar.xz",
+    "filename": "libssh-0.12.2-1-aarch64.pkg.tar.xz",
+    "sha256": "7ffb12281aa0a78456124c6a7500f48b03ac6a97f86125a6986d76bdbd31b2f3"
+  },
+  {
+    "name": "libtheora",
+    "version": "1.2.0-1",
+    "size": 380664,
+    "installed_size": 2491498,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libtheora-1.2.0-1-aarch64.pkg.tar.xz",
+    "filename": "libtheora-1.2.0-1-aarch64.pkg.tar.xz",
+    "sha256": "cb43eaac20d6e338502147d328843299f37be6a3bb97afab57dc2afdfbdc102f"
+  },
+  {
+    "name": "libvdpau",
+    "version": "1.5-4",
+    "size": 58712,
+    "installed_size": 348429,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libvdpau-1.5-4-aarch64.pkg.tar.xz",
+    "filename": "libvdpau-1.5-4-aarch64.pkg.tar.xz",
+    "sha256": "661b2f9d9be5306c16368806b2df2044a404a8bbf9c58deeb0ecd88d8b309877"
+  },
+  {
+    "name": "libvpx",
+    "version": "1.17.0-1",
+    "size": 1377516,
+    "installed_size": 4105964,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libvpx-1.17.0-1-aarch64.pkg.tar.xz",
+    "filename": "libvpx-1.17.0-1-aarch64.pkg.tar.xz",
+    "sha256": "4ed1aac5b0e9c9d73ea6366b701f16034e1b634bfd07c4d935eae7ebf5fcb1a1"
+  },
+  {
+    "name": "ocl-icd",
+    "version": "2.3.5-1",
+    "size": 74732,
+    "installed_size": 630670,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ocl-icd-2.3.5-1-aarch64.pkg.tar.xz",
+    "filename": "ocl-icd-2.3.5-1-aarch64.pkg.tar.xz",
+    "sha256": "fd826f2eb9888ebddce07e89ef6069f4f10d2120ae2cf2e2d424b4c25ba88b60"
+  },
+  {
+    "name": "opencore-amr",
+    "version": "0.1.6-2",
+    "size": 136700,
+    "installed_size": 540956,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/opencore-amr-0.1.6-2-aarch64.pkg.tar.xz",
+    "filename": "opencore-amr-0.1.6-2-aarch64.pkg.tar.xz",
+    "sha256": "7a81ea01d12d4a83879204d8be2071d2417d21cced2ed8e076ab309a951ba98e"
+  },
+  {
+    "name": "openjpeg2",
+    "version": "2.5.4-1",
+    "size": 942812,
+    "installed_size": 14237374,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/openjpeg2-2.5.4-1-aarch64.pkg.tar.xz",
+    "filename": "openjpeg2-2.5.4-1-aarch64.pkg.tar.xz",
+    "sha256": "aa64049214538bcb2830415891af2d494dfdbb1b930b0f251da4f99acf231f47"
+  },
+  {
+    "name": "fftw",
+    "version": "3.3.11-1",
+    "size": 1505896,
+    "installed_size": 5352845,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/fftw-3.3.11-1-aarch64.pkg.tar.xz",
+    "filename": "fftw-3.3.11-1-aarch64.pkg.tar.xz",
+    "sha256": "0d6b54edd0e73ec3f0e1496d2261834cf98eae71b4489c64a0ef6e6509d2e9b9"
+  },
+  {
+    "name": "rubberband",
+    "version": "4.0.0-2",
+    "size": 212300,
+    "installed_size": 1810385,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/rubberband-4.0.0-2-aarch64.pkg.tar.xz",
+    "filename": "rubberband-4.0.0-2-aarch64.pkg.tar.xz",
+    "sha256": "22f46afe465016fef8e9e1738a38e3ee0b966cb19090b05b6d39155b12912b26"
+  },
+  {
+    "name": "hidapi",
+    "version": "0.15.0-1",
+    "size": 42400,
+    "installed_size": 213531,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/hidapi-0.15.0-1-aarch64.pkg.tar.xz",
+    "filename": "hidapi-0.15.0-1-aarch64.pkg.tar.xz",
+    "sha256": "3c29d538838d3cedfaee37291cc139ffe07e9a9cd8da1c24ed8e58da5febd670"
+  },
+  {
+    "name": "sdl3",
+    "version": "3.4.18-1",
+    "size": 1501052,
+    "installed_size": 7426315,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/sdl3-3.4.18-1-aarch64.pkg.tar.xz",
+    "filename": "sdl3-3.4.18-1-aarch64.pkg.tar.xz",
+    "sha256": "eab78f77c8c0705db42fc8f04d685020c710cd04b6785c6b31b5a1d94aa93487"
+  },
+  {
+    "name": "sdl2-compat",
+    "version": "2.32.74-1",
+    "size": 457812,
+    "installed_size": 3307449,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/sdl2-compat-2.32.74-1-aarch64.pkg.tar.xz",
+    "filename": "sdl2-compat-2.32.74-1-aarch64.pkg.tar.xz",
+    "sha256": "11fc30912191f981b10710b4327c4ee25ca429745a08310142b0e94bb1083684"
+  },
+  {
+    "name": "snappy",
+    "version": "1.3.1-1",
+    "size": 35280,
+    "installed_size": 113214,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/snappy-1.3.1-1-aarch64.pkg.tar.xz",
+    "filename": "snappy-1.3.1-1-aarch64.pkg.tar.xz",
+    "sha256": "06292a50b1d4874b7ce1f0ae6910447f66ea6d48d5bd68eaec43beb372c99ae1"
+  },
+  {
+    "name": "libmd",
+    "version": "1.3.0-1",
+    "size": 54364,
+    "installed_size": 125053,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libmd-1.3.0-1-aarch64.pkg.tar.xz",
+    "filename": "libmd-1.3.0-1-aarch64.pkg.tar.xz",
+    "sha256": "e2f1090d6e3401da5655ac553398bd47338c4c6e39ac0ed684a9b4f33707354b"
+  },
+  {
+    "name": "libbsd",
+    "version": "0.12.2-2",
+    "size": 164028,
+    "installed_size": 343759,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libbsd-0.12.2-2-aarch64.pkg.tar.xz",
+    "filename": "libbsd-0.12.2-2-aarch64.pkg.tar.xz",
+    "sha256": "3d47f2e64ab9c2dfbdc5791ad7db237ed3c9708ad80718c26f4b850cf2b69238"
+  },
+  {
+    "name": "sndio",
+    "version": "1.10.0-1",
+    "size": 121920,
+    "installed_size": 440312,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/sndio-1.10.0-1-aarch64.pkg.tar.xz",
+    "filename": "sndio-1.10.0-1-aarch64.pkg.tar.xz",
+    "sha256": "89d0daf0976681633039f0354eccc5b379e93ead2c78aae247f9adf59e2b378e"
+  },
+  {
+    "name": "speexdsp",
+    "version": "1.2.1-3",
+    "size": 456100,
+    "installed_size": 615502,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/speexdsp-1.2.1-3-aarch64.pkg.tar.xz",
+    "filename": "speexdsp-1.2.1-3-aarch64.pkg.tar.xz",
+    "sha256": "474d8d6785c920004585c9d37d06264efcdce3d87b48b952e9c20f9f4d180c03"
+  },
+  {
+    "name": "speex",
+    "version": "1.2.1-3",
+    "size": 487604,
+    "installed_size": 754395,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/speex-1.2.1-3-aarch64.pkg.tar.xz",
+    "filename": "speex-1.2.1-3-aarch64.pkg.tar.xz",
+    "sha256": "b4676f1956136934d860abe050a792cca399554261e7f6bd89e5a222348afee6"
+  },
+  {
+    "name": "srt",
+    "version": "1.5.7-2",
+    "size": 477532,
+    "installed_size": 2111653,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/srt-1.5.7-2-aarch64.pkg.tar.xz",
+    "filename": "srt-1.5.7-2-aarch64.pkg.tar.xz",
+    "sha256": "e8758db0b9ca7f729f2c9a101f71805cfc37c77eed01e74eafcf5c89c4469007"
+  },
+  {
+    "name": "hicolor-icon-theme",
+    "version": "0.18-1",
+    "size": 12320,
+    "installed_size": 55627,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/hicolor-icon-theme-0.18-1-any.pkg.tar.xz",
+    "filename": "hicolor-icon-theme-0.18-1-any.pkg.tar.xz",
+    "sha256": "cdba2a3dba1dc73a10a1e2a4ac0da06deafa92ac243d81e127a1fcdafbe4a588"
+  },
+  {
+    "name": "v4l-utils",
+    "version": "1.32.0-2",
+    "size": 1901776,
+    "installed_size": 14369576,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/v4l-utils-1.32.0-2-aarch64.pkg.tar.xz",
+    "filename": "v4l-utils-1.32.0-2-aarch64.pkg.tar.xz",
+    "sha256": "fa268be75a81fc55a69b03e53376997e82c738d5629d884f7d342e664033d607"
+  },
+  {
+    "name": "zimg",
+    "version": "3.0.6-2",
+    "size": 115668,
+    "installed_size": 401140,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/zimg-3.0.6-2-aarch64.pkg.tar.xz",
+    "filename": "zimg-3.0.6-2-aarch64.pkg.tar.xz",
+    "sha256": "787c6dc29872e3cb900d51f90bfa1e7bfd069d8f91a4ea7e2b57740b71e381f7"
+  },
+  {
+    "name": "mpdecimal",
+    "version": "4.0.1-3",
+    "size": 93808,
+    "installed_size": 363519,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/mpdecimal-4.0.1-3-aarch64.pkg.tar.xz",
+    "filename": "mpdecimal-4.0.1-3-aarch64.pkg.tar.xz",
+    "sha256": "388611eba7f9b0dddcc03adb4f28bcb8fd2c42fbd8c930ca6b9b0f9e4ece0f1e"
+  },
+  {
+    "name": "python",
+    "version": "3.14.9-1",
+    "size": 13635560,
+    "installed_size": 82466569,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/python-3.14.9-1-aarch64.pkg.tar.xz",
+    "filename": "python-3.14.9-1-aarch64.pkg.tar.xz",
+    "sha256": "6546b1488434619a68ea3a0b6cb16a9d578b029b120bc2c0b82491bcc273dcb8"
+  },
+  {
+    "name": "vapoursynth",
+    "version": "81-1",
+    "size": 1646632,
+    "installed_size": 6054527,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vapoursynth-81-1-aarch64.pkg.tar.xz",
+    "filename": "vapoursynth-81-1-aarch64.pkg.tar.xz",
+    "sha256": "ed98272865ca1f0e23f4c175e19d74fc98bad9bf936fcdf3d3fd2a31e6b5fee6"
+  },
+  {
+    "name": "vid.stab",
+    "version": "1.1.2-1",
+    "size": 90116,
+    "installed_size": 595552,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/vid.stab-1.1.2-1-aarch64.pkg.tar.xz",
+    "filename": "vid.stab-1.1.2-1-aarch64.pkg.tar.xz",
+    "sha256": "bd6c00bc0742368ee778c7c8df002f355c352015bb4f428cada649f3e314f416"
+  },
+  {
+    "name": "l-smash",
+    "version": "2.14.5-4",
+    "size": 292012,
+    "installed_size": 1231826,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/l-smash-2.14.5-4-aarch64.pkg.tar.xz",
+    "filename": "l-smash-2.14.5-4-aarch64.pkg.tar.xz",
+    "sha256": "a531dfd5c54afa31c9cc0f4b6969e7633774345db0b9e39dd8e302327d101165"
+  },
+  {
+    "name": "x264",
+    "version": "3:0.165.r3222.b35605a-2",
+    "size": 569292,
+    "installed_size": 3076572,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/x264-3:0.165.r3222.b35605a-2-aarch64.pkg.tar.xz",
+    "filename": "x264-3:0.165.r3222.b35605a-2-aarch64.pkg.tar.xz",
+    "sha256": "ef95679c4ecf842fd08d1e49c61977c39fb38f0c2c67384130e9aba860229f70"
+  },
+  {
+    "name": "x265",
+    "version": "4.3-1",
+    "size": 1254356,
+    "installed_size": 4260824,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/x265-4.3-1-aarch64.pkg.tar.xz",
+    "filename": "x265-4.3-1-aarch64.pkg.tar.xz",
+    "sha256": "dbdde57f05a0c77eaa5fe5e74edba74b19c072cd98350ea1d7ae8a8f50089898"
+  },
+  {
+    "name": "xvidcore",
+    "version": "1.3.7-4",
+    "size": 162680,
+    "installed_size": 496057,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xvidcore-1.3.7-4-aarch64.pkg.tar.xz",
+    "filename": "xvidcore-1.3.7-4-aarch64.pkg.tar.xz",
+    "sha256": "3a502aa526a48dc0e98744ad6bd91e777fc6d97866412e8558feb4663093045c"
+  },
+  {
+    "name": "libsodium",
+    "version": "1.0.22-1",
+    "size": 162092,
+    "installed_size": 586922,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libsodium-1.0.22-1-aarch64.pkg.tar.xz",
+    "filename": "libsodium-1.0.22-1-aarch64.pkg.tar.xz",
+    "sha256": "0df84ee0659a06e2c192c72782484a0a6402535178f4ee867bfcb636cf2ebab2"
+  },
+  {
+    "name": "libpgm",
+    "version": "5.3.128-4",
+    "size": 164780,
+    "installed_size": 411083,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libpgm-5.3.128-4-aarch64.pkg.tar.xz",
+    "filename": "libpgm-5.3.128-4-aarch64.pkg.tar.xz",
+    "sha256": "9bfc588e91f3c68639538c6eec8bd50905095fb7a480392ec69503b4f7b57009"
+  },
+  {
+    "name": "zeromq",
+    "version": "4.3.5-3",
+    "size": 534876,
+    "installed_size": 3678432,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/zeromq-4.3.5-3-aarch64.pkg.tar.xz",
+    "filename": "zeromq-4.3.5-3-aarch64.pkg.tar.xz",
+    "sha256": "ae6e65b77c02fcec6b566209f02f0effd527234934b8fbc6042acba7619d9c71"
+  },
+  {
+    "name": "ffmpeg",
+    "version": "2:9.0.2-2",
+    "size": 13338768,
+    "installed_size": 44898925,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ffmpeg-2:9.0.2-2-aarch64.pkg.tar.xz",
+    "filename": "ffmpeg-2:9.0.2-2-aarch64.pkg.tar.xz",
+    "sha256": "086828ab8ceb02bcc94fcaf8cecfe3e78c62f3b7c41026e5b712dff57992c832"
+  },
+  {
+    "name": "karchive",
+    "version": "6.31.0-1",
+    "size": 183488,
+    "installed_size": 920942,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/karchive-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "karchive-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "c752e1ebff9aeaf023248d78efb05d293afbc27a847bea62599a01f669bd53c2"
+  },
+  {
+    "name": "kcodecs",
+    "version": "6.31.0-1",
+    "size": 201848,
+    "installed_size": 951779,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kcodecs-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kcodecs-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "0821fc0a39ba850d38190f968b9ab76fd2a71e5df6745d565277a842784ffd6d"
+  },
+  {
+    "name": "ki18n",
+    "version": "6.31.0-1",
+    "size": 1514348,
+    "installed_size": 18852133,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ki18n-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "ki18n-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "105d2eacc616bde8541e48386d8e76eb81707666353d5547720ad825e0974108"
+  },
+  {
+    "name": "nspr",
+    "version": "4.40-1",
+    "size": 188124,
+    "installed_size": 924849,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/nspr-4.40-1-aarch64.pkg.tar.xz",
+    "filename": "nspr-4.40-1-aarch64.pkg.tar.xz",
+    "sha256": "49a71ff0951c6596b66848381f89273d8c40166731561f716c592c9899b2af30"
+  },
+  {
+    "name": "nss",
+    "version": "3.133-1",
+    "size": 1557060,
+    "installed_size": 6991407,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/nss-3.133-1-aarch64.pkg.tar.xz",
+    "filename": "nss-3.133-1-aarch64.pkg.tar.xz",
+    "sha256": "d90dedad8a704dc0205ddc05e8e022b08b441d99a8a462ca4e6484feb154f315"
+  },
+  {
+    "name": "gpgmepp",
+    "version": "2.2.0-1",
+    "size": 151332,
+    "installed_size": 708979,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gpgmepp-2.2.0-1-aarch64.pkg.tar.xz",
+    "filename": "gpgmepp-2.2.0-1-aarch64.pkg.tar.xz",
+    "sha256": "e2e058b9eb3fdf64e3be23be25a0959af815bf919b714252017bef600e6bf2cb"
+  },
+  {
+    "name": "poppler",
+    "version": "26.10.0-2",
+    "size": 1652364,
+    "installed_size": 8229962,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/poppler-26.10.0-2-aarch64.pkg.tar.xz",
+    "filename": "poppler-26.10.0-2-aarch64.pkg.tar.xz",
+    "sha256": "acde57d57d59f5435e83fbde3cdd1f29f6c9759cfefbcc7b4676214571e8c79d"
+  },
+  {
+    "name": "poppler-qt6",
+    "version": "26.10.0-2",
+    "size": 238100,
+    "installed_size": 971057,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/poppler-qt6-26.10.0-2-aarch64.pkg.tar.xz",
+    "filename": "poppler-qt6-26.10.0-2-aarch64.pkg.tar.xz",
+    "sha256": "c0919e1e6f4b7470c7a18bc1aeecf2ac1b5c964d9a8cf1544909a6c2dca0507e"
+  },
+  {
+    "name": "taglib",
+    "version": "2.3.2-1",
+    "size": 511372,
+    "installed_size": 2812086,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/taglib-2.3.2-1-aarch64.pkg.tar.xz",
+    "filename": "taglib-2.3.2-1-aarch64.pkg.tar.xz",
+    "sha256": "923bbf78d57a2d724565055b425b3dba576bd7f5835e60377ecdf14d286ed430"
+  },
+  {
+    "name": "kfilemetadata",
+    "version": "6.31.0-1",
+    "size": 249476,
+    "installed_size": 2249334,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kfilemetadata-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kfilemetadata-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "de7d2f45fb13a72093f4f4ba38a70aeb891279a95c160377d0c838a9bbb35fe5"
+  },
+  {
+    "name": "kidletime",
+    "version": "6.31.0-1",
+    "size": 60600,
+    "installed_size": 425535,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kidletime-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kidletime-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "97c5b9ae61ec30ae4f32fae7b61749c2030cfd1a75b57e020b18172f5a317fc2"
+  },
+  {
+    "name": "kwidgetsaddons",
+    "version": "6.31.0-1",
+    "size": 2095272,
+    "installed_size": 8889847,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kwidgetsaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kwidgetsaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "4a3f5951b6e5d14527a2618c27858591a8697945bf0d816664c78d7f031de2e3"
+  },
+  {
+    "name": "kbookmarks",
+    "version": "6.31.0-1",
+    "size": 121464,
+    "installed_size": 585976,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kbookmarks-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kbookmarks-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "ce73f16ecec5634ff5a5761aa003fb224fe517ef4d92fce54b5a883b54a15216"
+  },
+  {
+    "name": "kguiaddons",
+    "version": "6.31.0-1",
+    "size": 212548,
+    "installed_size": 1095392,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kguiaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kguiaddons-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "84f9a228d0831acf4586e17d7d2aec6b302ba0655c25556089db8a51797affbe"
+  },
+  {
+    "name": "kcolorscheme",
+    "version": "6.31.0-1",
+    "size": 51944,
+    "installed_size": 203259,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kcolorscheme-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kcolorscheme-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "0fcc3299f75a4dbaed23d66857dd1e54f36cdb7e8c6acc35628dce41439d9a49"
+  },
+  {
+    "name": "kcompletion",
+    "version": "6.31.0-1",
+    "size": 126100,
+    "installed_size": 545146,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kcompletion-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kcompletion-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "3d32305ab61c547dc363b2e9c0d050e5360c6ef7fb4cb603cefdb53f1baca0a1"
+  },
+  {
+    "name": "breeze-icons",
+    "version": "6.31.0-1",
+    "size": 10636168,
+    "installed_size": 60111305,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/breeze-icons-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "breeze-icons-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "b252ef02395621b5891d72c5f7fccd1a1ead1ce770886e9fced4bf21e1130096"
+  },
+  {
+    "name": "qt6-svg",
+    "version": "6.12.0-1",
+    "size": 266844,
+    "installed_size": 1195628,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-svg-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-svg-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "cd03acc2075a19cbfae8ae982954fcc92846855cb9e30ed04e90523f7fcc7cb3"
+  },
+  {
+    "name": "kiconthemes",
+    "version": "6.31.0-1",
+    "size": 163340,
+    "installed_size": 887092,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kiconthemes-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kiconthemes-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "bc945067796f5d987472dd3f868eace290ef7f52f8cacce3119d515803c6a87c"
+  },
+  {
+    "name": "kitemviews",
+    "version": "6.31.0-1",
+    "size": 121652,
+    "installed_size": 474807,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kitemviews-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kitemviews-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "15bdde54aed24ffc745671d93fb619be08dc740974f2546778557e8ab9a78358"
+  },
+  {
+    "name": "libtool",
+    "version": "2.6.0+r23+gb08cb0a0-1",
+    "size": 431772,
+    "installed_size": 2472810,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/libtool-2.6.0+r23+gb08cb0a0-1-aarch64.pkg.tar.xz",
+    "filename": "libtool-2.6.0+r23+gb08cb0a0-1-aarch64.pkg.tar.xz",
+    "sha256": "064e9d5e1dcd6840943e87964ea233694e9911d281e1747b6c7f885199dcaa86"
+  },
+  {
+    "name": "tdb",
+    "version": "1.4.15-2",
+    "size": 72628,
+    "installed_size": 517953,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/tdb-1.4.15-2-aarch64.pkg.tar.xz",
+    "filename": "tdb-1.4.15-2-aarch64.pkg.tar.xz",
+    "sha256": "950900d8b4462bf0faf0e701f0c35a95cd23f49f8221244381aee457a05f0dd3"
+  },
+  {
+    "name": "sound-theme-freedesktop",
+    "version": "0.8-6",
+    "size": 377020,
+    "installed_size": 472275,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/sound-theme-freedesktop-0.8-6-any.pkg.tar.xz",
+    "filename": "sound-theme-freedesktop-0.8-6-any.pkg.tar.xz",
+    "sha256": "00e9d7c2aa6c5346066abc350c91a1b8b6c0a0d57a6fd825d9916198fdea92c8"
+  },
+  {
+    "name": "libcanberra",
+    "version": "1:0.30+r2+gc0620e4-6",
+    "size": 78964,
+    "installed_size": 826265,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libcanberra-1:0.30+r2+gc0620e4-6-aarch64.pkg.tar.xz",
+    "filename": "libcanberra-1:0.30+r2+gc0620e4-6-aarch64.pkg.tar.xz",
+    "sha256": "7ffd54a1466c6b8d9feba119c4dbb2fc87d7b1bf6f15ea10f2dd57e15c679839"
+  },
+  {
+    "name": "knotifications",
+    "version": "6.31.0-1",
+    "size": 139888,
+    "installed_size": 666339,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/knotifications-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "knotifications-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "d9e98d6938597385a362ffdd9d40b703c7d552b2288bef96111a0ea48f2795ba"
+  },
+  {
+    "name": "kjobwidgets",
+    "version": "6.31.0-1",
+    "size": 1861232,
+    "installed_size": 7866381,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kjobwidgets-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kjobwidgets-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "244303b02090c0de1a7e92c40684cc41eb6c2f9f4ba50e832e7157f364bc596e"
+  },
+  {
+    "name": "kservice",
+    "version": "6.31.0-1",
+    "size": 236636,
+    "installed_size": 884834,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kservice-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kservice-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "9345171368a8618134949bdffd0d88f90112f64e0171b0bc0229adc8aab98aa0"
+  },
+  {
+    "name": "kwindowsystem",
+    "version": "6.31.0-1",
+    "size": 243628,
+    "installed_size": 1241110,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kwindowsystem-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kwindowsystem-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "df297b9f47c07664f54525b01a3c980dac18b213945b0df215eedbedd31ecd85"
+  },
+  {
+    "name": "qt6-shadertools",
+    "version": "6.12.0-1",
+    "size": 1621928,
+    "installed_size": 6493612,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-shadertools-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-shadertools-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "d06d62e5e98e7d16f062387b17176962df5b09941f7f11f3cfc4a99150578bc8"
+  },
+  {
+    "name": "qt6-5compat",
+    "version": "6.12.0-1",
+    "size": 521852,
+    "installed_size": 2821548,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-5compat-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-5compat-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "4ddd2d43878105265fa546cde58495a87c09a62a600ad6ca6ab95a29f3850fa8"
+  },
+  {
+    "name": "qca-qt6",
+    "version": "2.3.12-1",
+    "size": 792852,
+    "installed_size": 4316195,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qca-qt6-2.3.12-1-aarch64.pkg.tar.xz",
+    "filename": "qca-qt6-2.3.12-1-aarch64.pkg.tar.xz",
+    "sha256": "ba31bdbc778ce1b1e4de3a0d63358e00e4818e7ac6d74906fb732832e259428d"
+  },
+  {
+    "name": "kwallet",
+    "version": "6.31.0-1",
+    "size": 536180,
+    "installed_size": 2875483,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kwallet-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kwallet-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "1cf41863dba09afb4d2c0292688d7ebca591ff5ec0306668958b51e842368d07"
+  },
+  {
+    "name": "libxslt",
+    "version": "1.1.45-2",
+    "size": 189964,
+    "installed_size": 972877,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxslt-1.1.45-2-aarch64.pkg.tar.xz",
+    "filename": "libxslt-1.1.45-2-aarch64.pkg.tar.xz",
+    "sha256": "dd508d0060063ed5d833001a125d6b427c8a623d669758c44ac10cc84a92392f"
+  },
+  {
+    "name": "libplist",
+    "version": "2.7.0-3",
+    "size": 146200,
+    "installed_size": 758213,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libplist-2.7.0-3-aarch64.pkg.tar.xz",
+    "filename": "libplist-2.7.0-3-aarch64.pkg.tar.xz",
+    "sha256": "d7dad53d8d174bdd6556dc6d8e60f3b49b2ee8749e39aef2642f6400bf1929a9"
+  },
+  {
+    "name": "libimobiledevice-glue",
+    "version": "1.3.2-1",
+    "size": 35000,
+    "installed_size": 158645,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libimobiledevice-glue-1.3.2-1-aarch64.pkg.tar.xz",
+    "filename": "libimobiledevice-glue-1.3.2-1-aarch64.pkg.tar.xz",
+    "sha256": "5f03793e06638133338af1d4358355625e2133bcfe9ef8070d62a8413d3fc054"
+  },
+  {
+    "name": "libtatsu",
+    "version": "1.0.5-1",
+    "size": 17988,
+    "installed_size": 72833,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libtatsu-1.0.5-1-aarch64.pkg.tar.xz",
+    "filename": "libtatsu-1.0.5-1-aarch64.pkg.tar.xz",
+    "sha256": "48ad83e9ccb9df49d50731342b4823a8ef106a009cb2406ea2f653b231465c26"
+  },
+  {
+    "name": "libusbmuxd",
+    "version": "2.1.1-2",
+    "size": 27392,
+    "installed_size": 220337,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libusbmuxd-2.1.1-2-aarch64.pkg.tar.xz",
+    "filename": "libusbmuxd-2.1.1-2-aarch64.pkg.tar.xz",
+    "sha256": "58573294f2f250cd230f383897a9d41cd6cf3b48fda601f9af14455c4eae6d65"
+  },
+  {
+    "name": "libimobiledevice",
+    "version": "1.4.0-2",
+    "size": 630616,
+    "installed_size": 7544184,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libimobiledevice-1.4.0-2-aarch64.pkg.tar.xz",
+    "filename": "libimobiledevice-1.4.0-2-aarch64.pkg.tar.xz",
+    "sha256": "d3430b5f125168a47de50519905d9d203195f4fc4beb79268549f1b7447adff2"
+  },
+  {
+    "name": "media-player-info",
+    "version": "26-1",
+    "size": 33376,
+    "installed_size": 183512,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/media-player-info-26-1-any.pkg.tar.xz",
+    "filename": "media-player-info-26-1-any.pkg.tar.xz",
+    "sha256": "cda4dc89ecc58ed637ce067d14863a6aff1cc52f64e1dcdd427514d27e401270"
+  },
+  {
+    "name": "libblockdev",
+    "version": "3.5.0-2",
+    "size": 257396,
+    "installed_size": 3860136,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "199ae6e22c55d1c621ccbdf175d59a7c1933b16b00c77203d854570836d23a59"
+  },
+  {
+    "name": "volume_key",
+    "version": "0.3.12-12",
+    "size": 123192,
+    "installed_size": 789165,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/volume_key-0.3.12-12-aarch64.pkg.tar.xz",
+    "filename": "volume_key-0.3.12-12-aarch64.pkg.tar.xz",
+    "sha256": "0effd7c5a0b829498e8f8c0e45f238fb01338e29dd7880e52e2ccb423d8cb642"
+  },
+  {
+    "name": "libblockdev-crypto",
+    "version": "3.5.0-2",
+    "size": 24268,
+    "installed_size": 84071,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-crypto-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-crypto-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "531d6003ed1ada001dbe2ab2b97dacf8cb879bac51ff2ad7e1cb6b470c65ee6a"
+  },
+  {
+    "name": "libbytesize",
+    "version": "2.12-3",
+    "size": 23864,
+    "installed_size": 131530,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libbytesize-2.12-3-aarch64.pkg.tar.xz",
+    "filename": "libbytesize-2.12-3-aarch64.pkg.tar.xz",
+    "sha256": "33178b35d92c0398c30c51f866c3d5ef585cc9fecc54eb8e2f4a7d85fcb08b67"
+  },
+  {
+    "name": "parted",
+    "version": "3.8-1",
+    "size": 558744,
+    "installed_size": 3036504,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/parted-3.8-1-aarch64.pkg.tar.xz",
+    "filename": "parted-3.8-1-aarch64.pkg.tar.xz",
+    "sha256": "744a72b536094518d5408208b952eb92cf445d5137f95d589a2404d47a53d085"
+  },
+  {
+    "name": "libblockdev-fs",
+    "version": "3.5.0-2",
+    "size": 41520,
+    "installed_size": 220022,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-fs-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-fs-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "b9fe4f2aa2f1d13cfd5b4f6e58706cca8ad2811b66223a45c6797a4bfcd6b964"
+  },
+  {
+    "name": "mdadm",
+    "version": "4.6-2",
+    "size": 382972,
+    "installed_size": 1393842,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/mdadm-4.6-2-aarch64.pkg.tar.xz",
+    "filename": "mdadm-4.6-2-aarch64.pkg.tar.xz",
+    "sha256": "a165c0279e845c03b7b20fcf67d88050d770c2ab15754b0a48728f3631f7f43e"
+  },
+  {
+    "name": "libblockdev-mdraid",
+    "version": "3.5.0-2",
+    "size": 16012,
+    "installed_size": 71598,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-mdraid-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-mdraid-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "110ae16f67194e4ef5d4f4495465c55713a70b4adb5e5ac342cae7853b39ec83"
+  },
+  {
+    "name": "libblockdev-loop",
+    "version": "3.5.0-2",
+    "size": 8944,
+    "installed_size": 69850,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-loop-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-loop-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "89761362aca9110443d274b9be600d67fc298627892fb895cbbfcbc8c1fc7e35"
+  },
+  {
+    "name": "libnvme",
+    "version": "1.16.2-2",
+    "size": 284860,
+    "installed_size": 1960393,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libnvme-1.16.2-2-aarch64.pkg.tar.xz",
+    "filename": "libnvme-1.16.2-2-aarch64.pkg.tar.xz",
+    "sha256": "564e3bec1adb6d370d7f44b86e75db981cb64ebccdf9b708b0fa44f9f2d4f77c"
+  },
+  {
+    "name": "libblockdev-nvme",
+    "version": "3.5.0-2",
+    "size": 26688,
+    "installed_size": 105009,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-nvme-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-nvme-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "75ac46abf9bbeb332faae5f2b0647807b72510bc40035a08db347b467b1d8ae4"
+  },
+  {
+    "name": "libblockdev-part",
+    "version": "3.5.0-2",
+    "size": 17584,
+    "installed_size": 71704,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-part-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-part-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "6795401e58344230a74f0982564d2d822362aad65b48fe7486213730c368d0b6"
+  },
+  {
+    "name": "libatasmart",
+    "version": "0.19-8",
+    "size": 28316,
+    "installed_size": 220856,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libatasmart-0.19-8-aarch64.pkg.tar.xz",
+    "filename": "libatasmart-0.19-8-aarch64.pkg.tar.xz",
+    "sha256": "0c66ed04a747d3baf281f00b2b341e1d41624422509203666fe961326ef4039d"
+  },
+  {
+    "name": "libblockdev-smart",
+    "version": "3.5.0-2",
+    "size": 26292,
+    "installed_size": 163920,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-smart-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-smart-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "5c2534e5e986054e915b2dd64fa3aab9373d573c5a453e4def7ac71fb37a34a1"
+  },
+  {
+    "name": "libblockdev-swap",
+    "version": "3.5.0-2",
+    "size": 10988,
+    "installed_size": 69619,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblockdev-swap-3.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "libblockdev-swap-3.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "9ff8297c040f57655b1c435af794224ac30cfefec50ef2a01ad2c734933a1c88"
+  },
+  {
+    "name": "udisks2",
+    "version": "2.11.2-1",
+    "size": 726396,
+    "installed_size": 8603894,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/udisks2-2.11.2-1-aarch64.pkg.tar.xz",
+    "filename": "udisks2-2.11.2-1-aarch64.pkg.tar.xz",
+    "sha256": "5b8b98acd55ceadbbed31813c90c8aa8c6773b32b2c52142888d09c81df94252"
+  },
+  {
+    "name": "upower",
+    "version": "1.91.5-1",
+    "size": 162344,
+    "installed_size": 1072786,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/upower-1.91.5-1-aarch64.pkg.tar.xz",
+    "filename": "upower-1.91.5-1-aarch64.pkg.tar.xz",
+    "sha256": "db4e9d6308519f5f04be2d50fae4653d544c4b1daaefce3131c105e167bd3101"
+  },
+  {
+    "name": "solid",
+    "version": "6.31.0-1",
+    "size": 461948,
+    "installed_size": 2674624,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/solid-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "solid-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "8e036fe6bbf2148f9603f444a71bf616a660c03f2c700f6acb67d65edc3d6e5a"
+  },
+  {
+    "name": "kio",
+    "version": "6.31.0-1",
+    "size": 3710156,
+    "installed_size": 22720685,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kio-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kio-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "f04685497ea579031f336951c1c6d412cd8c9054d0d4f9c9dcbd5bf082eca673"
+  },
+  {
+    "name": "baloo",
+    "version": "6.31.0-2",
+    "size": 528380,
+    "installed_size": 3175477,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/baloo-6.31.0-2-aarch64.pkg.tar.xz",
+    "filename": "baloo-6.31.0-2-aarch64.pkg.tar.xz",
+    "sha256": "ce0849e4aa610292f3c3c323cdc5d4d7e1070accf1372d62bebf0390ee72bc36"
+  },
+  {
+    "name": "noto-fonts-emoji",
+    "version": "1:20260924-1",
+    "size": 9639112,
+    "installed_size": 10734454,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/noto-fonts-emoji-1:20260924-1-any.pkg.tar.xz",
+    "filename": "noto-fonts-emoji-1:20260924-1-any.pkg.tar.xz",
+    "sha256": "4005f07053a47e243a37544de34d2901d0a3e929b9ad16510385aef47409112b"
+  },
+  {
+    "name": "kconfigwidgets",
+    "version": "6.31.0-1",
+    "size": 330800,
+    "installed_size": 1563795,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kconfigwidgets-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kconfigwidgets-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "05f8e2429e88038a692955060ed4e5a2ac2cc90063bc3a556de6d55843466f14"
+  },
+  {
+    "name": "kirigami",
+    "version": "6.31.0-1",
+    "size": 1320468,
+    "installed_size": 8927719,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kirigami-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kirigami-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "6b5f9af411f0f0597da53b3a2b1142308a71a278c377a0eaf7605960a293c7a6"
+  },
+  {
+    "name": "kglobalaccel",
+    "version": "6.31.0-1",
+    "size": 94380,
+    "installed_size": 356849,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kglobalaccel-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kglobalaccel-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "98b3233fa911e5678ad04c73e2e43e9ba52093d0ad4047d9cc18606a3ec06cec"
+  },
+  {
+    "name": "kxmlgui",
+    "version": "6.31.0-1",
+    "size": 770748,
+    "installed_size": 4404030,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kxmlgui-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kxmlgui-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "6e0f3b2380a11feeae6c9a351440da26328a04f2fb91cc78172fd77aab4b0f82"
+  },
+  {
+    "name": "kcmutils",
+    "version": "6.31.0-1",
+    "size": 307908,
+    "installed_size": 1676770,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kcmutils-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kcmutils-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "0c4b78c1df441502e23c5645699a71a81c21dd0c37771e3b6951c3bbc0bf3251"
+  },
+  {
+    "name": "kdeclarative",
+    "version": "6.31.0-1",
+    "size": 190668,
+    "installed_size": 1081435,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kdeclarative-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kdeclarative-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "53cfb1886520a1afe9a5fc15943aeb83dcec0050d4c9f660bc311314593e7d81"
+  },
+  {
+    "name": "kitemmodels",
+    "version": "6.31.0-1",
+    "size": 148140,
+    "installed_size": 639970,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kitemmodels-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kitemmodels-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "041fddd08dab53b64c1cff3b0e35280296b193923cfa1d161091da0568683194"
+  },
+  {
+    "name": "ksvg",
+    "version": "6.31.0-1",
+    "size": 148852,
+    "installed_size": 704216,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ksvg-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "ksvg-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "aba430fe1150e0c0235b4f006ceba1e0bffce327cd58231f4c7d9466f2b188c0"
+  },
+  {
+    "name": "libpipewire",
+    "version": "1:1.6.10-1",
+    "size": 1368084,
+    "installed_size": 7969132,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libpipewire-1:1.6.10-1-aarch64.pkg.tar.xz",
+    "filename": "libpipewire-1:1.6.10-1-aarch64.pkg.tar.xz",
+    "sha256": "81b9aba4a660f366f958ddeb60d3079a6808be4274fcc7a7f34389599ed871b6"
+  },
+  {
+    "name": "pipewire",
+    "version": "1:1.6.10-1",
+    "size": 263020,
+    "installed_size": 2033399,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/pipewire-1:1.6.10-1-aarch64.pkg.tar.xz",
+    "filename": "pipewire-1:1.6.10-1-aarch64.pkg.tar.xz",
+    "sha256": "dd950783694d7f92dcee6b6dd5987aa3061eb0bffd2350fe3fa0cb8a26ed64be"
+  },
+  {
+    "name": "libxrandr",
+    "version": "1.5.5-1",
+    "size": 25596,
+    "installed_size": 93471,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxrandr-1.5.5-1-aarch64.pkg.tar.xz",
+    "filename": "libxrandr-1.5.5-1-aarch64.pkg.tar.xz",
+    "sha256": "50ced1a5945e325ef28fd4a5f9ee3e45e49f538841271f49326916576213a5f3"
+  },
+  {
+    "name": "qt6-multimedia-ffmpeg",
+    "version": "6.12.0-1",
+    "size": 505960,
+    "installed_size": 3822027,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-multimedia-ffmpeg-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-multimedia-ffmpeg-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "03648c191e265fb085eb5c1e23800540611939a41e8f26195060bae7f6e308a9"
+  },
+  {
+    "name": "qt6-multimedia",
+    "version": "6.12.0-1",
+    "size": 1282316,
+    "installed_size": 8523060,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-multimedia-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-multimedia-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "e6b090815abc7777b2949ba5dcaa2e6eca5f3ef265fa8bf2fd33ff7e94701338"
+  },
+  {
+    "name": "sonnet",
+    "version": "6.31.0-1",
+    "size": 376816,
+    "installed_size": 2040707,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/sonnet-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "sonnet-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "d89433fa3110185b15d5a0b74e87774b89d70b006f291ea8e7acb62762d77e39"
+  },
+  {
+    "name": "kirigami-addons",
+    "version": "1.16.1-1",
+    "size": 2447736,
+    "installed_size": 11063292,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kirigami-addons-1.16.1-1-aarch64.pkg.tar.xz",
+    "filename": "kirigami-addons-1.16.1-1-aarch64.pkg.tar.xz",
+    "sha256": "aaac56fd2f855bca90bc7355c1595629b33f87a7a23c215ba1b49e952ca0d771"
+  },
+  {
+    "name": "kmenuedit",
+    "version": "6.8.2-1",
+    "size": 1047580,
+    "installed_size": 2143355,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kmenuedit-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kmenuedit-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "4713534305fb4affa18eb1f82fdefd7d64db315937f2f49f809baac27fb43d5a"
+  },
+  {
+    "name": "kpackage",
+    "version": "6.31.0-1",
+    "size": 177180,
+    "installed_size": 777312,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kpackage-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kpackage-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "7805d00007931e745a550229ac0d7c8aafd676c2526dee91a422bb6e7764ed95"
+  },
+  {
+    "name": "syndication",
+    "version": "6.31.0-1",
+    "size": 206368,
+    "installed_size": 972673,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/syndication-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "syndication-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "559dee55a647989eca2d488829d15ca5dcd0aab58ec388b8527b5ca93270b127"
+  },
+  {
+    "name": "knewstuff",
+    "version": "6.31.0-1",
+    "size": 677512,
+    "installed_size": 3843729,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/knewstuff-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "knewstuff-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "f23a200c8e8686a65f3b5403a0d4e7ac2b0adcc9e2129de160678c2c9479b207"
+  },
+  {
+    "name": "knotifyconfig",
+    "version": "6.31.0-1",
+    "size": 61868,
+    "installed_size": 254125,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/knotifyconfig-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "knotifyconfig-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "3767f10d6e041d94922cfb896e05d73029428dbf9a10e8cbf9366ce7d13a6dfc"
+  },
+  {
+    "name": "libepoxy",
+    "version": "1.5.10-3",
+    "size": 305076,
+    "installed_size": 3074067,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libepoxy-1.5.10-3-aarch64.pkg.tar.xz",
+    "filename": "libepoxy-1.5.10-3-aarch64.pkg.tar.xz",
+    "sha256": "8bb73da9e2df09cf7798904a8709dfb49826a7a9c593a166cddd4a891a280724"
+  },
+  {
+    "name": "kpipewire",
+    "version": "6.8.2-1",
+    "size": 192892,
+    "installed_size": 1066857,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kpipewire-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kpipewire-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "b1494a26f2812bba629f9cebcb2f80721d48413a441c4bcc4214e0216595820e"
+  },
+  {
+    "name": "krunner",
+    "version": "6.31.0-1",
+    "size": 211612,
+    "installed_size": 574795,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/krunner-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "krunner-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "6965a4ec790169cadbed0555c74bc12ec32fe91eddd74a4cf47f7fd6bdacf81c"
+  },
+  {
+    "name": "layer-shell-qt",
+    "version": "6.8.2-1",
+    "size": 40032,
+    "installed_size": 304771,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/layer-shell-qt-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "layer-shell-qt-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "1ac28c9fe8e38ae77528375afffb6175d2f14872fc34d8479c7344e0d1cf1548"
+  },
+  {
+    "name": "libkscreen",
+    "version": "6.8.2-1",
+    "size": 228508,
+    "installed_size": 996751,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libkscreen-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "libkscreen-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "f0ad5d75bcc007470ded0f29b837a0f46dc15b6e9c302b09447ff6ebe99ee367"
+  },
+  {
+    "name": "plasma-activities",
+    "version": "6.8.2-1",
+    "size": 118264,
+    "installed_size": 659172,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/plasma-activities-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "plasma-activities-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "38a34d67f0d9bfa65380ff3d496a2ce6ff42a1ff644ea7d8b1d173de657628c9"
+  },
+  {
+    "name": "libplasma",
+    "version": "6.8.2-1",
+    "size": 2722616,
+    "installed_size": 9554142,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libplasma-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "libplasma-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "54266ed49532f05e623dea0951b4817bdbbb13eca1e89cfa188280326f900e43"
+  },
+  {
+    "name": "kscreenlocker",
+    "version": "6.8.2-1",
+    "size": 267088,
+    "installed_size": 1456717,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kscreenlocker-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kscreenlocker-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "2612ec88966a8851756850366db4f0d3d702f11611cb2ae972b820c289e8c65e"
+  },
+  {
+    "name": "polkit-qt6",
+    "version": "0.201.1-1",
+    "size": 88620,
+    "installed_size": 466544,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/polkit-qt6-0.201.1-1-aarch64.pkg.tar.xz",
+    "filename": "polkit-qt6-0.201.1-1-aarch64.pkg.tar.xz",
+    "sha256": "f6baaa62490e2f609483498f8aa2db244bd170824236d9261f284c95c6aa3daf"
+  },
+  {
+    "name": "kauth",
+    "version": "6.31.0-1",
+    "size": 114908,
+    "installed_size": 562421,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kauth-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kauth-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "96efa43db454553c63a1f686ea30c8adf633337cb99762895750e783584a4cf8"
+  },
+  {
+    "name": "kquickcharts",
+    "version": "6.31.0-1",
+    "size": 186040,
+    "installed_size": 978662,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kquickcharts-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kquickcharts-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "8d1c5afb4f90ff99302d03cb7fc9fcd32e1df44e16489d10f1f7a752202a7830"
+  },
+  {
+    "name": "libksysguard",
+    "version": "6.8.2-1",
+    "size": 668336,
+    "installed_size": 4605006,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libksysguard-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "libksysguard-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "6a1f8e6f55a3c100e5d5cb73071c07d4b43847ba63ef738a60f17bd58ec478fe"
+  },
+  {
+    "name": "libxkbfile",
+    "version": "1.2.0-1",
+    "size": 69720,
+    "installed_size": 243465,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxkbfile-1.2.0-1-aarch64.pkg.tar.xz",
+    "filename": "libxkbfile-1.2.0-1-aarch64.pkg.tar.xz",
+    "sha256": "cb98c65dd555dc3bd7dfbeb2745966da3631be2ac218bcf234f73bdf6ea33deb"
+  },
+  {
+    "name": "plasma-activities-stats",
+    "version": "6.8.2-1",
+    "size": 89316,
+    "installed_size": 373959,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/plasma-activities-stats-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "plasma-activities-stats-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "bd953904f72c623bd40e53d4a0f2dc42c9ccf97884daaaa3231f5debe18a697e"
+  },
+  {
+    "name": "accountsservice",
+    "version": "26.27.3-1",
+    "size": 165108,
+    "installed_size": 1192785,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/accountsservice-26.27.3-1-aarch64.pkg.tar.xz",
+    "filename": "accountsservice-26.27.3-1-aarch64.pkg.tar.xz",
+    "sha256": "422cc32a9732e6304ab4546d7caf46d28c33a01b195c685fd470cbf9a697b52f"
+  },
+  {
+    "name": "hwloc",
+    "version": "2.15.0-1",
+    "size": 528628,
+    "installed_size": 2165637,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/hwloc-2.15.0-1-aarch64.pkg.tar.xz",
+    "filename": "hwloc-2.15.0-1-aarch64.pkg.tar.xz",
+    "sha256": "4c0ba2a711afb5a009a2a52e8b46cbf3d9d64c9fd133a1eb9074fb3eb0598526"
+  },
+  {
+    "name": "onetbb",
+    "version": "2023.2.0-1",
+    "size": 403280,
+    "installed_size": 2377545,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/onetbb-2023.2.0-1-aarch64.pkg.tar.xz",
+    "filename": "onetbb-2023.2.0-1-aarch64.pkg.tar.xz",
+    "sha256": "54cd693870bfa5acc43dd4f88f52fbae4fb8dd7130af2fcd5cc822d2031fb79e"
+  },
+  {
+    "name": "libblake3",
+    "version": "1.8.7-1",
+    "size": 19952,
+    "installed_size": 80485,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libblake3-1.8.7-1-aarch64.pkg.tar.xz",
+    "filename": "libblake3-1.8.7-1-aarch64.pkg.tar.xz",
+    "sha256": "29fe824723c868731c98b6c1507bd00c6d5d8ad34a2acea5e9425acbe38843ac"
+  },
+  {
+    "name": "libfyaml",
+    "version": "0.9.6-3",
+    "size": 340168,
+    "installed_size": 1269022,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libfyaml-0.9.6-3-aarch64.pkg.tar.xz",
+    "filename": "libfyaml-0.9.6-3-aarch64.pkg.tar.xz",
+    "sha256": "f6058547cf2c8c351ea6d340b05c03a977f57e38bb033c71f545489dad7927df"
+  },
+  {
+    "name": "libstemmer",
+    "version": "3.1.1-1",
+    "size": 125172,
+    "installed_size": 1055729,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libstemmer-3.1.1-1-aarch64.pkg.tar.xz",
+    "filename": "libstemmer-3.1.1-1-aarch64.pkg.tar.xz",
+    "sha256": "c5ab5687f090d94c15b7a4b7288a58e5bf826921ad9cffa8d85bad1ce31284ba"
+  },
+  {
+    "name": "cfitsio",
+    "version": "1:4.7.0-1",
+    "size": 538396,
+    "installed_size": 2338678,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/cfitsio-1:4.7.0-1-aarch64.pkg.tar.xz",
+    "filename": "cfitsio-1:4.7.0-1-aarch64.pkg.tar.xz",
+    "sha256": "fbe3fefbc4035ffd26c43c0a95aeed70541b77d03879b4784c4fe4324f283db8"
+  },
+  {
+    "name": "libcgif",
+    "version": "0.5.4-1",
+    "size": 12848,
+    "installed_size": 73823,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libcgif-0.5.4-1-aarch64.pkg.tar.xz",
+    "filename": "libcgif-0.5.4-1-aarch64.pkg.tar.xz",
+    "sha256": "94bb51f38a4289b8cbc2d8f921273debd5119341594fca0feaf2ef006d509e26"
+  },
+  {
+    "name": "libexif",
+    "version": "0.6.26-1",
+    "size": 496132,
+    "installed_size": 3346235,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libexif-0.6.26-1-aarch64.pkg.tar.xz",
+    "filename": "libexif-0.6.26-1-aarch64.pkg.tar.xz",
+    "sha256": "f3126e9de05ee7c82fd9c55b98fe3e8c5a1c9b39b7fab223be65820f5aefedfa"
+  },
+  {
+    "name": "libimagequant",
+    "version": "4.4.1-2",
+    "size": 222172,
+    "installed_size": 565923,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libimagequant-4.4.1-2-aarch64.pkg.tar.xz",
+    "filename": "libimagequant-4.4.1-2-aarch64.pkg.tar.xz",
+    "sha256": "ac3b16e4b5c19a370ca12fef236932c703ae14524cb0b2787f00a86626a68089"
+  },
+  {
+    "name": "libaec",
+    "version": "1.1.7-1",
+    "size": 23320,
+    "installed_size": 159415,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libaec-1.1.7-1-aarch64.pkg.tar.xz",
+    "filename": "libaec-1.1.7-1-aarch64.pkg.tar.xz",
+    "sha256": "3f042ae9731ffe11eaaf1f76ea1cd7eceb0cefc1d4655128b77eb12c3394b895"
+  },
+  {
+    "name": "hdf5",
+    "version": "2.2.0-1",
+    "size": 3797904,
+    "installed_size": 15804049,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/hdf5-2.2.0-1-aarch64.pkg.tar.xz",
+    "filename": "hdf5-2.2.0-1-aarch64.pkg.tar.xz",
+    "sha256": "080d55720f916ba77b03fe11fe0cadf92b65f5fc8ce78a193bf8c6d50965938c"
+  },
+  {
+    "name": "libmatio",
+    "version": "1.5.30-1",
+    "size": 143428,
+    "installed_size": 654470,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libmatio-1.5.30-1-aarch64.pkg.tar.xz",
+    "filename": "libmatio-1.5.30-1-aarch64.pkg.tar.xz",
+    "sha256": "edef992f9964a8750c7f2de83e6a72f5c0ec17ecb012539bb7d22d89c982c78e"
+  },
+  {
+    "name": "libraw",
+    "version": "0.22.3-1",
+    "size": 449380,
+    "installed_size": 3555749,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libraw-0.22.3-1-aarch64.pkg.tar.xz",
+    "filename": "libraw-0.22.3-1-aarch64.pkg.tar.xz",
+    "sha256": "4808d36d556cf7c51a9aae457f4e0aafa65d0367d5366f21f809d4e54d270de9"
+  },
+  {
+    "name": "imath",
+    "version": "3.2.3-1",
+    "size": 3728564,
+    "installed_size": 42352531,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/imath-3.2.3-1-aarch64.pkg.tar.xz",
+    "filename": "imath-3.2.3-1-aarch64.pkg.tar.xz",
+    "sha256": "08007b648713403fb227777b9565a1844a7a12864ad214f4e3e56cb7281fa728"
+  },
+  {
+    "name": "openjph",
+    "version": "0.33.0-1",
+    "size": 163836,
+    "installed_size": 710127,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/openjph-0.33.0-1-aarch64.pkg.tar.xz",
+    "filename": "openjph-0.33.0-1-aarch64.pkg.tar.xz",
+    "sha256": "5526072f05d1600641ad65276f14a4a36e41ec9da6716760dc6ca503c2e89f2c"
+  },
+  {
+    "name": "openexr",
+    "version": "3.5.3-3",
+    "size": 1081816,
+    "installed_size": 5755181,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/openexr-3.5.3-3-aarch64.pkg.tar.xz",
+    "filename": "openexr-3.5.3-3-aarch64.pkg.tar.xz",
+    "sha256": "8ccfb8429e0dbdf109db291f43370e6bc149890b8baaabf27bc21a871be551c4"
+  },
+  {
+    "name": "libvips",
+    "version": "8.18.7-1",
+    "size": 1394772,
+    "installed_size": 6802250,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libvips-8.18.7-1-aarch64.pkg.tar.xz",
+    "filename": "libvips-8.18.7-1-aarch64.pkg.tar.xz",
+    "sha256": "e8e4eebc1e878409f99a62eb9977149bcd0b76f93f26dfa685c7a05c6d818d9d"
+  },
+  {
+    "name": "libxmlb",
+    "version": "0.3.29-1",
+    "size": 144040,
+    "installed_size": 1372498,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxmlb-0.3.29-1-aarch64.pkg.tar.xz",
+    "filename": "libxmlb-0.3.29-1-aarch64.pkg.tar.xz",
+    "sha256": "90c709cfd15566611fbd2aaa05b82a2249c6bef33e064843891b010bc41aa441"
+  },
+  {
+    "name": "appstream",
+    "version": "1.2.2-1",
+    "size": 3532124,
+    "installed_size": 19580515,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/appstream-1.2.2-1-aarch64.pkg.tar.xz",
+    "filename": "appstream-1.2.2-1-aarch64.pkg.tar.xz",
+    "sha256": "da3b88e02ada3aadc5547c0fb534cfdc2523cb04ac56689259453ee268609054"
+  },
+  {
+    "name": "appstream-qt",
+    "version": "1.2.2-1",
+    "size": 135816,
+    "installed_size": 958392,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/appstream-qt-1.2.2-1-aarch64.pkg.tar.xz",
+    "filename": "appstream-qt-1.2.2-1-aarch64.pkg.tar.xz",
+    "sha256": "4dfce744e6fcefcd5feb02de922b2f17c8e12035a05993b1e831e0c90dd85ceb"
+  },
+  {
+    "name": "kactivitymanagerd",
+    "version": "6.8.2-1",
+    "size": 183968,
+    "installed_size": 1075036,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kactivitymanagerd-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kactivitymanagerd-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "afedc978ae48594ca30d9c35ba339f9e3f0965410391cb0310a6a1fb0c8b7175"
+  },
+  {
+    "name": "kpty",
+    "version": "6.31.0-1",
+    "size": 51904,
+    "installed_size": 178439,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kpty-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kpty-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "7f45417dc8f5a8ff35fd8b8976e2bf21a0501b2b059214110b56a9d69f649d8b"
+  },
+  {
+    "name": "kdesu",
+    "version": "6.31.0-1",
+    "size": 71720,
+    "installed_size": 358642,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kdesu-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kdesu-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "689dfa3b80d08a5a4040de2bab53d1aecdbc7af1d365febd44a30f24240dd9df"
+  },
+  {
+    "name": "kparts",
+    "version": "6.31.0-1",
+    "size": 168288,
+    "installed_size": 588615,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kparts-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kparts-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "d0aa316dc4f5fdab72d57ffaf05f77c04f0ca15c95419880260ce7260b3de079"
+  },
+  {
+    "name": "kde-cli-tools",
+    "version": "6.8.2-1",
+    "size": 853952,
+    "installed_size": 4359964,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kde-cli-tools-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kde-cli-tools-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "4827a03af819db4bb4f60c25d2bdaa2dbf88c70613fd17b7d3a71aa6e80d90fd"
+  },
+  {
+    "name": "kded",
+    "version": "6.31.0-1",
+    "size": 65808,
+    "installed_size": 167185,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kded-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kded-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "4581365ce91133150d2e3cf458d8115798aecb0f10df324c9f0b263902130ae0"
+  },
+  {
+    "name": "kholidays",
+    "version": "1:6.31.0-1",
+    "size": 317520,
+    "installed_size": 1270031,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kholidays-1:6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kholidays-1:6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "afba466d4b7d17b8c986f280c8511c29814e725a2fc91c6f841eb4c7b847417f"
+  },
+  {
+    "name": "kdnssd",
+    "version": "6.31.0-1",
+    "size": 88332,
+    "installed_size": 335978,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kdnssd-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kdnssd-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "c4d84fe2151effc5f775faae1928b8659658e2b0b707439dabb2a5180ac2f54d"
+  },
+  {
+    "name": "kdsoap",
+    "version": "2.3.0-1",
+    "size": 455440,
+    "installed_size": 1814326,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kdsoap-2.3.0-1-aarch64.pkg.tar.xz",
+    "filename": "kdsoap-2.3.0-1-aarch64.pkg.tar.xz",
+    "sha256": "e846da4e88e14645f6cf59b8e564f09dd1752d9078bfd7e3e3404ce0d6c12c2b"
+  },
+  {
+    "name": "kdsoap-ws-discovery-client",
+    "version": "0.4.0-3",
+    "size": 185936,
+    "installed_size": 905647,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kdsoap-ws-discovery-client-0.4.0-3-aarch64.pkg.tar.xz",
+    "filename": "kdsoap-ws-discovery-client-0.4.0-3-aarch64.pkg.tar.xz",
+    "sha256": "1b67488a1c168b5fa6e9f669d245778326df43285fa5e720a4fbd346d40ad74a"
+  },
+  {
+    "name": "libkexiv2",
+    "version": "26.08.3-1",
+    "size": 140220,
+    "installed_size": 531451,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libkexiv2-26.08.3-1-aarch64.pkg.tar.xz",
+    "filename": "libkexiv2-26.08.3-1-aarch64.pkg.tar.xz",
+    "sha256": "750fbd5fac6d0efc044af3dd215087cd59a2023dd3bd2e7a455a8a1a336a75d4"
+  },
+  {
+    "name": "libmtp",
+    "version": "1.1.23-1",
+    "size": 632600,
+    "installed_size": 6834666,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libmtp-1.1.23-1-aarch64.pkg.tar.xz",
+    "filename": "libmtp-1.1.23-1-aarch64.pkg.tar.xz",
+    "sha256": "3d8916300599561f5649be494c8879449067e9decc490f070c663a877b90f238"
+  },
+  {
+    "name": "ripgrep",
+    "version": "15.2.0-1",
+    "size": 1181456,
+    "installed_size": 4331437,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ripgrep-15.2.0-1-aarch64.pkg.tar.xz",
+    "filename": "ripgrep-15.2.0-1-aarch64.pkg.tar.xz",
+    "sha256": "458f1c725cc64502616bfeed1d795cbce4f5479321b06d4b8fd91fa3b125b628"
+  },
+  {
+    "name": "ripgrep-all",
+    "version": "0.10.10-3",
+    "size": 2150284,
+    "installed_size": 13066376,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ripgrep-all-0.10.10-3-aarch64.pkg.tar.xz",
+    "filename": "ripgrep-all-0.10.10-3-aarch64.pkg.tar.xz",
+    "sha256": "a43f8a606657ef42358bbafe5b609698b38810d9d6b4de3d98d97b905a91a183"
+  },
+  {
+    "name": "libwbclient",
+    "version": "2:4.25.1-1",
+    "size": 35676,
+    "installed_size": 191877,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libwbclient-2:4.25.1-1-aarch64.pkg.tar.xz",
+    "filename": "libwbclient-2:4.25.1-1-aarch64.pkg.tar.xz",
+    "sha256": "9918d9b72a24b0ab0367780e0e648168690d3c08af4d0e5d3927efaef04406ea"
+  },
+  {
+    "name": "talloc",
+    "version": "2.5.0-2",
+    "size": 46924,
+    "installed_size": 350697,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/talloc-2.5.0-2-aarch64.pkg.tar.xz",
+    "filename": "talloc-2.5.0-2-aarch64.pkg.tar.xz",
+    "sha256": "21d57667d565e8450678971ce0fb37e3e80619438a993f1feade7136d8b0ce4b"
+  },
+  {
+    "name": "cifs-utils",
+    "version": "7.9-1",
+    "size": 99592,
+    "installed_size": 621101,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/cifs-utils-7.9-1-aarch64.pkg.tar.xz",
+    "filename": "cifs-utils-7.9-1-aarch64.pkg.tar.xz",
+    "sha256": "d46ecac615eba28d58201f81cf2b64e3320767bef8dfd487182f95a0a85097f8"
+  },
+  {
+    "name": "tevent",
+    "version": "1:0.17.2-2",
+    "size": 55540,
+    "installed_size": 304837,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/tevent-1:0.17.2-2-aarch64.pkg.tar.xz",
+    "filename": "tevent-1:0.17.2-2-aarch64.pkg.tar.xz",
+    "sha256": "4e3b013c425cba18ffb3c3d3f84e403aa10a2e50744bf72be3e514d444d83806"
+  },
+  {
+    "name": "ldb",
+    "version": "2:4.25.1-1",
+    "size": 441440,
+    "installed_size": 5186170,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ldb-2:4.25.1-1-aarch64.pkg.tar.xz",
+    "filename": "ldb-2:4.25.1-1-aarch64.pkg.tar.xz",
+    "sha256": "a76589984ed470973c9a9a111541973603f29bb66e7dc589bf146762f96c5997"
+  },
+  {
+    "name": "smbclient",
+    "version": "2:4.25.1-1",
+    "size": 6536044,
+    "installed_size": 38243157,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/smbclient-2:4.25.1-1-aarch64.pkg.tar.xz",
+    "filename": "smbclient-2:4.25.1-1-aarch64.pkg.tar.xz",
+    "sha256": "916917b6d2728c4b63ddeebf53513614276eeeacf6ada307bfaceaaa747051d8"
+  },
+  {
+    "name": "syntax-highlighting",
+    "version": "6.31.0-1",
+    "size": 1220212,
+    "installed_size": 10784613,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/syntax-highlighting-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "syntax-highlighting-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "a4e27a6d8959a34e28b81c54c7e5d40ec22c20694c1939369c766e5fabc98c0b"
+  },
+  {
+    "name": "kio-extras",
+    "version": "26.08.3-1",
+    "size": 1869232,
+    "installed_size": 9434028,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kio-extras-26.08.3-1-aarch64.pkg.tar.xz",
+    "filename": "kio-extras-26.08.3-1-aarch64.pkg.tar.xz",
+    "sha256": "5d330fbf55f633d4a0a2df7dfd65277c556b11997881d93cb74add9138e4ea0d"
+  },
+  {
+    "name": "fuse-common",
+    "version": "3.18.3-1",
+    "size": 2868,
+    "installed_size": 725,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/fuse-common-3.18.3-1-aarch64.pkg.tar.xz",
+    "filename": "fuse-common-3.18.3-1-aarch64.pkg.tar.xz",
+    "sha256": "f8a67e6a893e09ece9d9611112b46259df1d947b8d57ac9f118a00eb955780b9"
+  },
+  {
+    "name": "numactl",
+    "version": "2.0.19-1",
+    "size": 83656,
+    "installed_size": 513210,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/numactl-2.0.19-1-aarch64.pkg.tar.xz",
+    "filename": "numactl-2.0.19-1-aarch64.pkg.tar.xz",
+    "sha256": "b28ebc082254c63fbbd9aac1e2ec9bae8e78fe7243682e875df537906ecb5971"
+  },
+  {
+    "name": "fuse3",
+    "version": "3.18.3-1",
+    "size": 133600,
+    "installed_size": 716456,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/fuse3-3.18.3-1-aarch64.pkg.tar.xz",
+    "filename": "fuse3-3.18.3-1-aarch64.pkg.tar.xz",
+    "sha256": "ea1a152ebe20cecf157378c8917e04b976e89287e2471dd20117b3923b3f0ebb"
+  },
+  {
+    "name": "kio-fuse",
+    "version": "5.1.1-2",
+    "size": 62828,
+    "installed_size": 200542,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kio-fuse-5.1.1-2-aarch64.pkg.tar.xz",
+    "filename": "kio-fuse-5.1.1-2-aarch64.pkg.tar.xz",
+    "sha256": "a9d4bbc6eb96be5f61deffb686043f74c05067ca2736ce438e9ff3646a861f78"
+  },
+  {
+    "name": "qt6-positioning",
+    "version": "6.12.0-1",
+    "size": 378216,
+    "installed_size": 2377665,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-positioning-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-positioning-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "f40e144c96bb65641b06de4de8cffc10ddcc6cc3c8d108ce0a81ecaadf41db38"
+  },
+  {
+    "name": "knighttime",
+    "version": "6.8.2-1",
+    "size": 62548,
+    "installed_size": 293129,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/knighttime-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "knighttime-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "30c0dbe4ed4c4a54eb3339d238707a76816833b102357805ce9e51a18701aa1a"
+  },
+  {
+    "name": "kstatusnotifieritem",
+    "version": "6.31.0-1",
+    "size": 143424,
+    "installed_size": 585682,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kstatusnotifieritem-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kstatusnotifieritem-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "1bd7c251f3e462fe02cca2a028b2087068153644fef0795d3b75418c8e958b7c"
+  },
+  {
+    "name": "ksystemstats",
+    "version": "6.8.2-1",
+    "size": 309280,
+    "installed_size": 2335742,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ksystemstats-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "ksystemstats-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "6fa3b12beac73cf60979857f46ea04929bd81641fa5fa40a0c17eb86738cca87"
+  },
+  {
+    "name": "editorconfig-core-c",
+    "version": "0.12.11-1",
+    "size": 31664,
+    "installed_size": 205988,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/editorconfig-core-c-0.12.11-1-aarch64.pkg.tar.xz",
+    "filename": "editorconfig-core-c-0.12.11-1-aarch64.pkg.tar.xz",
+    "sha256": "21acd0a1c77fd1487f229463c8cbd7dde26bb07086b342dfad9edd3fe6af4628"
+  },
+  {
+    "name": "qt6-speech",
+    "version": "6.12.0-1",
+    "size": 133952,
+    "installed_size": 820674,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-speech-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-speech-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "30fdf078602668db97a85b98cd75b44cc3fb969ec327aa609984e3dec5a241c1"
+  },
+  {
+    "name": "ktexteditor",
+    "version": "6.31.0-1",
+    "size": 2766520,
+    "installed_size": 15466255,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ktexteditor-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "ktexteditor-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "f3aefba58812c8d3d985fd7e1bdf57855817e7a4f58ed5d100eafe94c605eacb"
+  },
+  {
+    "name": "ktextwidgets",
+    "version": "6.31.0-1",
+    "size": 282184,
+    "installed_size": 1567655,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ktextwidgets-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "ktextwidgets-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "bbc60f01f6e36c501d6de4e97e3ba6905f2c321921815f79df47a2ca69f6a4b4"
+  },
+  {
+    "name": "kuserfeedback",
+    "version": "6.31.0-1",
+    "size": 324468,
+    "installed_size": 2277957,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kuserfeedback-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kuserfeedback-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "fcf4ac45a7e1ef0592c115e28110018cddea95a8584ff17c7f909eef007b3a70"
+  },
+  {
+    "name": "kwayland",
+    "version": "6.8.2-1",
+    "size": 229924,
+    "installed_size": 1450657,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kwayland-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kwayland-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "241810347458407ed6a6520729f8acf0f07a0858fad5d15685b64008cbc96452"
+  },
+  {
+    "name": "kdecoration",
+    "version": "6.8.2-1",
+    "size": 94176,
+    "installed_size": 501359,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kdecoration-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kdecoration-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "002b0ee4d2718c2540653b8743d3cf77bb5a2798e3666bcf636ab03923f5e334"
+  },
+  {
+    "name": "gumbo-parser",
+    "version": "0.14.1-1",
+    "size": 79012,
+    "installed_size": 423554,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gumbo-parser-0.14.1-1-aarch64.pkg.tar.xz",
+    "filename": "gumbo-parser-0.14.1-1-aarch64.pkg.tar.xz",
+    "sha256": "1fd21c5fcf1aaa791f9f4978c57840816787a4dbb691455f0a84733bfa25a2ca"
+  },
+  {
+    "name": "litehtml",
+    "version": "0.10-2",
+    "size": 467748,
+    "installed_size": 1892242,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/litehtml-0.10-2-aarch64.pkg.tar.xz",
+    "filename": "litehtml-0.10-2-aarch64.pkg.tar.xz",
+    "sha256": "0f396c5700d5c7ce93e28b493f0139e72603aa86393befa8c207ab1422dee663"
+  },
+  {
+    "name": "qt6-tools",
+    "version": "6.12.0-1",
+    "size": 6323948,
+    "installed_size": 26857897,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-tools-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-tools-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "46cd082bea9cc4f7d88e5a0d7182260eff00fab3514777839a0213636569e9ff"
+  },
+  {
+    "name": "aurorae",
+    "version": "6.8.2-1",
+    "size": 157828,
+    "installed_size": 903978,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/aurorae-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "aurorae-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "a9b96a0f780f49526ff1f5e4ce3de7d5b30a08a4353052c160d1abbad7b01612"
+  },
+  {
+    "name": "frameworkintegration",
+    "version": "6.31.0-1",
+    "size": 72252,
+    "installed_size": 401336,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/frameworkintegration-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "frameworkintegration-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "dad1452a5c8bb9ac78f2d21224fbab5a02c4d9b1cb9f9e39caefccb13db488ed"
+  },
+  {
+    "name": "breeze-cursors",
+    "version": "6.8.2-1",
+    "size": 1222772,
+    "installed_size": 30674848,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/breeze-cursors-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "breeze-cursors-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "710c66e8b6b269b149822e15035c004b5eb50d7fde8ccf50b334035229e1c1ac"
+  },
+  {
+    "name": "breeze",
+    "version": "6.8.2-1",
+    "size": 39502408,
+    "installed_size": 40959958,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/breeze-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "breeze-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "6fbcc108869f49c0ae7568c0da07a6088f5b10d5814a9517d3af0cd0c205c819"
+  },
+  {
+    "name": "libmbim",
+    "version": "1.34.0-2",
+    "size": 401900,
+    "installed_size": 4000742,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libmbim-1.34.0-2-aarch64.pkg.tar.xz",
+    "filename": "libmbim-1.34.0-2-aarch64.pkg.tar.xz",
+    "sha256": "cb91e4028cd7e00983e1a44d8ece84f134437f28552f7b94ed9af3d152268525"
+  },
+  {
+    "name": "libqrtr-glib",
+    "version": "1.4.0-2",
+    "size": 25552,
+    "installed_size": 162581,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libqrtr-glib-1.4.0-2-aarch64.pkg.tar.xz",
+    "filename": "libqrtr-glib-1.4.0-2-aarch64.pkg.tar.xz",
+    "sha256": "eb7a972c21c5c396c84b5b2dd46576b3befe7ac8c06d58b192070d48cb49f774"
+  },
+  {
+    "name": "libqmi",
+    "version": "1.38.0-2",
+    "size": 1725908,
+    "installed_size": 23085595,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libqmi-1.38.0-2-aarch64.pkg.tar.xz",
+    "filename": "libqmi-1.38.0-2-aarch64.pkg.tar.xz",
+    "sha256": "4e39f19a20da9497594d5e213bef8694ce96cdcf6327b76603f1940234233dc8"
+  },
+  {
+    "name": "abseil-cpp",
+    "version": "20260817.0-2",
+    "size": 1310120,
+    "installed_size": 12542535,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/abseil-cpp-20260817.0-2-aarch64.pkg.tar.xz",
+    "filename": "abseil-cpp-20260817.0-2-aarch64.pkg.tar.xz",
+    "sha256": "c003392fa0d87f66c08b202e49835c20f03d5e8c4e3e61e510c8839242293775"
+  },
+  {
+    "name": "protobuf",
+    "version": "36.1-1",
+    "size": 3323356,
+    "installed_size": 19326081,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/protobuf-36.1-1-aarch64.pkg.tar.xz",
+    "filename": "protobuf-36.1-1-aarch64.pkg.tar.xz",
+    "sha256": "f957a4e7cf11a4a5997609625ab4f176e3f51c66f0b1128e437fd23bc789851b"
+  },
+  {
+    "name": "protobuf-c",
+    "version": "1.5.2-15",
+    "size": 112836,
+    "installed_size": 437211,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/protobuf-c-1.5.2-15-aarch64.pkg.tar.xz",
+    "filename": "protobuf-c-1.5.2-15-aarch64.pkg.tar.xz",
+    "sha256": "8eeaa6e4d7c65750ac1a3c29f5bc844df668c715aa926d7038cb3453c4b2af4c"
+  },
+  {
+    "name": "libssc",
+    "version": "0.4.4-1",
+    "size": 59976,
+    "installed_size": 369456,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libssc-0.4.4-1-aarch64.pkg.tar.xz",
+    "filename": "libssc-0.4.4-1-aarch64.pkg.tar.xz",
+    "sha256": "c65429123ee7ec43d8feca7cb034df0cd7c2eae27ab8eaea951226c4d14a5f84"
+  },
+  {
+    "name": "iio-sensor-proxy",
+    "version": "3.9-1",
+    "size": 37772,
+    "installed_size": 206625,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/iio-sensor-proxy-3.9-1-aarch64.pkg.tar.xz",
+    "filename": "iio-sensor-proxy-3.9-1-aarch64.pkg.tar.xz",
+    "sha256": "8c37d1f1448dbc0f6381fc75315a7754e7ac9902efb341558a4c47cd4065f975"
+  },
+  {
+    "name": "kglobalacceld",
+    "version": "6.8.2-1",
+    "size": 108268,
+    "installed_size": 419009,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kglobalacceld-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "kglobalacceld-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "049564e5676e0d42de68b69dfdf90c56d8c6cd84c8e20b75f835d3bd6b507001"
+  },
+  {
+    "name": "libei",
+    "version": "1.6.0-2",
+    "size": 108044,
+    "installed_size": 670402,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libei-1.6.0-2-aarch64.pkg.tar.xz",
+    "filename": "libei-1.6.0-2-aarch64.pkg.tar.xz",
+    "sha256": "b35ad9f62bb07ccb598b96e0aad7a218fb3d1bf0b816047283514efb9e63a361"
+  },
+  {
+    "name": "gsettings-system-schemas",
+    "version": "51.0-1",
+    "size": 6084,
+    "installed_size": 16204,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gsettings-system-schemas-51.0-1-any.pkg.tar.xz",
+    "filename": "gsettings-system-schemas-51.0-1-any.pkg.tar.xz",
+    "sha256": "1f09f0a13318507f2bdbe7a57b685dec1c2a7e400038d870511baeac03fce648"
+  },
+  {
+    "name": "adwaita-fonts",
+    "version": "51.0-2",
+    "size": 2038816,
+    "installed_size": 7627210,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/adwaita-fonts-51.0-2-any.pkg.tar.xz",
+    "filename": "adwaita-fonts-51.0-2-any.pkg.tar.xz",
+    "sha256": "3a6f361315f4a2361a4f8f5776ba35578bad70b52fbd61331ec51db071bc893b"
+  },
+  {
+    "name": "gsettings-desktop-schemas",
+    "version": "51.0-1",
+    "size": 843564,
+    "installed_size": 6975440,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/gsettings-desktop-schemas-51.0-1-any.pkg.tar.xz",
+    "filename": "gsettings-desktop-schemas-51.0-1-any.pkg.tar.xz",
+    "sha256": "87e806c8fb932c8d02c6a09cdd47af61a45b7901218f8a85826880a67becce57"
+  },
+  {
+    "name": "libxtst",
+    "version": "1.2.6-1",
+    "size": 25432,
+    "installed_size": 152640,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxtst-1.2.6-1-aarch64.pkg.tar.xz",
+    "filename": "libxtst-1.2.6-1-aarch64.pkg.tar.xz",
+    "sha256": "04e7e7c88d10ccd040220baa47100024c16f906b196f974b23baf26b9d087aa9"
+  },
+  {
+    "name": "xorg-xprop",
+    "version": "1.2.8-1",
+    "size": 26412,
+    "installed_size": 77934,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-xprop-1.2.8-1-aarch64.pkg.tar.xz",
+    "filename": "xorg-xprop-1.2.8-1-aarch64.pkg.tar.xz",
+    "sha256": "5ab8f4c95ee0772592be2f9efc5ebe876083202ad6a06515bcc81bd0f0b6a15a"
+  },
+  {
+    "name": "at-spi2-core",
+    "version": "2.62.1-1",
+    "size": 547452,
+    "installed_size": 4479425,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/at-spi2-core-2.62.1-1-aarch64.pkg.tar.xz",
+    "filename": "at-spi2-core-2.62.1-1-aarch64.pkg.tar.xz",
+    "sha256": "71efadc123171229c74281323db4b04c594c5e31ee0d7dfcb680bf5d8d98c74b"
+  },
+  {
+    "name": "libqaccessibilityclient-qt6",
+    "version": "0.6.0-4",
+    "size": 95388,
+    "installed_size": 384071,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libqaccessibilityclient-qt6-0.6.0-4-aarch64.pkg.tar.xz",
+    "filename": "libqaccessibilityclient-qt6-0.6.0-4-aarch64.pkg.tar.xz",
+    "sha256": "4eec4075a2a0b2644540eabf30aa07dd557edd0e2e506826e126bbb0cdcf04fb"
+  },
+  {
+    "name": "libxcvt",
+    "version": "0.1.3-1",
+    "size": 10556,
+    "installed_size": 143021,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxcvt-0.1.3-1-aarch64.pkg.tar.xz",
+    "filename": "libxcvt-0.1.3-1-aarch64.pkg.tar.xz",
+    "sha256": "4eadab34ee20d01d83f4b46dc040ec0de0e468b754be0c184d55d8fddd966d8a"
+  },
+  {
+    "name": "milou",
+    "version": "6.8.2-1",
+    "size": 112416,
+    "installed_size": 595830,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/milou-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "milou-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "f5da3b17fafc0e691c83e99768177eafba50cc5c00b935cfda4034f7353dccf6"
+  },
+  {
+    "name": "libwireplumber",
+    "version": "0.5.18-1",
+    "size": 284324,
+    "installed_size": 1881884,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libwireplumber-0.5.18-1-aarch64.pkg.tar.xz",
+    "filename": "libwireplumber-0.5.18-1-aarch64.pkg.tar.xz",
+    "sha256": "9fc7aedc4079fadbef1fd7079076b781bee45431d9e534b7c45b82c39ad17d9c"
+  },
+  {
+    "name": "lua",
+    "version": "5.5.1-1",
+    "size": 309320,
+    "installed_size": 1757006,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/lua-5.5.1-1-aarch64.pkg.tar.xz",
+    "filename": "lua-5.5.1-1-aarch64.pkg.tar.xz",
+    "sha256": "bc30a8770a0e8bf42cdba5b49c1dcffce547396405526130845719cab5adf72d"
+  },
+  {
+    "name": "wireplumber",
+    "version": "0.5.18-1",
+    "size": 289536,
+    "installed_size": 2243377,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/wireplumber-0.5.18-1-aarch64.pkg.tar.xz",
+    "filename": "wireplumber-0.5.18-1-aarch64.pkg.tar.xz",
+    "sha256": "2410813c8b3eba26598b90b260171ac884af59f8dc1441112eee80f1873b628b"
+  },
+  {
+    "name": "pipewire-session-manager",
+    "version": "1:1.6.10-1",
+    "size": 3972,
+    "installed_size": 0,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/pipewire-session-manager-1:1.6.10-1-aarch64.pkg.tar.xz",
+    "filename": "pipewire-session-manager-1:1.6.10-1-aarch64.pkg.tar.xz",
+    "sha256": "ee188ed5ebd60e81728faa4d610ef42f17c88d29e29828ede96b5cd294d0c4d5"
+  },
+  {
+    "name": "kwin",
+    "version": "6.8.2-2",
+    "size": 10638676,
+    "installed_size": 37970627,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kwin-6.8.2-2-aarch64.pkg.tar.xz",
+    "filename": "kwin-6.8.2-2-aarch64.pkg.tar.xz",
+    "sha256": "74876e5adbdc7d2c6dc718013abeba44c018d0d6b629959bd2a33b49dd093d12"
+  },
+  {
+    "name": "libqalculate",
+    "version": "5.13.2-1",
+    "size": 2639136,
+    "installed_size": 16770840,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libqalculate-5.13.2-1-aarch64.pkg.tar.xz",
+    "filename": "libqalculate-5.13.2-1-aarch64.pkg.tar.xz",
+    "sha256": "c15037685971d4902e889e3bb03d7d25f3f4aa9dcfd83c9c650eaac93ac53e5a"
+  },
+  {
+    "name": "ocean-sound-theme",
+    "version": "6.8.2-1",
+    "size": 2034464,
+    "installed_size": 2176022,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ocean-sound-theme-6.8.2-1-any.pkg.tar.xz",
+    "filename": "ocean-sound-theme-6.8.2-1-any.pkg.tar.xz",
+    "sha256": "4a7967be0d649f39cc91dde07add9463dbcb122d2f36b260c9e9ce758911fd3e"
+  },
+  {
+    "name": "libdmtx",
+    "version": "0.7.8-1",
+    "size": 48256,
+    "installed_size": 161643,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libdmtx-0.7.8-1-aarch64.pkg.tar.xz",
+    "filename": "libdmtx-0.7.8-1-aarch64.pkg.tar.xz",
+    "sha256": "5595e46d864d849746527c3ef93953fda6782c5c6e8f3abb8c62fe1fc6c85417"
+  },
+  {
+    "name": "qrencode",
+    "version": "4.1.1-4",
+    "size": 38320,
+    "installed_size": 158146,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qrencode-4.1.1-4-aarch64.pkg.tar.xz",
+    "filename": "qrencode-4.1.1-4-aarch64.pkg.tar.xz",
+    "sha256": "dd4fdce79fc61dd0271714c5e2cac90bc4967121556fa4af132ee835f097713a"
+  },
+  {
+    "name": "zint",
+    "version": "2.16.0-2",
+    "size": 421000,
+    "installed_size": 901909,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/zint-2.16.0-2-aarch64.pkg.tar.xz",
+    "filename": "zint-2.16.0-2-aarch64.pkg.tar.xz",
+    "sha256": "4fb1d8d02c66179345c0fbc7ad449e452e7aa10abfcdda34c4f28be0ff4fc765"
+  },
+  {
+    "name": "zxing-cpp",
+    "version": "3.1.1-1",
+    "size": 777852,
+    "installed_size": 2165618,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/zxing-cpp-3.1.1-1-aarch64.pkg.tar.xz",
+    "filename": "zxing-cpp-3.1.1-1-aarch64.pkg.tar.xz",
+    "sha256": "efdca72e976e488dc7883f2b5b2392574b26369b8c769a37d9f8ecee727c35c5"
+  },
+  {
+    "name": "prison",
+    "version": "6.31.0-1",
+    "size": 81544,
+    "installed_size": 397566,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/prison-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "prison-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "0f39c8e4ef8754511394f3225953f4479b02d2c48ad9c1ba9d349f57abe1ee70"
+  },
+  {
+    "name": "qt6-location",
+    "version": "6.12.0-1",
+    "size": 649004,
+    "installed_size": 3974337,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-location-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-location-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "c2a48c5ced6f9c05e93a4e6d46b9a44ecaa295d36f174da94f2e83a4a4d48060"
+  },
+  {
+    "name": "hunspell",
+    "version": "1.7.6-1",
+    "size": 385632,
+    "installed_size": 1874023,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/hunspell-1.7.6-1-aarch64.pkg.tar.xz",
+    "filename": "hunspell-1.7.6-1-aarch64.pkg.tar.xz",
+    "sha256": "af59065ce912ba7d14de394f1b43c2975c48ea3a7ffefed9db0bafa837eb0f43"
+  },
+  {
+    "name": "qt6-virtualkeyboard",
+    "version": "6.12.0-1",
+    "size": 2331328,
+    "installed_size": 7605113,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-virtualkeyboard-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-virtualkeyboard-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "7c39cd33c29a25c1221ddefb5e1e06f93237367ec5f0bf10d44c8daac1a5d860"
+  },
+  {
+    "name": "cxx-rust-cssparser",
+    "version": "1.1.0-1",
+    "size": 871652,
+    "installed_size": 4232322,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/cxx-rust-cssparser-1.1.0-1-aarch64.pkg.tar.xz",
+    "filename": "cxx-rust-cssparser-1.1.0-1-aarch64.pkg.tar.xz",
+    "sha256": "a38a3ee87272e1fdb129e1782d6ffd8855bc8cf7e46f832e25e9639240382f10"
+  },
+  {
+    "name": "union",
+    "version": "6.8.2-1",
+    "size": 949492,
+    "installed_size": 5980203,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/union-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "union-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "8c55dd1a85d62f2422118b1867b7e314b0a4b83f6dda1ef7c04581c67233b381"
+  },
+  {
+    "name": "xorg-xmessage",
+    "version": "1.0.7-2",
+    "size": 13408,
+    "installed_size": 74522,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-xmessage-1.0.7-2-aarch64.pkg.tar.xz",
+    "filename": "xorg-xmessage-1.0.7-2-aarch64.pkg.tar.xz",
+    "sha256": "e10cee3b52dc5c4cc8929c054a8e7c4baa89a5e8083845491df938c29b5d7b30"
+  },
+  {
+    "name": "xorg-xrdb",
+    "version": "1.2.3-1",
+    "size": 19776,
+    "installed_size": 74773,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-xrdb-1.2.3-1-aarch64.pkg.tar.xz",
+    "filename": "xorg-xrdb-1.2.3-1-aarch64.pkg.tar.xz",
+    "sha256": "280a0c97061cc8694eb4b77c17c0ec23884e244c000b151301d1cb71a774271f"
+  },
+  {
+    "name": "xorg-fonts-encodings",
+    "version": "1.1.0-2",
+    "size": 578240,
+    "installed_size": 644558,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-fonts-encodings-1.1.0-2-any.pkg.tar.xz",
+    "filename": "xorg-fonts-encodings-1.1.0-2-any.pkg.tar.xz",
+    "sha256": "1e6b1699140df659a049dc9094fc3b08a60b624db748bc004f28db51e5bfa641"
+  },
+  {
+    "name": "libfontenc",
+    "version": "1.1.9-1",
+    "size": 14732,
+    "installed_size": 77234,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libfontenc-1.1.9-1-aarch64.pkg.tar.xz",
+    "filename": "libfontenc-1.1.9-1-aarch64.pkg.tar.xz",
+    "sha256": "e42320161bec71bafa2243ff203fa8a3306b0a0f91e90dd89291b093340ab1fc"
+  },
+  {
+    "name": "libxfont2",
+    "version": "2.0.9-1",
+    "size": 88360,
+    "installed_size": 220439,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libxfont2-2.0.9-1-aarch64.pkg.tar.xz",
+    "filename": "libxfont2-2.0.9-1-aarch64.pkg.tar.xz",
+    "sha256": "cc74f8a2d3377f068b5f3c35619e333c1a331254298625666eac84a533b30347"
+  },
+  {
+    "name": "xorg-xkbcomp",
+    "version": "1.5.0-1",
+    "size": 81536,
+    "installed_size": 276360,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-xkbcomp-1.5.0-1-aarch64.pkg.tar.xz",
+    "filename": "xorg-xkbcomp-1.5.0-1-aarch64.pkg.tar.xz",
+    "sha256": "7c30d6aa484ff17ab36c3c33ae145195831458751e901b96b92b3398abc96611"
+  },
+  {
+    "name": "xorg-setxkbmap",
+    "version": "1.3.5-1",
+    "size": 13496,
+    "installed_size": 71104,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-setxkbmap-1.3.5-1-aarch64.pkg.tar.xz",
+    "filename": "xorg-setxkbmap-1.3.5-1-aarch64.pkg.tar.xz",
+    "sha256": "a3323ae651b0477c7c411e431d68debef85eef9d2f15ca90d89e383e2fad08a4"
+  },
+  {
+    "name": "xorg-server-common",
+    "version": "21.1.25-2",
+    "size": 27344,
+    "installed_size": 130326,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-server-common-21.1.25-2-aarch64.pkg.tar.xz",
+    "filename": "xorg-server-common-21.1.25-2-aarch64.pkg.tar.xz",
+    "sha256": "2c9cb31118dcc9732198581ee8ecfc8b7cfed048667d750c55fc2bc91770e653"
+  },
+  {
+    "name": "libdecor",
+    "version": "0.2.5-1",
+    "size": 42288,
+    "installed_size": 218557,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/libdecor-0.2.5-1-aarch64.pkg.tar.xz",
+    "filename": "libdecor-0.2.5-1-aarch64.pkg.tar.xz",
+    "sha256": "af8fc60c81c611bc74935468fb99b6651f69a1cdf67a7f84eb09fee6fb664016"
+  },
+  {
+    "name": "xorg-xwayland",
+    "version": "24.1.14-1",
+    "size": 851344,
+    "installed_size": 2685617,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xorg-xwayland-24.1.14-1-aarch64.pkg.tar.xz",
+    "filename": "xorg-xwayland-24.1.14-1-aarch64.pkg.tar.xz",
+    "sha256": "6affc1b822583d80040e1be9598dfdb7bedc235d2c29283af7a878100fc069c1"
+  },
+  {
+    "name": "qqc2-breeze-style",
+    "version": "6.8.2-1",
+    "size": 594116,
+    "installed_size": 4237112,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qqc2-breeze-style-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "qqc2-breeze-style-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "f0b34790d25991f4ea9bd8b7e962ef5784f17d5a6523f6a4f6f26c67dc8bf7d9"
+  },
+  {
+    "name": "qqc2-desktop-style",
+    "version": "6.31.0-1",
+    "size": 695288,
+    "installed_size": 4610961,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qqc2-desktop-style-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "qqc2-desktop-style-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "11cca6430dc9a18ae94dd1adcffc361dedec23abea1876e7db073ca18b2bcba7"
+  },
+  {
+    "name": "noto-fonts",
+    "version": "1:2026.11.01-1",
+    "size": 27292264,
+    "installed_size": 112008533,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/noto-fonts-1:2026.11.01-1-any.pkg.tar.xz",
+    "filename": "noto-fonts-1:2026.11.01-1-any.pkg.tar.xz",
+    "sha256": "778358b6cb93bc6ee95edd80f169168144e305eaf80bf30af4ecbc015fe21221"
+  },
+  {
+    "name": "ttf-hack",
+    "version": "3.003-7",
+    "size": 364296,
+    "installed_size": 1269761,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ttf-hack-3.003-7-any.pkg.tar.xz",
+    "filename": "ttf-hack-3.003-7-any.pkg.tar.xz",
+    "sha256": "19310f008909e51e94e66237fa87b0b168313f67c74547e0ae7b63d5872bd468"
+  },
+  {
+    "name": "xdg-desktop-portal",
+    "version": "1.22.1-2",
+    "size": 464240,
+    "installed_size": 3099143,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xdg-desktop-portal-1.22.1-2-aarch64.pkg.tar.xz",
+    "filename": "xdg-desktop-portal-1.22.1-2-aarch64.pkg.tar.xz",
+    "sha256": "e1f5f15d6455a3b9787775e5c6f33c0223154aef94d837b1ed52f4651705c7c6"
+  },
+  {
+    "name": "xdg-desktop-portal-kde",
+    "version": "6.8.2-1",
+    "size": 704072,
+    "installed_size": 3667154,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xdg-desktop-portal-kde-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "xdg-desktop-portal-kde-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "a91fa123319610177921a2b378e2bbb1f42718ec6b9057b7987f6ef0f7b94d03"
+  },
+  {
+    "name": "plasma-integration",
+    "version": "6.8.2-1",
+    "size": 131400,
+    "installed_size": 534717,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/plasma-integration-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "plasma-integration-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "fcee828248ce2d657861df498b4af65142fa2430b0f0cda30cb82a9f4e1a4985"
+  },
+  {
+    "name": "plasma-workspace",
+    "version": "6.8.2-1",
+    "size": 22048664,
+    "installed_size": 68247698,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/plasma-workspace-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "plasma-workspace-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "3899600235848dc40d65298d61d718e06a8a1491262e4cb4d06b88cc58862f86"
+  },
+  {
+    "name": "kunitconversion",
+    "version": "6.31.0-1",
+    "size": 992856,
+    "installed_size": 12569916,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/kunitconversion-6.31.0-1-aarch64.pkg.tar.xz",
+    "filename": "kunitconversion-6.31.0-1-aarch64.pkg.tar.xz",
+    "sha256": "736aed150cf463fef2d54333664547a5135c31481f104bb4bf7f540dc0838303"
+  },
+  {
+    "name": "plasma5support",
+    "version": "6.8.2-1",
+    "size": 1087308,
+    "installed_size": 10402083,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/plasma5support-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "plasma5support-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "f2f2a7e061012737e164d77f57201eb6b05848408682f49dae8da5c6567ebbc4"
+  },
+  {
+    "name": "polkit-kde-agent",
+    "version": "6.8.2-1",
+    "size": 72308,
+    "installed_size": 289342,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/polkit-kde-agent-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "polkit-kde-agent-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "c6bceda9fde5428e2270e0babbb14a70194c1620a2f1a74e91217d2f91a69fca"
+  },
+  {
+    "name": "perl",
+    "version": "5.44.0-1",
+    "size": 16314036,
+    "installed_size": 67341301,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/core/perl-5.44.0-1-aarch64.pkg.tar.xz",
+    "filename": "perl-5.44.0-1-aarch64.pkg.tar.xz",
+    "sha256": "9b2156550793a373a7a288edc9143d20918bfc0503c78060ef6677926f04f4e2"
+  },
+  {
+    "name": "i2c-tools",
+    "version": "4.4-4",
+    "size": 87548,
+    "installed_size": 700309,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/i2c-tools-4.4-4-aarch64.pkg.tar.xz",
+    "filename": "i2c-tools-4.4-4-aarch64.pkg.tar.xz",
+    "sha256": "19061a15e4372eb72a437918cd6bc8bc8c199ff7e756668a1d5519a4e23b68a0"
+  },
+  {
+    "name": "ddcutil",
+    "version": "3.0.2-1",
+    "size": 692820,
+    "installed_size": 3462777,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/ddcutil-3.0.2-1-aarch64.pkg.tar.xz",
+    "filename": "ddcutil-3.0.2-1-aarch64.pkg.tar.xz",
+    "sha256": "8f5d3c32263b1f97778cd209264d65a5b6e02009202b36b7ca8dbc90bd138dfb"
+  },
+  {
+    "name": "qt6-websockets",
+    "version": "6.12.0-1",
+    "size": 104456,
+    "installed_size": 506987,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qt6-websockets-6.12.0-1-aarch64.pkg.tar.xz",
+    "filename": "qt6-websockets-6.12.0-1-aarch64.pkg.tar.xz",
+    "sha256": "41930136fcb276a132a824581315cc9d1dbcfd0d76931b313064498ad86e1d16"
+  },
+  {
+    "name": "qcoro",
+    "version": "0.13.0-2",
+    "size": 133756,
+    "installed_size": 1067862,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/qcoro-0.13.0-2-aarch64.pkg.tar.xz",
+    "filename": "qcoro-0.13.0-2-aarch64.pkg.tar.xz",
+    "sha256": "7b5edd4e7fd5925319bc7b3b71294fd98289d67afb3772f6053dccc881efa8fd"
+  },
+  {
+    "name": "powerdevil",
+    "version": "6.8.2-1",
+    "size": 1639784,
+    "installed_size": 8143508,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/powerdevil-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "powerdevil-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "49f74f780517e127d057b7c870ec2e9805dfef4c5449cd3022f326f94a0f388f"
+  },
+  {
+    "name": "systemsettings",
+    "version": "6.8.2-1",
+    "size": 372820,
+    "installed_size": 1421932,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/systemsettings-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "systemsettings-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "28e9a655afb5083b87ea7ac12a3812f6846f76915cc5f1f95bd7480956300b56"
+  },
+  {
+    "name": "xdg-user-dirs",
+    "version": "0.20-1",
+    "size": 44136,
+    "installed_size": 275989,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/xdg-user-dirs-0.20-1-aarch64.pkg.tar.xz",
+    "filename": "xdg-user-dirs-0.20-1-aarch64.pkg.tar.xz",
+    "sha256": "249c5662c50da333e7cf5242d3c32306ef7780c9b8196060e91d46a75f49c9c5"
+  },
+  {
+    "name": "plasma-desktop",
+    "version": "6.8.2-1",
+    "size": 19755180,
+    "installed_size": 46687192,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/plasma-desktop-6.8.2-1-aarch64.pkg.tar.xz",
+    "filename": "plasma-desktop-6.8.2-1-aarch64.pkg.tar.xz",
+    "sha256": "2ad756fad206514ddcfc3e31bc6f76ac68f11c10e2249dd0d455a764796575a3"
+  },
+  {
+    "name": "konsole",
+    "version": "26.08.3-1",
+    "size": 2216696,
+    "installed_size": 11428182,
+    "url": "https://mirrors.tuna.tsinghua.edu.cn/archlinuxarm/aarch64/extra/konsole-26.08.3-1-aarch64.pkg.tar.xz",
+    "filename": "konsole-26.08.3-1-aarch64.pkg.tar.xz",
+    "sha256": "ebf7bf16ef3dd70d5c69ab2e6bb9d8627743199514d94c24da98d5ac0aa2e2fb"
+  }
+]

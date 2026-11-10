@@ -13,6 +13,10 @@
 两份原始镜像也已保存，44 个种子分卷和 2 份清单全部通过远端 SHA256 核验。
 详细结果见 [云端验证记录](docs/cloud-validation-2026-11-10.json)。
 
+移植源码、GPU 兼容层、Mesa 构建配方、EvoX 补丁历史已补入仓库，
+目录说明和复现缺口见 [源码归档说明](docs/SOURCE_CODE.md)。
+**Archive porting source code** 工作流另存当前 Git 源码包和完整 Mesa 26.2.6 原始源码。
+
 ## 工作流
 
 | Actions 名称 | 做什么 | 真机验证状态 |
