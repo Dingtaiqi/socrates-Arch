@@ -16,8 +16,14 @@ token, repo = request['token'], request['repository']
 root = Path('/home/qinghuo/source_exports_20261110/full-source-v1')
 lock = (root / 'uploader.lock').open('a')
 fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-# The proxy passed a small probe but reset TLS during sustained uploads.
-urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({})))
+# The optional loopback endpoint is an SSH tunnel to this job's cloud runner.
+proxy = request.get('relay_proxy')
+if proxy:
+    parsed = urllib.parse.urlsplit(proxy)
+    if parsed.scheme != 'http' or parsed.hostname != '127.0.0.1' or not parsed.port:
+        raise ValueError('Unsupported source relay endpoint')
+urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler(
+    {'http': proxy, 'https': proxy} if proxy else {})))
 started = time.monotonic()
 max_seconds = 15000
 tag = 'evox-full-source-20261110'

@@ -20,10 +20,10 @@ release = api(base + '/releases', json.dumps({'tag_name': 'network-probe-' + r['
               'target_commitish': r['commit'], 'name': 'Temporary generated network probe', 'draft': True}).encode())
 try:
     payload = os.urandom(8 * 1024 * 1024)
-    for proxy in [None, 'http://127.0.0.1:7890']:
+    for proxy in [r['relay_proxy']] if r.get('relay_proxy') else [None, 'http://127.0.0.1:7890']:
         opener = urllib.request.build_opener(urllib.request.ProxyHandler(
             {'http': proxy, 'https': proxy} if proxy else {}))
-        name = 'proxy.bin' if proxy else 'direct.bin'
+        name = 'relay.bin' if r.get('relay_proxy') else ('proxy.bin' if proxy else 'direct.bin')
         url = release['upload_url'].split('{')[0] + '?name=' + name
         req = urllib.request.Request(url, payload, headers={**headers, 'Content-Type': 'application/octet-stream'})
         start = time.monotonic()

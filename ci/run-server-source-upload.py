@@ -1,6 +1,8 @@
 """Use a temporary GitHub job token; only control traffic passes through CI."""
 import json
+import importlib.util
 import os
+from pathlib import Path
 import paramiko
 
 client = paramiko.SSHClient()
@@ -10,12 +12,18 @@ for line in os.environ['BUILD_KNOWN_HOSTS'].splitlines():
         for name in entry.hostnames:
             client.get_host_keys().add(name, entry.key.get_name(), entry.key)
 client.set_missing_host_key_policy(paramiko.RejectPolicy())
+proxy = None
 try:
     client.connect(os.environ['BUILD_HOST'], port=int(os.environ['BUILD_PORT']),
                    username=os.environ['BUILD_USER'], password=os.environ['BUILD_PASSWORD'],
                    allow_agent=False, look_for_keys=False, timeout=15,
                    banner_timeout=30, auth_timeout=30)
     client.get_transport().set_keepalive(20)
+    if os.environ.get('SOURCE_CLOUD_RELAY') == '1':
+        spec = importlib.util.spec_from_file_location('source_cloud_proxy', Path(__file__).with_name('source-cloud-proxy.py'))
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        proxy = module.SourceCloudProxy(client.get_transport())
     program = os.environ.get('SERVER_UPLOAD_PROGRAM', 'upload_sources_v2.py')
     if program not in ('upload_sources_v2.py', 'upload_full_sources.py', 'upload_full_sources_v2.py',
                         'probe_server_upload.py', 'upload_arch_inputs.py', 'upload_evox_build_proof.py'):
@@ -26,6 +34,7 @@ try:
                             'repository': os.environ['GITHUB_REPOSITORY'],
                             'run_id': os.environ['GITHUB_RUN_ID'],
                             'run_url': 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/' + os.environ['GITHUB_RUN_ID'],
+                            'relay_proxy': 'http://127.0.0.1:' + str(proxy.port) if proxy else None,
                             'commit': os.environ['GITHUB_SHA']}) + '\n')
     stdin.flush()
     stdout.channel.settimeout(3600)
@@ -44,4 +53,6 @@ try:
         with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
             output.write('complete=' + str(complete).lower() + '\n')
 finally:
+    if proxy:
+        proxy.close()
     client.close()
