@@ -20,24 +20,34 @@ fi
 cp arch/kde-start.sh "$work/launcher"
 debugfs -R "dump /system/etc/arch/persist.uuid $work/persist.uuid" "$image"
 # The shipped config has CRLF; native init also strips CR/LF when reading it.
-test "$(tr -d '\r\n' <"$work/persist.uuid")" = fad4bd59-96f1-4c6c-8791-d31c87b82264
+test "$(tr -d '\r\n' <"$work/persist.uuid")" = "${EXPECTED_PERSIST_UUID:-fad4bd59-96f1-4c6c-8791-d31c87b82264}"
 # Read back every write: debugfs can report command errors with exit code zero.
 replace_file() {
-    local source=$1 target=$2
+    local source=$1 target=$2 mode=${3:-0755}
     debugfs -w -R "rm $target" "$image"
     debugfs -w -R "write $source $target" "$image"
-    debugfs -w -R "set_inode_field $target mode 0100755" "$image"
+    debugfs -w -R "set_inode_field $target mode 010${mode}" "$image"
     debugfs -R "dump $target $work/readback" "$image"
     cmp "$source" "$work/readback"
     debugfs -R "stat $target" "$image" >"$work/inode"
-    grep -Eq 'Mode:[[:space:]]+0755([[:space:]]|$)' "$work/inode"
+    grep -Eq "Mode:[[:space:]]+${mode}([[:space:]]|$)" "$work/inode"
     rm "$work/readback"
 }
 replace_file "$work/minit" /system/bin/init
 replace_file "$work/minit" /native_init
 replace_file "$work/launcher" /system/etc/arch/kde-start.sh
+if [ -n "${PERSIST_UUID:-}" ]; then
+    python3 - "$PERSIST_UUID" >"$work/new.uuid" <<'PY'
+import re,sys
+value=sys.argv[1].lower()
+if not re.fullmatch(r'[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}', value):
+    raise SystemExit('PERSIST_UUID must be an ext4 UUID')
+print(value)
+PY
+    replace_file "$work/new.uuid" /system/etc/arch/persist.uuid 0644
+fi
 debugfs -R "dump /system/arch-rootfs.erofs $work/rootfs.erofs" "$image"
-printf '%s  %s\n' 7afa94d0b226a1a22c79fb82ca2c12256d258d5257c5eb8dec7685281f070023 "$work/rootfs.erofs" | sha256sum -c -
+printf '%s  %s\n' "${EXPECTED_ROOTFS_SHA256:-7afa94d0b226a1a22c79fb82ca2c12256d258d5257c5eb8dec7685281f070023}" "$work/rootfs.erofs" | sha256sum -c -
 fsck.erofs "$work/rootfs.erofs"
 e2fsck -fn "$image"
 echo 'OFFLINE REBUILD COMPLETE: requires a separate device test.'

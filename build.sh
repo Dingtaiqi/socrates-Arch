@@ -34,12 +34,17 @@ PY
         python3 "$repo_dir/arch/restore-build-inputs.py" "$inputs"
         exec bash "$repo_dir/arch/build-turnip-portable.sh" "$inputs/inputs" "$output"
         ;;
+    arch-image)
+        shift
+        exec python3 "$repo_dir/arch/build-image.py" "$@"
+        ;;
     *)
         printf '%s\n' \
             'bash build.sh evox /path/to/new/source [systemimage|evolution|init|check]' \
             'bash build.sh restore-evox /path/to/new/source [restore options]' \
             'bash build.sh arch-support /path/to/output' \
-            'bash build.sh arch-turnip /path/to/build-inputs /path/to/output'
+            'bash build.sh arch-turnip /path/to/build-inputs /path/to/output' \
+            'PERSIST_UUID=<existing-data-volume-uuid> bash build.sh arch-image /path/to/new.img'
         [ "$action" = help ]
         ;;
 esac
