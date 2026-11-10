@@ -47,13 +47,35 @@ Actions 中的 **Archive porting source code** 会下载并校验原始 Mesa 源
 `arch/gpu/read_scanout.c` 是早期 dumb-buffer 诊断，曾涉及未解释的重启；
 保留作历史参考，不应对 GPU/imported buffer 直接运行。
 
-## 尚未形成完整的源码复现链
+## 已补齐构建服务器独有材料
 
-原构建机 SSH 密钥认证成功，但打开新会话超时；本次未能导出完整 EvoX checkout。
-当前缺少该 checkout 的 `repo manifest -r`、服务器独有的 tracked changes 和部分
-迭代脚本引用的中间文件。`evox/history/` 保留的是本地现有材料，不能视为完整 b66 补丁序列。
+2026-11-10 已在构建服务器上完成导出、脱敏、打包、校验，并由服务器直接上传 GitHub。
+本机仅接收进度和少量清单，未下载服务器源码包。
+[直传工作流](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42747624122)
+已通过；草稿 Release 为 `build-server-sources-42747624122`。
+附件和校验值见 [server-capture.json](../evox/server-capture.json)。
 
-服务器恢复后，可在服务器本地运行：
+- `manifest.lock.xml` 锁定全部 1265 个项目，revision 全部解析为完整 commit ID。
+- 7 个项目有 tracked changes，补丁反向检查全部通过；同时保存了 17 个改动或新增源码文件。
+- 各项目均无脱离 remote refs 的本地提交；没有需要额外抢救的未推送提交。
+- 收集了 931 份服务器脚本，以及 Arch 构建配方和 226 份包身份记录。
+- 509 个文件中的凭据或个人网络配置已脱敏；正文和包内文件身份记录同步更新。
+
+源码包中的 `projects.json` 将原项目路径对应到 `projects/<id>/`，其中包含补丁、
+文件快照和上游许可信息。`manifests/` 保留原 manifest 及 local manifests。
+`ARCHIVE_RECORD.json` 记录脱敏范围。此快照对应导出时的当前工作树，
+不等同于宣称已重新构建并验证历史 b66 镜像。
+
+`Archive porting source code` 会在 GitHub 云端复用并校验这份服务器备份，
+与原有 Git 源码包和完整 Mesa 源码一起保存；构建机到期后也不再依赖它下载这些材料。
+本次迁出工作流使用的临时 SSH 连接 secrets 已删除；工作流代码保留供以后重新配置主机时使用。
+
+## 复现边界
+
+没有把全部未修改的 Android 上游源码树重复镜像到仓库；它们由固定 commit ID 引用。
+恢复时需按 manifest 同步对应项目，再按 `projects.json` 应用补丁和新增文件。
+服务器上实际使用的完整导出程序保存在 `evox/capture-server-sources.py`，
+其中路径和输出目录是本次迁出配置。下述简版工具也可在源码服务器本地使用：
 
 ```bash
 bash evox/capture-checkout.sh /build/evox /home/YOUR_USER/evox-source-export

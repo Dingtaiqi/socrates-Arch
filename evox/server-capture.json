@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-10",
+  "release_tag": "build-server-sources-42747624122",
+  "release_url": "https://github.com/Dingtaiqi/socrates-Arch/releases/tag/untagged-8bac1ad6e849383bcb3a",
+  "workflow_run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42747624122",
+  "projects": 1265,
+  "modified_projects": 7,
+  "exported_source_files": 17,
+  "server_scripts": 931,
+  "arch_package_records": 226,
+  "local_commit_projects": 0,
+  "unresolved_revisions": 0,
+  "reverse_apply_checks_passed": 7,
+  "credential_redacted_files": 509,
+  "excluded_sensitive_files": [],
+  "transfer": "build server -> GitHub; source archive not downloaded to workstation",
+  "coverage": "Current checkout revisions, working-tree patches, selected untracked sources, server recipes and package metadata. Unchanged upstream trees are referenced by commit.",
+  "assets": [
+    {
+      "name": "ARCHIVE_RECORD.json",
+      "bytes": 21900,
+      "sha256": "abc2bc00686a232acb5abf5c6531a96cf337c6cc6d47cb76b651eeb0629ce309"
+    },
+    {
+      "name": "evox-arch-server-sources-20261110.tar.gz",
+      "bytes": 16057213,
+      "sha256": "940037fe5e87a706b25770249cc5984425c9207e199ec4979f3af31b0446dbed"
+    },
+    {
+      "name": "evox-manifest.lock.xml",
+      "bytes": 309274,
+      "sha256": "d007eceec557967296e39d1ba0b334d198f7cc4352014564d3f809563cec42ba"
+    },
+    {
+      "name": "SHA256SUMS",
+      "bytes": 282,
+      "sha256": "8e5073128bc3df7846b163f8739bacc5dbdef3c647cc62d9c8630aaafd87a021"
+    }
+  ]
+}

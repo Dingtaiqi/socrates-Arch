@@ -16,6 +16,8 @@
 移植源码、GPU 兼容层、Mesa 构建配方、EvoX 补丁历史已补入仓库，
 目录说明和复现缺口见 [源码归档说明](docs/SOURCE_CODE.md)。
 **Archive porting source code** 工作流另存当前 Git 源码包和完整 Mesa 26.2.6 原始源码。
+构建机上的固定版本清单、7 个项目的本地改动和服务器配方也已直传 GitHub，
+见 [服务端源码备份记录](evox/server-capture.json)。
 
 ## 工作流
 
@@ -106,8 +108,8 @@ native init 必须同时核对 UUID 和卷标记才挂载持久层，且从不�
 
 EvoX 原工程来自 Evolution-X manifest `cnb`，设备为 socrates，历史 lunch
 目标是 `lineage_socrates-cp2a-userdebug`。可用 b66 还叠加了多轮 DSU 兼容修正，
-原始脚本分散在旧工作区与服务器；当前尚无完整的固定 revision 清单及补丁序列。
-只运行 `m evolution` 不会自动生成等价 b66。本仓库先把可用成果本体保存下来。
+本地和服务器现有的历史脚本、当前 checkout 的固定 revision 清单及本地改动现已保存。
+这些材料尚未经过完整历史镜像重建验证；只运行 `m evolution` 不会自动生成等价 b66。
 
 完整 Android 构建的官方基准至少需要 400 GB 可用磁盘；普通 GitHub Linux
 runner 标称存储 14 GB，托管作业最长 6 小时。因此这里没有添加一个必然资源不足的

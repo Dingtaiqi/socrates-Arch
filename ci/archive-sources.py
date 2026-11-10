@@ -20,14 +20,29 @@ if source.stat().st_size != lock['bytes'] or sha512.hexdigest() != lock['sha512'
 commit = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
 archive = out / ('socrates-porting-sources-' + commit[:12] + '.tar.gz')
 subprocess.run(['git', 'archive', '--format=tar.gz', '-o', str(archive), 'HEAD'], check=True)
+server_capture = json.loads(Path('evox/server-capture.json').read_text())
+for asset in server_capture['assets']:
+    subprocess.run(['gh', 'release', 'download', server_capture['release_tag'],
+                    '--repo', os.environ['GITHUB_REPOSITORY'], '--pattern', asset['name'],
+                    '--dir', str(out)], check=True)
+    path = out / asset['name']
+    h = hashlib.sha256()
+    with path.open('rb') as src:
+        for block in iter(lambda: src.read(4 * 1024 * 1024), b''):
+            h.update(block)
+    if path.stat().st_size != asset['bytes'] or h.hexdigest() != asset['sha256']:
+        raise SystemExit('Saved server source capture checksum mismatch')
+# The new archive has its own aggregate checksum file below.
+(out / 'SHA256SUMS').unlink()
 record = {
     'commit': commit,
     'run': 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/' + os.environ['GITHUB_RUN_ID'],
     'mesa': lock,
+    'server_capture': server_capture,
     'scope': 'Tracked Arch/EvoX porting sources, historical patches, and full upstream Mesa source',
     'full_android_checkout': False,
     'missing': [
-        'Resolved EvoX repo manifest and server-only tracked changes; source server session timed out',
+        'Unmodified Android upstream repositories are pinned by the saved manifest, not mirrored in full',
         'Complete Arch package source collection and historical cross-toolchain/sysroot inputs',
         'Goodix touch_report and device firmware have no source in this workspace'
     ]

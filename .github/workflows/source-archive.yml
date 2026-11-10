@@ -23,7 +23,7 @@ jobs:
         run: |
           set -euo pipefail
           tag="sources-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
-          printf '%s\n' 'Arch/EvoX porting source history and full verified Mesa 26.2.6 source. Full Android checkout is still incomplete; see source-archive.json and docs/SOURCE_CODE.md.' > out/source-notes.md
+          printf '%s\n' 'Porting history, verified Mesa 26.2.6 source, and the build-server source capture with a fixed Android manifest and local patches. Unmodified Android repositories are referenced by commit; see source-archive.json and docs/SOURCE_CODE.md.' > out/source-notes.md
           gh release create "$tag" --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
             --draft --title "Porting source archive / $GITHUB_RUN_ID" --notes-file out/source-notes.md
           gh release upload "$tag" out/source-archive/* --repo "$GITHUB_REPOSITORY"
