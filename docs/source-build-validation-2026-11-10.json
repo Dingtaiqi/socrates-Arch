@@ -32,6 +32,16 @@
     "local_patch_projects": 7,
     "local_files_verified": 17,
     "full_source_transfer": "in_progress",
-    "fresh_full_rom_build_verified": false
+    "fresh_full_rom_build_verified": false,
+    "current_checkout_systemimage_build": {
+      "returncode": 0,
+      "seconds": 202,
+      "stop_reason": null,
+      "fresh_full_build": false,
+      "target": "systemimage",
+      "image_bytes": 986390528,
+      "image_sha256": "f36454608c870b8ed8a610ced5fc37b726eb0d0fdb1ae33b3227bbde5bebe1d5"
+    },
+    "systemimage_scope": "Incremental system partition build on original checkout; not historical b66 or a merged DSU image"
   }
 }
