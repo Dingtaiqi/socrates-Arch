@@ -25,6 +25,7 @@ for p in [OUT, OUT / 'parts', OUT / 'groups', OUT / 'staging']:
     p.mkdir(mode=0o700, exist_ok=True)
     os.chown(p, 1000, 1000)
 ENV = {**os.environ, 'GIT_OPTIONAL_LOCKS': '0', 'GIT_LFS_SKIP_SMUDGE': '1',
+       'GIT_ATTR_NOSYSTEM': '1',
        'GIT_CONFIG_COUNT': '3', 'GIT_CONFIG_KEY_0': 'safe.directory',
        'GIT_CONFIG_VALUE_0': '*', 'GIT_CONFIG_KEY_1': 'pack.threads',
        'GIT_CONFIG_VALUE_1': '4', 'GIT_CONFIG_KEY_2': 'core.fsmonitor',
@@ -126,11 +127,26 @@ def mirror(project):
     lfs = run(['git', '-C', str(src), 'lfs', 'ls-files', '--long', 'HEAD']).decode()
     objects = []
     if lfs.strip():
+        # ls-files also finds literal pointer text used by source-code tests.
+        # Only committed filter=lfs paths require external object payloads.
+        run(git + ['read-tree', 'HEAD'])
+        required = []
+        try:
+            for line in lfs.splitlines():
+                name = line[67:]
+                attrs = run(git + ['-c', 'core.attributesFile=/dev/null', 'check-attr',
+                                   '--cached', '-z', 'filter', '--', name])
+                if attrs.split(b'\0')[2] == b'lfs':
+                    required.append(line)
+                else:
+                    print('LITERAL_LFS_POINTER_RETAINED', project['path'], name, flush=True)
+        finally:
+            (directory / 'index').unlink(missing_ok=True)
         envtext = run(['git', '-C', str(src), 'lfs', 'env']).decode()
         media = Path(next(l.split('=', 1)[1] for l in envtext.splitlines()
                           if l.startswith('LocalMediaDir=')))
         missing = []
-        for line in lfs.splitlines():
+        for line in required:
             m = re.match(r'^([0-9a-f]{64})\s+[-*]\s+(.+)$', line)
             if not m:
                 raise RuntimeError('Unrecognized LFS listing in ' + project['path'])
@@ -148,7 +164,8 @@ def mirror(project):
                 missing.append(oid)
         if missing:
             run(git + ['remote', 'set-url', 'origin', project['url']])
-            run(git + ['lfs', 'fetch', 'origin', project['head']])
+            run(git + ['lfs', 'fetch', '--include=' + ','.join(o['path'] for o in objects),
+                       '--exclude=', 'origin', project['head']])
         for obj in objects:
             p = directory / 'lfs/objects' / obj['oid'][:2] / obj['oid'][2:4] / obj['oid']
             if not p.is_file() or file_hash(p) != obj['oid']:

@@ -76,7 +76,9 @@ class RestoreTests(unittest.TestCase):
         payload = b'pinned-build-input\0' * 4096
         (self.source / '.gitattributes').write_text('*.bin filter=lfs diff=lfs merge=lfs -text\n')
         (self.source / 'artifact.bin').write_bytes(payload)
-        self.git('add', '.gitattributes', 'artifact.bin')
+        literal = b'version https://git-lfs.github.com/spec/v1\noid sha256:' + b'a' * 64 + b'\nsize 999999\n'
+        (self.source / 'literal-pointer.txt').write_bytes(literal)
+        self.git('add', '.gitattributes', 'artifact.bin', 'literal-pointer.txt')
         self.git('-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid', 'commit', '-qm', 'LFS input')
         self.project.update(head=self.git('rev-parse', 'HEAD').decode().strip(), lfs_objects=1)
         shutil.rmtree(self.mirror)
@@ -94,6 +96,7 @@ class RestoreTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         restored = self.destination / 'platform/demo'
         self.assertEqual((restored / 'artifact.bin').read_bytes(), payload)
+        self.assertEqual((restored / 'literal-pointer.txt').read_bytes(), literal)
         diff = subprocess.run(['git', '-C', str(restored), 'diff', '--exit-code', 'HEAD', '--', 'artifact.bin'],
                               capture_output=True)
         self.assertEqual(diff.returncode, 0, diff.stderr)

@@ -15,7 +15,7 @@ import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 
-ENV = {**os.environ, 'GIT_LFS_SKIP_SMUDGE': '1', 'GIT_OPTIONAL_LOCKS': '0'}
+ENV = {**os.environ, 'GIT_LFS_SKIP_SMUDGE': '1', 'GIT_OPTIONAL_LOCKS': '0', 'GIT_ATTR_NOSYSTEM': '1'}
 
 
 def run(args, cwd=None):
@@ -175,11 +175,26 @@ def install_repository(project, scratch, root):
         run(['git', 'lfs', 'install', '--local', '--force', '--skip-smudge', '--skip-repo'], cwd=worktree)
     run(git + ['reset', '--hard', project['head']], cwd=worktree)
     if project.get('lfs_objects'):
-        run(['git', 'lfs', 'checkout'], cwd=worktree)
-        run(['git', 'lfs', 'fsck', '--objects', 'HEAD'], cwd=worktree)
         listing = run(['git', 'lfs', 'ls-files', '--long', 'HEAD'], cwd=worktree).decode()
-        if any(line[65:66] != '*' for line in listing.splitlines()):
-            raise ValueError('LFS checkout left pointer files: ' + path)
+        required = []
+        for line in listing.splitlines():
+            name = line[67:]
+            attrs = run(git + ['-c', 'core.attributesFile=/dev/null', 'check-attr',
+                               '--cached', '-z', 'filter', '--', name])
+            if attrs.split(b'\0')[2] == b'lfs':
+                required.append((line[:64], name))
+        if len(required) != project['lfs_objects']:
+            raise ValueError('Required LFS file count differs: ' + path)
+        run(['git', 'lfs', 'checkout', '--'] + [name for oid, name in required], cwd=worktree)
+        # Check the payloads themselves, leaving literal pointer test fixtures
+        # without filter=lfs untouched and independent of nonexistent objects.
+        for oid, name in required:
+            digest = hashlib.sha256()
+            with safe_path(worktree, name).open('rb') as source:
+                for block in iter(lambda: source.read(4 * 1024 * 1024), b''):
+                    digest.update(block)
+            if digest.hexdigest() != oid:
+                raise ValueError('LFS payload checksum differs: ' + path + '/' + name)
     receipt.write_text(json.dumps(project))
     pending.unlink()
     print('RESTORED', path, project['head'], flush=True)
