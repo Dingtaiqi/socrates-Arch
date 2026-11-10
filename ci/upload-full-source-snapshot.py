@@ -149,6 +149,11 @@ while True:
 
 snapshot['release_tag'] = tag
 snapshot['source_release_url'] = 'https://github.com/' + repo + '/releases/tag/' + tag
+# Keep the downloadable index and the Git index byte-identical.
+validation = json.loads((root / 'VALIDATION_READY.json').read_text())
+if not validation.get('restoration_verified') or not validation.get('configuration_verified'):
+    raise RuntimeError('Independent validation has not passed; keeping source release draft')
+snapshot['validation'] = validation
 data = (json.dumps(snapshot, indent=2) + '\n').encode()
 manifest = root / 'SNAPSHOT.public.json'
 manifest.write_bytes(data)
@@ -161,12 +166,6 @@ record = {'release_tag': tag, 'release_url': release['html_url'],
 (root / 'UPLOAD_COMPLETE.json').write_text(json.dumps(record, indent=2) + '\n')
 print('FULL_SOURCE_UPLOAD_COMPLETE ' + json.dumps(record), flush=True)
 
-# Publish only after the independent server-side restoration/configuration checks.
-validation = json.loads((root / 'VALIDATION_READY.json').read_text())
-if not validation.get('restoration_verified') or not validation.get('configuration_verified'):
-    raise RuntimeError('Independent validation has not passed; keeping source release draft')
-snapshot['validation'] = validation
-data = (json.dumps(snapshot, indent=2) + '\n').encode()
 content_url = api_root + '/contents/evox/full-source-snapshot.json'
 try:
     current = api(content_url + '?ref=main')
@@ -178,9 +177,11 @@ body = {'message': 'Record complete offline build-server source snapshot',
         'content': base64.b64encode(data).decode(), 'branch': 'main'}
 if current:
     body['sha'] = current['sha']
-api(content_url, json.dumps(body).encode(), method='PUT', extra={'Content-Type': 'application/json'})
+committed = api(content_url, json.dumps(body).encode(), method='PUT', extra={'Content-Type': 'application/json'})
+record['source_code_commit'] = committed['commit']['sha']
 api(api_root + '/releases/' + str(release['id']), json.dumps({
     'draft': False, 'make_latest': 'false',
+    'target_commitish': record['source_code_commit'],
     'body': 'Complete committed source repositories, local LFS inputs, seven porting patches and '
             'audited unmanaged build inputs. No build outputs or old Git history. '
             'Restore and build using build.sh in the repository. '
