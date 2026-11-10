@@ -16,12 +16,13 @@ jobs:
         with:
           persist-credentials: false
       - run: |
+          sudo apt-get update
+          sudo apt-get install -y git-lfs
           python3 -m unittest discover -s ci -p 'test_*.py'
           bash -n ci/rebuild-arch.sh ci/release.sh build.sh evox/build-source.sh arch/build-turnip-portable.sh
           sh -n arch/kde-start.sh
       - name: Cross-compile the ARM64 native init
         run: |
-          sudo apt-get update
           sudo apt-get install -y gcc-aarch64-linux-gnu libdrm-dev
           aarch64-linux-gnu-gcc -O2 -static -Wall -Wextra -o /tmp/minit-kde arch/minit_kde.c
           aarch64-linux-gnu-readelf -h /tmp/minit-kde | grep 'Machine:.*AArch64'

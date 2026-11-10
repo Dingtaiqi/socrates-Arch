@@ -169,6 +169,10 @@ def install_repository(project, scratch, root):
     if run(git + ['rev-parse', 'HEAD']).decode().strip() != project['head']:
         raise ValueError('Snapshot HEAD differs: ' + path)
     run(git + ['fsck', '--connectivity-only', '--no-reflogs', '--no-dangling'])
+    if project.get('lfs_objects'):
+        # Keep filters and the bundled object store local to the restored repo.
+        run(git + ['config', 'lfs.storage', 'lfs'])
+        run(['git', 'lfs', 'install', '--local', '--force', '--skip-smudge', '--skip-repo'], cwd=worktree)
     run(git + ['reset', '--hard', project['head']], cwd=worktree)
     if project.get('lfs_objects'):
         run(['git', 'lfs', 'checkout'], cwd=worktree)
