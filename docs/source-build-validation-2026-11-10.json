@@ -57,6 +57,11 @@
       "result": "passed",
       "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42837822180",
       "scope": "Synthetic LFS repository restored with system/global filters disabled and an unrelated global object store; file content and clean Git diff verified"
+    },
+    "literal_lfs_pointer_test": {
+      "result": "passed",
+      "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42855704712",
+      "scope": "Real LFS payload and a literal pointer fixture coexist; only committed filter=lfs paths are hydrated and their complete SHA256 values checked"
     }
   }
 }

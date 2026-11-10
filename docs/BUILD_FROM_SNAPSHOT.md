@@ -45,6 +45,8 @@ python3 evox/restore-source.py ../evox-test-restore --groups 0,1
 每个分卷和组合归档均核对 SHA256，Git HEAD 和对象连通性也会检查。
 恢复器为包含 LFS 文件的项目设置仓库内的过滤器和对象缓存；无系统/用户级 LFS
 过滤器、全局缓存另指其他目录的组合场景已通过独立还原测试。
+只为提交属性中标记 `filter=lfs` 的路径还原 LFS 数据，并核对完整文件 SHA256；
+测试目录中仅仅长得像 LFS 指针的普通文本会保持原文。
 已完成恢复后的开发者改动不会被重复 checkout 清除。
 源码快照用于固定版本构建；需要更新上游时另建正常的 repo sync 工作区。
 
