@@ -29,7 +29,7 @@ BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 入口先恢复已锁定源码，再执行 `lunch lineage_socrates-cp2a-userdebug` 和
 `m systemimage`。也可将最后一项改成 `check`（只检查配置）、`init`（编译 init）
 或 `evolution`（完整 ROM）。不会向手机发送命令。
-Android 构建会使用快照内的 JDK/Clang 等预编译输入。
+Android 构建会使用快照内的 Repo、JDK/Clang 等输入，无需另行下载 Repo 工具。
 依赖参考：[AOSP 构建要求](https://source.android.com/docs/setup/start/requirements)。
 原服务器安装包版本记录在 `evox/host-packages.lock.tsv`，可用于核对缺失的构建依赖。
 

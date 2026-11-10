@@ -6,6 +6,8 @@ target=${2:-systemimage}
 case "$target" in systemimage|evolution|init|check) ;; *) echo 'Unsupported build target' >&2; exit 2;; esac
 source_dir=$(realpath -- "$source_dir")
 test -f "$source_dir/build/envsetup.sh"
+test -x "$source_dir/.repo/repo/repo"
+export PATH="$source_dir/.repo/repo:$PATH"
 jobs=${BUILD_JOBS:-8}
 case "$jobs" in ''|*[!0-9]*) echo 'Invalid BUILD_JOBS' >&2; exit 2;; esac
 test "$jobs" -gt 0
