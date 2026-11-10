@@ -11,7 +11,7 @@
 旧 Git 历史、`out/`、`out_init/` 和个人凭据不属于源码快照。
 完整上游源码以 Release 分卷保存；Git 仓库保存恢复/编译入口和校验清单。
 
-使用 x86-64 Ubuntu 22.04 或兼容的 Linux 环境，准备至少 400 GB 可用磁盘，
+EvoX 构建环境使用 x86-64 Ubuntu 22.04，准备至少 400 GB 可用磁盘，
 64 GB 以上内存；原机器是 Ubuntu 22.04、64 GB 内存。恢复会同时保存浅层 Git 对象
 和工作树，编译产物还会继续占用空间。不要在普通 GitHub 托管 runner 上全量编译 Android。
 
@@ -20,7 +20,7 @@ sudo apt-get update
 sudo apt-get install -y git git-lfs python3 curl gnupg flex bison build-essential \
   zip unzip zlib1g-dev libc6-dev-i386 x11proto-core-dev libx11-dev lib32z1-dev \
   libgl1-mesa-dev libxml2-utils xsltproc fontconfig bc libelf-dev ccache lz4 \
-  libssl-dev rsync
+  libssl-dev rsync libncurses5 libtinfo5 python-is-python3
 git clone https://github.com/Dingtaiqi/socrates-Arch.git
 cd socrates-Arch
 BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
@@ -31,6 +31,7 @@ BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 或 `evolution`（完整 ROM）。不会向手机发送命令。
 Android 构建会使用快照内的 JDK/Clang 等预编译输入。
 依赖参考：[AOSP 构建要求](https://source.android.com/docs/setup/start/requirements)。
+原服务器安装包版本记录在 `evox/host-packages.lock.tsv`，可用于核对缺失的构建依赖。
 
 仅恢复文件或分阶段检查：
 
