@@ -34,9 +34,9 @@ sudo apt-get update
 sudo apt-get install -y build-essential binutils-aarch64-linux-gnu pkg-config \
   qemu-user-static bison flex xz-utils python3 e2fsprogs erofs-utils gcc-aarch64-linux-gnu
 # 编译 native init，生成新的 system 镜像文件。
-bash build.sh arch-image /build/new-arch.img
+bash build.sh arch-image out/new-arch.img
 # 独立从 Mesa 源码编译 KGSL Vulkan 驱动。
-bash build.sh arch-turnip /build/arch-inputs /build/new-turnip
+bash build.sh arch-turnip out/arch-inputs out/new-turnip
 ```
 
 镜像入口使用公开、去个人化的固定 Arch Linux ARM 用户空间，保留现有桌面运行库；

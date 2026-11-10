@@ -12,7 +12,7 @@
 完整上游源码以 Release 分卷保存；Git 仓库保存恢复/编译入口和校验清单。
 
 使用 x86-64 Ubuntu 22.04 或兼容的 Linux 环境，准备至少 400 GB 可用磁盘，
-32 GB 以上内存；原机器是 Ubuntu 22.04、64 GB 内存。恢复会同时保存浅层 Git 对象
+64 GB 以上内存；原机器是 Ubuntu 22.04、64 GB 内存。恢复会同时保存浅层 Git 对象
 和工作树，编译产物还会继续占用空间。不要在普通 GitHub 托管 runner 上全量编译 Android。
 
 ```bash
@@ -23,7 +23,7 @@ sudo apt-get install -y git git-lfs python3 curl gnupg flex bison build-essentia
   libssl-dev rsync
 git clone https://github.com/Dingtaiqi/socrates-Arch.git
 cd socrates-Arch
-BUILD_JOBS=8 bash build.sh evox /build/restored-socrates systemimage
+BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 ```
 
 入口先恢复已锁定源码，再执行 `lunch lineage_socrates-cp2a-userdebug` 和
@@ -35,9 +35,9 @@ Android 构建会使用快照内的 JDK/Clang 等预编译输入。
 仅恢复文件或分阶段检查：
 
 ```bash
-bash build.sh restore-evox /build/restored-socrates
+bash build.sh restore-evox ../evox-source
 # 可选：只恢复清单中的指定分组，不能用不完整恢复执行正式构建。
-python3 evox/restore-source.py /build/test-restore --groups 0,1
+python3 evox/restore-source.py ../evox-test-restore --groups 0,1
 ```
 
 恢复目标必须是新目录，或由同一清单创建的目录；重复运行会跳过已完成分组。
@@ -65,7 +65,7 @@ Mesa 26.2.6 原始源码、Turnip KGSL 构建配方和工具链记录已经保�
 ```bash
 sudo apt-get install -y build-essential binutils-aarch64-linux-gnu pkg-config \
   qemu-user-static bison flex xz-utils python3
-bash build.sh arch-turnip /build/arch-inputs /build/new-turnip
+bash build.sh arch-turnip out/arch-inputs out/new-turnip
 ```
 
 `Build ARM64 Turnip from source` Actions 使用同一入口编译 ARM64 KGSL Vulkan 驱动，
@@ -79,7 +79,7 @@ bash build.sh arch-turnip /build/arch-inputs /build/new-turnip
 
 ```bash
 sudo apt-get install -y e2fsprogs erofs-utils gcc-aarch64-linux-gnu
-bash build.sh arch-image /build/new-arch.img
+bash build.sh arch-image out/new-arch.img
 # 需要使用现有数据卷时，在构建命令前设置 PERSIST_UUID=<该卷UUID>。
 ```
 
