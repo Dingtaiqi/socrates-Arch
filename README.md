@@ -26,6 +26,7 @@ ARM64 KGSL 驱动的源码编译。EvoX 完整源码快照仍在迁出。
 ## 克隆后编译 Arch
 
 公开构建底包与 GPU 编译环境已经上传，以下两条入口均已在 GitHub 云端实际通过：
+编译主机使用 x86-64 Ubuntu 22.04/24.04，目标产物为 ARM64。
 
 ```bash
 git clone https://github.com/Dingtaiqi/socrates-Arch.git

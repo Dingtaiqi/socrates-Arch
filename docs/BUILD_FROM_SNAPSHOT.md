@@ -43,6 +43,8 @@ python3 evox/restore-source.py ../evox-test-restore --groups 0,1
 
 恢复目标必须是新目录，或由同一清单创建的目录；重复运行会跳过已完成分组。
 每个分卷和组合归档均核对 SHA256，Git HEAD 和对象连通性也会检查。
+恢复器为包含 LFS 文件的项目设置仓库内的过滤器和对象缓存；空全局配置及自定义
+全局缓存路径的场景已通过独立还原测试。
 已完成恢复后的开发者改动不会被重复 checkout 清除。
 源码快照用于固定版本构建；需要更新上游时另建正常的 repo sync 工作区。
 
@@ -60,6 +62,8 @@ python3 evox/restore-source.py ../evox-test-restore --groups 0,1
 并非已合并的 DSU 镜像，也未验证完整 `m evolution` 或全新环境全量编译。
 
 ## Arch
+
+以下编译环境面向 x86-64 Ubuntu 22.04/24.04 主机，输出 ARM64 产物。
 
 `bash build.sh arch-support OUTPUT_DIR` 可从源码交叉编译当前 DRM 兼容层和重启工具。
 Mesa 26.2.6 原始源码、Turnip KGSL 构建配方和工具链记录已经保存。
