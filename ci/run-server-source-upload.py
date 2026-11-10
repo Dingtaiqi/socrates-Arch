@@ -26,7 +26,8 @@ try:
         proxy = module.SourceCloudProxy(client.get_transport())
     program = os.environ.get('SERVER_UPLOAD_PROGRAM', 'upload_sources_v2.py')
     if program not in ('upload_sources_v2.py', 'upload_full_sources.py', 'upload_full_sources_v2.py',
-                        'probe_server_upload.py', 'upload_arch_inputs.py', 'upload_evox_build_proof.py'):
+                        'upload_full_sources_relay.py', 'probe_server_upload.py', 'probe_server_upload_relay.py',
+                        'upload_arch_inputs.py', 'upload_evox_build_proof.py'):
         raise SystemExit('Unsupported server upload program')
     stdin, stdout, stderr = client.exec_command(
         'timeout -k 15s 19800s python3 -u /home/qinghuo/source_exports_20261110/' + program, timeout=180)
