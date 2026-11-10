@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 import time
+import urllib.request
 
 import paramiko
 
@@ -17,7 +18,11 @@ base = Path('/home/qinghuo/source_exports_20261110/evox-build-proof-v1')
 assets = json.loads((base / 'ASSETS.json').read_text())
 sys.stdout.buffer.write((json.dumps(assets) + '\\n').encode())
 sys.stdout.buffer.flush()
+requested = set(json.loads(sys.stdin.readline()))
+assert requested.issubset({item['name'] for item in assets['assets']})
 for item in assets['assets']:
+    if item['name'] not in requested:
+        continue
     assert Path(item['name']).name == item['name']
     with (base / item['name']).open('rb') as source:
         shutil.copyfileobj(source, sys.stdout.buffer, 1024 * 1024)
@@ -36,13 +41,28 @@ try:
                    allow_agent=False, look_for_keys=False, timeout=15,
                    banner_timeout=30, auth_timeout=30)
     client.get_transport().set_keepalive(20)
-    _, stdout, stderr = client.exec_command('python3 -u -c ' + shlex.quote(remote), timeout=180)
+    stdin, stdout, stderr = client.exec_command('python3 -u -c ' + shlex.quote(remote), timeout=180)
     stdout.channel.settimeout(180)
     with tempfile.TemporaryDirectory(prefix='evox-build-proof-') as directory:
         base = Path(directory)
         manifest = json.loads(stdout.readline())
         (base / 'ASSETS.json').write_text(json.dumps(manifest))
+        request = urllib.request.Request('https://api.github.com/repos/' +
+            os.environ['GITHUB_REPOSITORY'] + '/releases?per_page=100',
+            headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+                     'Accept': 'application/vnd.github+json'})
+        with urllib.request.urlopen(request, timeout=60) as response:
+            releases = json.load(response)
+        release = next((r for r in releases if r['tag_name'] == 'evox-systemimage-proof-20261110'), {})
+        existing = {item['name']: item for item in release.get('assets', [])}
+        requested = {item['name'] for item in manifest['assets']
+                     if existing.get(item['name'], {}).get('digest') != 'sha256:' + item['sha256']}
+        stdin.write(json.dumps(sorted(requested)) + '\n')
+        stdin.flush()
         for item in manifest['assets']:
+            if item['name'] not in requested:
+                print('PROOF_ALREADY_ARCHIVED', item['name'], flush=True)
+                continue
             if Path(item['name']).name != item['name']:
                 raise ValueError('Unexpected build proof path')
             started, received = time.monotonic(), 0
