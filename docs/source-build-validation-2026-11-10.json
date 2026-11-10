@@ -43,6 +43,16 @@
       "image_sha256": "f36454608c870b8ed8a610ced5fc37b726eb0d0fdb1ae33b3227bbde5bebe1d5"
     },
     "systemimage_scope": "Incremental system partition build on original checkout; not historical b66 or a merged DSU image",
+    "systemimage_archive": {
+      "result": "success",
+      "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42849078628",
+      "release_tag": "evox-systemimage-proof-20261110",
+      "draft": true,
+      "artifact": "evox-system-partition-build.img.gz",
+      "bytes": 561285133,
+      "sha256": "36433aed1b1546c32c62028c49fc599f1c91820a72404105fe57e70070141124",
+      "transfer": "Build server to GitHub runner to draft Release, with end-to-end digest checks"
+    },
     "cold_lfs_restore_test": {
       "result": "passed",
       "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42837822180",
