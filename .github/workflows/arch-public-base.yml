@@ -1,0 +1,38 @@
+name: Prepare public Arch build base
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: arch-public-base
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install image tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y e2fsprogs erofs-utils zerofree gcc-aarch64-linux-gnu
+          df -h .
+          mkdir inputs out
+      - name: Fetch the pinned system-only seed
+        run: python3 ci/bundle.py fetch arch inputs/system.img
+      - name: Remove personal settings in the disposable cloud copy
+        run: sudo python3 ci/sanitize-arch-base.py
+      - name: Package the checked build base
+        run: |
+          sudo chown -R "$(id -u):$(id -g)" out
+          python3 ci/bundle.py pack inputs/system.img out --name arch-public-base.img
+          printf '%s\n' "$GITHUB_SHA" >out/SOURCE_COMMIT
+          (cd out; sha256sum -- * >SHA256SUMS)
+          gh release create "arch-public-base-${GITHUB_RUN_ID}" out/* \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --draft \
+            --title "Sanitized Arch build base ${GITHUB_RUN_ID}" \
+            --notes "System-only build base: login keys, network credentials and user homes removed; passwords locked; free blocks zeroed. Rebuilt image has not been device-tested."
