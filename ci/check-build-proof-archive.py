@@ -2,19 +2,24 @@
 import json
 import os
 from pathlib import Path
+import urllib.error
 import urllib.request
 
 root = Path(__file__).resolve().parents[1]
 expected = json.loads((root / 'evox/build-proof-assets.json').read_text())
 request = urllib.request.Request('https://api.github.com/repos/' +
-    os.environ['GITHUB_REPOSITORY'] + '/releases?per_page=100',
+    os.environ['GITHUB_REPOSITORY'] + '/releases/' + str(expected['release_id']),
     headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
              'Accept': 'application/vnd.github+json'})
-with urllib.request.urlopen(request, timeout=60) as response:
-    releases = json.load(response)
-release = next((r for r in releases if r['tag_name'] == expected['release_tag']), {})
+try:
+    with urllib.request.urlopen(request, timeout=60) as response:
+        release = json.load(response)
+except urllib.error.HTTPError as error:
+    if error.code != 404:
+        raise
+    release = {}
 assets = {item['name']: item for item in release.get('assets', [])}
-complete = release.get('draft') is expected['draft'] and all(
+complete = release.get('tag_name') == expected['release_tag'] and release.get('draft') is expected['draft'] and all(
     assets.get(item['name'], {}).get('state') == 'uploaded' and
     assets[item['name']]['size'] == item['bytes'] and
     assets[item['name']].get('digest') == 'sha256:' + item['sha256']
