@@ -16,7 +16,9 @@ spec.loader.exec_module(restore)
 snapshot_path = repo / 'evox/full-source-snapshot.json'
 snapshot = json.loads(snapshot_path.read_text())
 identity = hashlib.sha256(snapshot_path.read_bytes()).hexdigest()
-report = {'snapshot_sha256': identity, 'groups': [], 'repositories': 0, 'normal_projects': 0,
+report = {'snapshot_sha256': identity,
+          'checker_commit': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=repo).decode().strip(),
+          'groups': [], 'repositories': 0, 'normal_projects': 0,
           'lfs_objects': 0, 'extra_input_files': 0, 'fresh_full_rom_build_verified': False,
           'scope': 'Every group restored independently, including local overlays, Git objects and LFS; not a full ROM compile'}
 out = repo / 'out/source-restore-check'

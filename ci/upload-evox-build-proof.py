@@ -26,10 +26,13 @@ def api(url, data=None, method=None, length=None):
 releases = api(api_root + '/releases?per_page=100')
 release = next((r for r in releases if r['tag_name'] == tag), None)
 if not release:
-    release = api(api_root + '/releases', json.dumps({'tag_name': tag, 'target_commitish': request['commit'],
+    # Resolving the current branch avoids workflow-write permission requirements
+    # when the archiving job's commit is behind later workflow edits on main.
+    release = api(api_root + '/releases', json.dumps({'tag_name': tag, 'target_commitish': 'main',
         'draft': True, 'name': 'EvoX current source systemimage build proof',
         'body': 'Current original checkout compiled systemimage successfully. Plain system partition build, '
-                'not a merged DSU image or historical b66 reproduction. Not device-tested. Kept private. ' + request['run_url']}).encode())
+                'not a merged DSU image or historical b66 reproduction. Not device-tested. Kept private. '
+                'Archiving workflow commit: ' + request['commit'] + '. ' + request['run_url']}).encode())
 if not release['draft']:
     raise SystemExit('Compiled partition archive must remain draft')
 for item in assets:

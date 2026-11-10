@@ -19,7 +19,8 @@ jobs:
       BUILD_USER: ${{ secrets.BUILD_SOURCE_USER_20261110 }}
       BUILD_PASSWORD: ${{ secrets.BUILD_SOURCE_PASSWORD_20261110 }}
       BUILD_KNOWN_HOSTS: ${{ secrets.BUILD_SOURCE_KNOWN_HOSTS_20261110 }}
-      SERVER_UPLOAD_PROGRAM: upload_full_sources_v2.py
+      SERVER_UPLOAD_PROGRAM: upload_full_sources_relay.py
+      SOURCE_CLOUD_RELAY: '1'
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:

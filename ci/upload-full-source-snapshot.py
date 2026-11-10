@@ -4,6 +4,7 @@ import base64
 import fcntl
 import hashlib
 import json
+import itertools
 from pathlib import Path
 import sys
 import time
@@ -17,13 +18,14 @@ root = Path('/home/qinghuo/source_exports_20261110/full-source-v1')
 lock = (root / 'uploader.lock').open('a')
 fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
 # The optional loopback endpoint is an SSH tunnel to this job's cloud runner.
-proxy = request.get('relay_proxy')
-if proxy:
-    parsed = urllib.parse.urlsplit(proxy)
-    if parsed.scheme != 'http' or parsed.hostname != '127.0.0.1' or not parsed.port:
-        raise ValueError('Unsupported source relay endpoint')
-urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler(
-    {'http': proxy, 'https': proxy} if proxy else {})))
+proxies = request.get('relay_proxies') or [request.get('relay_proxy')]
+for proxy in proxies:
+    if proxy:
+        parsed = urllib.parse.urlsplit(proxy)
+        if parsed.scheme != 'http' or parsed.hostname != '127.0.0.1' or not parsed.port:
+            raise ValueError('Unsupported source relay endpoint')
+openers = itertools.cycle([urllib.request.build_opener(urllib.request.ProxyHandler(
+    {'http': proxy, 'https': proxy} if proxy else {})) for proxy in proxies])
 started = time.monotonic()
 max_seconds = 15000
 tag = 'evox-full-source-20261110'
@@ -31,6 +33,7 @@ api_root = 'https://api.github.com/repos/' + repo
 
 
 def api(url, data=None, method=None, extra=None):
+    opener = next(openers)
     headers = {'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json',
                'X-GitHub-Api-Version': '2022-11-28'}
     if extra:
@@ -40,7 +43,7 @@ def api(url, data=None, method=None, extra=None):
             if hasattr(data, 'seek'):
                 data.seek(0)
             req = urllib.request.Request(url, data=data, headers=headers, method=method)
-            with urllib.request.urlopen(req, timeout=900) as response:
+            with opener.open(req, timeout=900) as response:
                 return json.load(response) if response.status != 204 else None
         except urllib.error.HTTPError as error:
             if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 3:
@@ -187,7 +190,9 @@ committed = api(content_url, json.dumps(body).encode(), method='PUT', extra={'Co
 record['source_code_commit'] = committed['commit']['sha']
 api(api_root + '/releases/' + str(release['id']), json.dumps({
     'draft': False, 'make_latest': 'false',
-    'target_commitish': record['source_code_commit'],
+    # The index commit is now on main. Resolve the branch at publication so
+    # unrelated newer workflow edits cannot require an unavailable permission.
+    'target_commitish': 'main',
     'body': 'Complete committed source repositories, local LFS inputs, seven porting patches and '
             'audited unmanaged build inputs. No build outputs or old Git history. '
             'Restore and build using build.sh in the repository. '

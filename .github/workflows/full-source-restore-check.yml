@@ -44,6 +44,6 @@ jobs:
           RESULT_TAG: ${{ steps.ready.outputs.tag }}
         run: |
           gh release create "$RESULT_TAG" out/source-restore-check/RESTORE_VALIDATION.json \
-            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --repo "$GITHUB_REPOSITORY" --target main \
             --title "Complete source restoration checks" \
             --notes "All snapshot groups restored independently; Git objects, LFS and local overlays verified. A fresh full ROM compilation is not certified."

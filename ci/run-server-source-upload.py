@@ -5,25 +5,35 @@ import os
 from pathlib import Path
 import paramiko
 
-client = paramiko.SSHClient()
-for line in os.environ['BUILD_KNOWN_HOSTS'].splitlines():
-    entry = paramiko.hostkeys.HostKeyEntry.from_line(line)
-    if entry:
-        for name in entry.hostnames:
-            client.get_host_keys().add(name, entry.key.get_name(), entry.key)
-client.set_missing_host_key_policy(paramiko.RejectPolicy())
-proxy = None
-try:
+def connect():
+    client = paramiko.SSHClient()
+    for line in os.environ['BUILD_KNOWN_HOSTS'].splitlines():
+        entry = paramiko.hostkeys.HostKeyEntry.from_line(line)
+        if entry:
+            for name in entry.hostnames:
+                client.get_host_keys().add(name, entry.key.get_name(), entry.key)
+    client.set_missing_host_key_policy(paramiko.RejectPolicy())
     client.connect(os.environ['BUILD_HOST'], port=int(os.environ['BUILD_PORT']),
                    username=os.environ['BUILD_USER'], password=os.environ['BUILD_PASSWORD'],
                    allow_agent=False, look_for_keys=False, timeout=15,
                    banner_timeout=30, auth_timeout=30)
     client.get_transport().set_keepalive(20)
+    return client
+
+
+clients, proxies = [], []
+try:
+    client = connect()
+    clients.append(client)
     if os.environ.get('SOURCE_CLOUD_RELAY') == '1':
         spec = importlib.util.spec_from_file_location('source_cloud_proxy', Path(__file__).with_name('source-cloud-proxy.py'))
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
-        proxy = module.SourceCloudProxy(client.get_transport())
+        for number in range(3):
+            connection = client if number == 0 else connect()
+            if number:
+                clients.append(connection)
+            proxies.append(module.SourceCloudProxy(connection.get_transport()))
     program = os.environ.get('SERVER_UPLOAD_PROGRAM', 'upload_sources_v2.py')
     if program not in ('upload_sources_v2.py', 'upload_full_sources.py', 'upload_full_sources_v2.py',
                         'upload_full_sources_relay.py', 'probe_server_upload.py', 'probe_server_upload_relay.py',
@@ -35,7 +45,8 @@ try:
                             'repository': os.environ['GITHUB_REPOSITORY'],
                             'run_id': os.environ['GITHUB_RUN_ID'],
                             'run_url': 'https://github.com/' + os.environ['GITHUB_REPOSITORY'] + '/actions/runs/' + os.environ['GITHUB_RUN_ID'],
-                            'relay_proxy': 'http://127.0.0.1:' + str(proxy.port) if proxy else None,
+                            'relay_proxy': 'http://127.0.0.1:' + str(proxies[0].port) if proxies else None,
+                            'relay_proxies': ['http://127.0.0.1:' + str(p.port) for p in proxies],
                             'commit': os.environ['GITHUB_SHA']}) + '\n')
     stdin.flush()
     stdout.channel.settimeout(3600)
@@ -54,6 +65,5 @@ try:
         with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
             output.write('complete=' + str(complete).lower() + '\n')
 finally:
-    if proxy:
-        proxy.close()
-    client.close()
+    for connection in clients:
+        connection.close()
