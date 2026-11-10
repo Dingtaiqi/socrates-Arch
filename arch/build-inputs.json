@@ -7,6 +7,13 @@
       "name": "arch-turnip-build-inputs-20261110.tar.gz",
       "bytes": 406475373,
       "sha256": "09158907246cbf0c028374b9aed7bf2690142c9ead61c4f9a7ab26c71136d9d6"
+    },
+    {
+      "name": "wayland-protocols-1.41.tar.xz",
+      "kind": "file",
+      "destination": "mesa-packagecache/wayland-protocols-1.41.tar.xz",
+      "bytes": 120224,
+      "sha256": "2786b6b1b79965e313f2c289c12075b9ed700d41844810c51afda10ee329576b"
     }
   ],
   "files": 12152
