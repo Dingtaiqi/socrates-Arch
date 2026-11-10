@@ -58,6 +58,15 @@
       "scope": "Each group independently restored on a fresh Linux runner; not a fresh full ROM compilation"
     },
     "temporary_build_host_secrets_removed": 5,
+    "serverless_archive_recheck": {
+      "result": "success",
+      "source_run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42886619171",
+      "proof_run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42886661898",
+      "validation_report_recheck_run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42886662017",
+      "build_host_credentials_present": false,
+      "build_host_contacted": false,
+      "scope": "Existing source parts, saved proof and completed restoration report recognized after deleting all five temporary build-host secrets; server transfer steps skipped"
+    },
     "fresh_full_rom_build_verified": false,
     "current_checkout_systemimage_build": {
       "returncode": 0,

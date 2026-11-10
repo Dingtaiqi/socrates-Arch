@@ -52,6 +52,19 @@ KDE/Qt 等来自二进制软件包。GPU 入口生成独立驱动包。
 [构建底包](https://github.com/Dingtaiqi/socrates-Arch/releases/tag/arch-public-base-42779960846)。
 新构建产物尚未做真机复验，记录见 [源码构建验证](docs/source-build-validation-2026-11-10.json)。
 
+## 克隆后恢复和编译 EvoX
+
+在 x86-64 Ubuntu 22.04 主机准备 64 GB 以上内存、至少 400 GB 可用磁盘，
+按 [构建说明](docs/BUILD_FROM_SNAPSHOT.md) 安装依赖，然后在本仓库目录执行：
+
+```bash
+BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
+```
+
+入口会下载并校验完整快照、恢复源码，再配置 socrates 并构建 system 分区。
+完整快照的逐组还原已通过；原工作树的 `init`、`systemimage` 编译已通过。
+全新环境完整 ROM 编译尚未验证。
+
 ## 工作流
 
 | Actions 名称 | 做什么 | 真机验证状态 |
@@ -61,6 +74,9 @@ KDE/Qt 等来自二进制软件包。GPU 入口生成独立驱动包。
 | Arch KDE - archive or rebuild / rebuild | 在已验收底包中交叉编译并替换 native init、更新桌面启动脚本，保留 EROFS rootfs 和 userdata UUID | 离线检查通过后，仍需独立真机验证 |
 | Build Arch image from public inputs | 从公开底包下载、校验并编译 native init，保存新镜像与日志 | 云端通过；新镜像未做真机验证 |
 | Build ARM64 Turnip from source | 固定 Mesa 源码和编译环境，生成 AArch64 KGSL Vulkan 驱动包 | 云端通过；新驱动未做真机验证 |
+| Upload complete offline source snapshot | 检查完整源码快照；未发布时才连接迁出主机 | 已保存；移除服务器 secrets 后重跑通过 |
+| Validate every source snapshot group | 逐组还原并校验 Git、LFS 和本地改动 | 160 组、1267 个仓库通过 |
+| Preserve EvoX source build result | 私有保存 system 分区编译产物及日志，已保存则直接跳过 | 原树编译通过；不是合并的 DSU 镜像 |
 | Check image tooling | 分卷往返、损坏检测、路径检查、脚本语法、ARM64 init 静态交叉编译 | 不操作手机 |
 
 Arch 桌面为 KWin / Zink / Turnip Adreno 740，1440×3200 @ 60 Hz；
