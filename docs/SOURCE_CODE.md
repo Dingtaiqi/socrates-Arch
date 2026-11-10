@@ -4,6 +4,12 @@
 逐文件来源、内容 SHA256、脱敏计数见 [source-catalog.json](source-catalog.json)。
 目录中的历史脚本用于追溯，不是按字典序运行就能复现最终镜像的流水线。
 
+2026-11-10 已上传 548 份本地源码/补丁，并逐文件核对下载后的源码压缩包。
+[源码归档工作流](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42739908386)
+和 [ARM64 支持组件交叉编译](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42739907246)
+均已通过。完整 Mesa 源码与 Git 源码包保存在草稿 Release `sources-42739908386-1`；
+登录后可在 [Releases](https://github.com/Dingtaiqi/socrates-Arch/releases) 下载。
+
 ## 已保存
 
 | 目录 | 内容与用途 |
