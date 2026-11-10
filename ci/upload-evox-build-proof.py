@@ -1,5 +1,6 @@
-"""Keep the current compiled partition private; upload directly from the server."""
+"""Keep the current compiled partition private, with digest-verified assets."""
 import json
+import os
 from pathlib import Path
 import sys
 import urllib.error
@@ -7,7 +8,7 @@ import urllib.parse
 import urllib.request
 
 request = json.loads(sys.stdin.readline())
-base = Path('/home/qinghuo/source_exports_20261110/evox-build-proof-v1')
+base = Path(os.environ.get('EVOX_BUILD_PROOF_DIR', '/home/qinghuo/source_exports_20261110/evox-build-proof-v1'))
 assets = json.loads((base / 'ASSETS.json').read_text())['assets']
 repository = request['repository']
 api_root = 'https://api.github.com/repos/' + repository
