@@ -20,8 +20,7 @@ record = json.loads((base / 'INPUTS.json').read_text())
 tag = record['release_tag']
 repository = request['repository']
 api_root = 'https://api.github.com/repos/' + repository
-urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({
-    'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'})))
+urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({})))
 
 def api(url, data=None, method=None, content_type='application/json', length=None):
     headers = {'Authorization': 'Bearer ' + request['token'],
@@ -29,8 +28,18 @@ def api(url, data=None, method=None, content_type='application/json', length=Non
     if length is not None:
         headers['Content-Length'] = str(length)
     req = urllib.request.Request(url, data, headers=headers, method=method)
-    with urllib.request.urlopen(req, timeout=900) as response:
-        return json.load(response) if response.status != 204 else None
+    for attempt in range(4):
+        try:
+            if hasattr(data, 'seek'):
+                data.seek(0)
+            with urllib.request.urlopen(req, timeout=900) as response:
+                return json.load(response) if response.status != 204 else None
+        except urllib.error.HTTPError:
+            raise
+        except (OSError, urllib.error.URLError):
+            if attempt == 3:
+                raise
+            time.sleep(10 * (attempt + 1))
 
 releases = api(api_root + '/releases?per_page=100')
 release = next((r for r in releases if r['tag_name'] == tag), None)
@@ -45,7 +54,9 @@ for item in record['assets']:
     if not release['draft']:
         raise SystemExit('Refusing to alter published build inputs')
     if existing:
-        raise SystemExit('Conflicting build input asset')
+        if existing['state'] != 'starter':
+            raise SystemExit('Conflicting build input asset')
+        api(api_root + '/releases/assets/' + str(existing['id']), method='DELETE')
     path = base / item['name']
     with path.open('rb') as source:
         result = api(release['upload_url'].split('{')[0] + '?name=' + urllib.parse.quote(item['name']),

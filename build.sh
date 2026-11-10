@@ -27,11 +27,19 @@ PY
         cd "$repo_dir"
         exec bash arch/build-support.sh "$@"
         ;;
+    arch-turnip)
+        shift
+        inputs=${1:?Usage: bash build.sh arch-turnip INPUTS_WORK_DIR OUTPUT_DIR}
+        output=${2:?Output directory required}
+        python3 "$repo_dir/arch/restore-build-inputs.py" "$inputs"
+        exec bash "$repo_dir/arch/build-turnip-portable.sh" "$inputs/inputs" "$output"
+        ;;
     *)
         printf '%s\n' \
             'bash build.sh evox /path/to/new/source [systemimage|evolution|init|check]' \
             'bash build.sh restore-evox /path/to/new/source [restore options]' \
-            'bash build.sh arch-support /path/to/output'
+            'bash build.sh arch-support /path/to/output' \
+            'bash build.sh arch-turnip /path/to/build-inputs /path/to/output'
         [ "$action" = help ]
         ;;
 esac

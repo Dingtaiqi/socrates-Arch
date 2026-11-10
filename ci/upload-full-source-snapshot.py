@@ -16,9 +16,8 @@ token, repo = request['token'], request['repository']
 root = Path('/home/qinghuo/source_exports_20261110/full-source-v1')
 lock = (root / 'uploader.lock').open('a')
 fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
-# The existing server proxy was faster in a disposable GitHub upload probe.
-urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({
-    'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'})))
+# The proxy passed a small probe but reset TLS during sustained uploads.
+urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({})))
 started = time.monotonic()
 max_seconds = 15000
 tag = 'evox-full-source-20261110'
@@ -39,6 +38,10 @@ def api(url, data=None, method=None, extra=None):
                 return json.load(response) if response.status != 204 else None
         except urllib.error.HTTPError as error:
             if error.code not in (429, 500, 502, 503, 504) or attempt == 3:
+                raise
+            time.sleep(10 * (attempt + 1))
+        except (urllib.error.URLError, OSError):
+            if attempt == 3:
                 raise
             time.sleep(10 * (attempt + 1))
 

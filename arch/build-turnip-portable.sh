@@ -26,7 +26,7 @@ cat >"$output/bin/wayland-scanner" <<'TOOL'
 exec qemu-aarch64-static -L "$SOCRATES_SYSROOT" "$SOCRATES_SYSROOT/usr/bin/wayland-scanner" "$@"
 TOOL
 chmod 755 "$output/bin/meson" "$output/bin/wayland-scanner"
-ln -s "$inputs/hostpy/ninja/data/bin/ninja" "$output/bin/ninja"
+ln -s "$inputs/hostpy/bin/ninja" "$output/bin/ninja"
 ln -s "$inputs/hostpy/cmake/data/bin/cmake" "$output/bin/cmake"
 export PATH="$output/bin:$inputs/host-tools/bin:$PATH"
 export PKG_CONFIG_PATH="$output/host-pc"
@@ -64,6 +64,10 @@ cpp_link_args = ['-L{s}/usr/lib', '-Wl,-rpath-link,{s}/usr/lib']
 PY
 printf '%s  %s\n' b9436b3e1a8be76fbd4823dc884f90596ab7c6ac5e1867a305e66ffccfb31a92 "$inputs/sources/mesa-26.2.6.tar.xz" | sha256sum -c -
 tar -xJf "$inputs/sources/mesa-26.2.6.tar.xz" -C "$output"
+if [ -d "$inputs/mesa-packagecache" ]; then
+    mkdir -p "$output/mesa-26.2.6/subprojects/packagecache"
+    cp "$inputs/mesa-packagecache/"* "$output/mesa-26.2.6/subprojects/packagecache/"
+fi
 wayland-scanner --version
 meson --version
 TURNIP_BUILD_JOBS=${TURNIP_BUILD_JOBS:-8} bash "$repo_dir/arch/turnip/build_turnip_kgsl.sh" \
