@@ -1,0 +1,23 @@
+{
+  "schema": 1,
+  "rootfs_sha256": "9d2dc6846e6be54aab3a304fe1ece573941af77fcff14b910d0ce53d87cff60a",
+  "persist_uuid": "00000000-0000-4000-8000-000000000000",
+  "image_sha256": "666c4f547fcc82e7361aab8ba66245a29e5a20718a09c44768e460cb04659c5e",
+  "image_bytes": 3221225472,
+  "sanitization": {
+    "removed_paths": 24,
+    "locked_accounts": 80,
+    "removed_login_accounts": 2
+  },
+  "free_blocks_zeroed": true,
+  "journal_recreated": false,
+  "personal_login_material_removed": true,
+  "device_tested": false,
+  "release_tag": "arch-public-base-42779960846",
+  "manifest": {
+    "name": "arch-public-base.img.manifest.json",
+    "bytes": 540,
+    "sha256": "d1f869cfdfbdaf55185762cd7a72a85664764d2e2df8aec852f76c58154295b3"
+  },
+  "source_run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42779960846"
+}

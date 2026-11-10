@@ -1,0 +1,42 @@
+name: Build Arch image from public inputs
+on:
+  workflow_dispatch:
+    inputs:
+      persist_uuid:
+        description: Existing marked data-volume UUID; placeholder builds do not select a real volume
+        type: string
+        default: '00000000-0000-4000-8000-000000000000'
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - run: |
+          sudo apt-get update
+          sudo apt-get install -y e2fsprogs erofs-utils gcc-aarch64-linux-gnu
+          mkdir out
+      - name: Download public inputs and compile native init
+        env:
+          PERSIST_UUID: ${{ inputs.persist_uuid }}
+        run: |
+          set -o pipefail
+          bash build.sh arch-image out/system.img 2>&1 | tee out/build.log
+      - name: Save image and build provenance
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python3 ci/bundle.py pack out/system.img out --name arch-source-build.img
+          rm out/system.img
+          cp arch/build-base.json out/
+          printf '%s\n' "$GITHUB_SHA" >out/SOURCE_COMMIT
+          (cd out; sha256sum -- * >SHA256SUMS)
+          gh release create "arch-source-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" out/* \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" --draft \
+            --title "Arch source rebuild ${GITHUB_RUN_ID}" \
+            --notes "Native init compiled from source on a fixed sanitized Arch Linux ARM binary userspace. No userdata or phone operations. New build needs device validation."

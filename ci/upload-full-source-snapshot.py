@@ -37,7 +37,7 @@ def api(url, data=None, method=None, extra=None):
             with urllib.request.urlopen(req, timeout=900) as response:
                 return json.load(response) if response.status != 204 else None
         except urllib.error.HTTPError as error:
-            if error.code not in (429, 500, 502, 503, 504) or attempt == 3:
+            if error.code not in (408, 429, 500, 502, 503, 504) or attempt == 3:
                 raise
             time.sleep(10 * (attempt + 1))
         except (urllib.error.URLError, OSError):
@@ -120,7 +120,7 @@ while True:
             pending.append((path, item))
     if pending:
         pending = pending[:4]
-        with ThreadPoolExecutor(max_workers=4) as pool:
+        with ThreadPoolExecutor(max_workers=3) as pool:
             jobs = {pool.submit(upload, p, item): (p, item) for p, item in pending}
             for future in as_completed(jobs):
                 path, item = jobs[future]
