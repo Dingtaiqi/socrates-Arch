@@ -17,7 +17,7 @@ try:
                    banner_timeout=30, auth_timeout=30, channel_timeout=180)
     client.get_transport().set_keepalive(20)
     stdin, stdout, stderr = client.exec_command(
-        'python3 -u /home/qinghuo/source_exports_20261110/upload_sources.py', timeout=180)
+        'python3 -u /home/qinghuo/source_exports_20261110/upload_sources_v2.py', timeout=180)
     stdin.write(json.dumps({'token': os.environ['GH_TOKEN'],
                             'repository': os.environ['GITHUB_REPOSITORY'],
                             'run_id': os.environ['GITHUB_RUN_ID'],
