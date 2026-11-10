@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "release_tag": "arch-build-inputs-20261110",
+  "coverage": "Cross GCC 12 binaries/debs, host Python tools, native glslang, Arch headers/libraries, original Mesa/glslang source archives; no user rootfs directories or system image",
+  "assets": [
+    {
+      "name": "arch-turnip-build-inputs-20261110.tar.gz",
+      "bytes": 406475373,
+      "sha256": "09158907246cbf0c028374b9aed7bf2690142c9ead61c4f9a7ab26c71136d9d6"
+    }
+  ],
+  "files": 12152
+}
