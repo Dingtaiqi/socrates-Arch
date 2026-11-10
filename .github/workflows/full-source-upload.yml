@@ -7,23 +7,41 @@ concurrency:
   group: full-source-upload
   cancel-in-progress: false
 jobs:
-  upload:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 355
-    env:
-      GH_TOKEN: ${{ github.token }}
-      BUILD_HOST: ${{ secrets.BUILD_SOURCE_HOST_20261110 }}
-      BUILD_PORT: ${{ secrets.BUILD_SOURCE_PORT_20261110 }}
-      BUILD_USER: ${{ secrets.BUILD_SOURCE_USER_20261110 }}
-      BUILD_PASSWORD: ${{ secrets.BUILD_SOURCE_PASSWORD_20261110 }}
-      BUILD_KNOWN_HOSTS: ${{ secrets.BUILD_SOURCE_KNOWN_HOSTS_20261110 }}
-      SERVER_UPLOAD_PROGRAM: upload_full_sources.py
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          persist-credentials: false
-      - run: |
-          sudo apt-get update
-          sudo apt-get install -y python3-paramiko
-      - name: Direct server-to-GitHub source upload
-        run: /usr/bin/python3 ci/run-server-source-upload.py
+  session_1:
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit
+  session_2:
+    needs: session_1
+    if: ${{ always() && !cancelled() && needs.session_1.result != 'skipped' && needs.session_1.outputs.complete != 'true' }}
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit
+  session_3:
+    needs: session_2
+    if: ${{ always() && !cancelled() && needs.session_2.result != 'skipped' && needs.session_2.outputs.complete != 'true' }}
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit
+  session_4:
+    needs: session_3
+    if: ${{ always() && !cancelled() && needs.session_3.result != 'skipped' && needs.session_3.outputs.complete != 'true' }}
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit
+  session_5:
+    needs: session_4
+    if: ${{ always() && !cancelled() && needs.session_4.result != 'skipped' && needs.session_4.outputs.complete != 'true' }}
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit
+  session_6:
+    needs: session_5
+    if: ${{ always() && !cancelled() && needs.session_5.result != 'skipped' && needs.session_5.outputs.complete != 'true' }}
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit
+  session_7:
+    needs: session_6
+    if: ${{ always() && !cancelled() && needs.session_6.result != 'skipped' && needs.session_6.outputs.complete != 'true' }}
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit
+  session_8:
+    needs: session_7
+    if: ${{ always() && !cancelled() && needs.session_7.result != 'skipped' && needs.session_7.outputs.complete != 'true' }}
+    uses: ./.github/workflows/source-upload-session.yml
+    secrets: inherit

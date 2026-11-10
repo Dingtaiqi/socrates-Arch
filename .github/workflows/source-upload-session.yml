@@ -1,0 +1,30 @@
+name: Resumable source upload session
+on:
+  workflow_call:
+    outputs:
+      complete:
+        value: ${{ jobs.upload.outputs.complete }}
+permissions:
+  contents: write
+jobs:
+  upload:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    outputs:
+      complete: ${{ steps.transfer.outputs.complete }}
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BUILD_HOST: ${{ secrets.BUILD_SOURCE_HOST_20261110 }}
+      BUILD_PORT: ${{ secrets.BUILD_SOURCE_PORT_20261110 }}
+      BUILD_USER: ${{ secrets.BUILD_SOURCE_USER_20261110 }}
+      BUILD_PASSWORD: ${{ secrets.BUILD_SOURCE_PASSWORD_20261110 }}
+      BUILD_KNOWN_HOSTS: ${{ secrets.BUILD_SOURCE_KNOWN_HOSTS_20261110 }}
+      SERVER_UPLOAD_PROGRAM: upload_full_sources_v2.py
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - run: sudo apt-get update && sudo apt-get install -y python3-paramiko
+      - name: Direct resumable server upload
+        id: transfer
+        run: /usr/bin/python3 ci/run-server-source-upload.py

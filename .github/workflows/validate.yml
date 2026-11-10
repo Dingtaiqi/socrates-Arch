@@ -1,9 +1,9 @@
 name: Check image tooling
 on:
   push:
-    paths: ['ci/**', 'arch/**', '.github/workflows/**']
+    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/build-source.sh', 'build.sh', '.github/workflows/**']
   pull_request:
-    paths: ['ci/**', 'arch/**', '.github/workflows/**']
+    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/build-source.sh', 'build.sh', '.github/workflows/**']
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,7 +17,7 @@ jobs:
           persist-credentials: false
       - run: |
           python3 -m unittest discover -s ci -p 'test_*.py'
-          bash -n ci/rebuild-arch.sh ci/release.sh
+          bash -n ci/rebuild-arch.sh ci/release.sh build.sh evox/build-source.sh
           sh -n arch/kde-start.sh
       - name: Cross-compile the ARM64 native init
         run: |

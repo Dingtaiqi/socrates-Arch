@@ -21,7 +21,7 @@ try:
                         'probe_server_upload.py'):
         raise SystemExit('Unsupported server upload program')
     stdin, stdout, stderr = client.exec_command(
-        'python3 -u /home/qinghuo/source_exports_20261110/' + program, timeout=180)
+        'timeout -k 15s 19800s python3 -u /home/qinghuo/source_exports_20261110/' + program, timeout=180)
     stdin.write(json.dumps({'token': os.environ['GH_TOKEN'],
                             'repository': os.environ['GITHUB_REPOSITORY'],
                             'run_id': os.environ['GITHUB_RUN_ID'],
@@ -29,13 +29,19 @@ try:
                             'commit': os.environ['GITHUB_SHA']}) + '\n')
     stdin.flush()
     stdout.channel.settimeout(3600)
+    complete = False
     for line in stdout:
         print(line, end='', flush=True)
+        if line.startswith('FULL_SOURCE_PUBLISHED '):
+            complete = True
     error = stderr.read().decode()
     if error:
         print(error)
     code = stdout.channel.recv_exit_status()
     if code:
         raise SystemExit(code)
+    if os.environ.get('GITHUB_OUTPUT'):
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+            output.write('complete=' + str(complete).lower() + '\n')
 finally:
     client.close()
