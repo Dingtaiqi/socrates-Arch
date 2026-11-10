@@ -4,7 +4,7 @@
 `ubuntu-24.04` 运行，不依赖原构建服务器或连接手机。
 
 当前支持已验证镜像归档、公开 Arch 底包上的 native init 重建，以及 Mesa Turnip
-ARM64 KGSL 驱动的源码编译。EvoX 完整源码快照仍在迁出。
+ARM64 KGSL 驱动的源码编译。EvoX 完整构建树快照已公开保存，逐组还原验证正在进行。
 
 **2026-11-10：两条云端镜像流程已实际运行成功。**
 [Arch 重建记录](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42663629383) ·
@@ -19,8 +19,10 @@ ARM64 KGSL 驱动的源码编译。EvoX 完整源码快照仍在迁出。
 构建机上的固定版本清单、7 个项目的本地改动和服务器配方也已直传 GitHub，
 见 [服务端源码备份记录](evox/server-capture.json)。
 
-完整 Android 源码及预编译输入正在服务器上分卷直传，恢复和编译入口已加入
-`build.sh`。迁出完成后将提交校验索引并公开源码附件；使用方法和实测边界见
+完整 Android 源码及预编译输入已保存到
+[公开源码 Release](https://github.com/Dingtaiqi/socrates-Arch/releases/tag/evox-full-source-20261110)：
+1267 个仓库、206 个分卷、约 36.9 GB，另含审计过的 manifest 外构建输入。
+`build.sh` 会按已提交的校验索引恢复源码；使用方法和实测边界见
 [从源码快照构建](docs/BUILD_FROM_SNAPSHOT.md)。原始手机镜像仍保留为草稿。
 
 ## 克隆后编译 Arch

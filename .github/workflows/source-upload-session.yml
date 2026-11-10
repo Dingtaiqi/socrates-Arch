@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-24.04
     timeout-minutes: 355
     outputs:
-      complete: ${{ steps.transfer.outputs.complete }}
+      complete: ${{ steps.existing.outputs.complete || steps.transfer.outputs.complete }}
     env:
       GH_TOKEN: ${{ github.token }}
       BUILD_HOST: ${{ secrets.BUILD_SOURCE_HOST_20261110 }}
@@ -25,7 +25,17 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           persist-credentials: false
-      - run: sudo apt-get update && sudo apt-get install -y python3-paramiko
-      - name: Direct resumable server upload
+      - id: existing
+        name: Check for the already published snapshot
+        run: |
+          if [ -f evox/full-source-snapshot.json ] && \
+            gh api "repos/$GITHUB_REPOSITORY/releases/tags/evox-full-source-20261110" --jq '.draft' | grep -qx false; then
+            echo 'complete=true' >>"$GITHUB_OUTPUT"
+            echo 'FULL_SOURCE_PUBLISHED already archived on GitHub; no build host required'
+          fi
+      - if: steps.existing.outputs.complete != 'true'
+        run: sudo apt-get update && sudo apt-get install -y python3-paramiko
+      - if: steps.existing.outputs.complete != 'true'
+        name: Resumable source upload through the cloud
         id: transfer
         run: /usr/bin/python3 ci/run-server-source-upload.py

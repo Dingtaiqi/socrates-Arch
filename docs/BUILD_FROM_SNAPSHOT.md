@@ -1,8 +1,10 @@
 # 从源码快照恢复和编译
 
-完整 EvoX 源码正在由原构建服务器直传 GitHub。上传全部完成并通过校验后，
-工作流会公开源码 Release `evox-full-source-20261110`，并自动提交
-`evox/full-source-snapshot.json`。**此清单出现前，完整恢复命令不会开始下载。**
+完整 EvoX 构建树已保存到公开源码 Release
+[`evox-full-source-20261110`](https://github.com/Dingtaiqi/socrates-Arch/releases/tag/evox-full-source-20261110)。
+206 个分卷共 36,885,685,305 B，远端大小和 SHA256 均已核对。
+`evox/full-source-snapshot.json` 已提交，并与 Release 内的清单逐字节一致。
+全部分组的独立还原检查正在 [GitHub 云端运行](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42879967081)。
 
 ## EvoX
 

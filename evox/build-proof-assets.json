@@ -1,0 +1,21 @@
+{
+  "release_tag": "evox-systemimage-proof-20261110",
+  "draft": true,
+  "assets": [
+    {
+      "name": "BUILD_RESULT.json",
+      "bytes": 408,
+      "sha256": "d90c91cb2674b7d5313e30d6306bde58768be423c976ee0492e339515eac5fb6"
+    },
+    {
+      "name": "build.log",
+      "bytes": 41048,
+      "sha256": "7fd2d34a9910d9edb6790bbddf42f3da929a093818fbe7c91de80570cb2536a4"
+    },
+    {
+      "name": "evox-system-partition-build.img.gz",
+      "bytes": 561285133,
+      "sha256": "36433aed1b1546c32c62028c49fc599f1c91820a72404105fe57e70070141124"
+    }
+  ]
+}

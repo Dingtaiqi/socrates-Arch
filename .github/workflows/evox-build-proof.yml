@@ -32,6 +32,10 @@ jobs:
             echo 'upload=true' >>"$GITHUB_OUTPUT"
           fi
       - if: steps.ready.outputs.upload == 'true'
+        id: archived
+        name: Check the existing proof without the build host
+        run: python3 ci/check-build-proof-archive.py
+      - if: steps.ready.outputs.upload == 'true' && steps.archived.outputs.archived != 'true'
         run: sudo apt-get update && sudo apt-get install -y python3-paramiko
-      - if: steps.ready.outputs.upload == 'true'
+      - if: steps.ready.outputs.upload == 'true' && steps.archived.outputs.archived != 'true'
         run: /usr/bin/python3 ci/relay-evox-build-proof.py

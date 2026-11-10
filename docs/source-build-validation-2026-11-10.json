@@ -31,7 +31,23 @@
     "fresh_restore_fixture_repositories": 11,
     "local_patch_projects": 7,
     "local_files_verified": 17,
-    "full_source_transfer": "in_progress",
+    "full_source_transfer": "complete",
+    "full_source_snapshot": {
+      "release": "https://github.com/Dingtaiqi/socrates-Arch/releases/tag/evox-full-source-20261110",
+      "published_at": "2026-11-10T18:54:39Z",
+      "index_commit": "ba2d0cd75a271edd478c25ea738eff5eebd33954",
+      "index_sha256": "1be903e5889a841416c2fb1e88fbb1a665abc68c16ec8582120ec347d606db0e",
+      "repositories": 1267,
+      "groups": 160,
+      "parts": 206,
+      "compressed_bytes": 36885685305,
+      "remote_size_and_digest_verified": true,
+      "release_and_git_index_byte_identical": true
+    },
+    "full_source_restoration": {
+      "result": "in_progress",
+      "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42879967081"
+    },
     "fresh_full_rom_build_verified": false,
     "current_checkout_systemimage_build": {
       "returncode": 0,
