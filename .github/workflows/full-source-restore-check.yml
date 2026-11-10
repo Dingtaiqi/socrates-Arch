@@ -37,6 +37,12 @@ jobs:
       - if: steps.ready.outputs.check == 'true'
         run: sudo apt-get update && sudo apt-get install -y git-lfs
       - if: steps.ready.outputs.check == 'true'
+        name: Make room for the large compiler snapshot groups
+        run: |
+          # These preinstalled SDKs are unused by the Git/LFS restoration check.
+          sudo rm -rf -- /usr/local/lib/android /usr/share/dotnet /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h "$RUNNER_TEMP"
+      - if: steps.ready.outputs.check == 'true'
         run: python3 ci/check-full-source-restore.py
       - if: steps.ready.outputs.check == 'true'
         name: Keep restoration evidence
