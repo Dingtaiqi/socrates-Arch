@@ -37,7 +37,7 @@ with tempfile.TemporaryDirectory(prefix='arch-base-', dir=image.parent) as temp:
     image_record = json.loads(manifest.read_text())
     for part in image_record['parts']:
         restore.download(prefix + part['name'], temp / part['name'], part)
-    bundle.restore(manifest, image, {'bytes': record['image_bytes'], 'sha256': record['image_sha256']})
+    bundle.restore(manifest, image, {'name': 'arch-public-base.img', 'bytes': record['image_bytes'], 'sha256': record['image_sha256']})
 environment = {**os.environ, 'EXPECTED_PERSIST_UUID': record['persist_uuid'],
                'EXPECTED_ROOTFS_SHA256': record['rootfs_sha256']}
 subprocess.run(['bash', str(repo / 'ci/rebuild-arch.sh'), str(image)], cwd=repo, env=environment, check=True)

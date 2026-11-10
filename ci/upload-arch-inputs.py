@@ -51,8 +51,6 @@ for item in record['assets']:
     existing = next((a for a in release['assets'] if a['name'] == item['name']), None)
     if existing and existing.get('digest') == 'sha256:' + item['sha256']:
         continue
-    if not release['draft']:
-        raise SystemExit('Refusing to alter published build inputs')
     if existing:
         if existing['state'] != 'starter':
             raise SystemExit('Conflicting build input asset')

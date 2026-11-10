@@ -76,6 +76,7 @@ try:
     for path in ['root', 'home', 'tmp', 'run', 'var/log', 'var/cache/pacman/pkg',
                  'etc/pacman.d/gnupg', 'etc/NetworkManager/system-connections',
                  'etc/wpa_supplicant', 'etc/wpa_supplicant.conf', 'etc/iwd', 'etc/connman',
+                 'etc/netctl', 'etc/ppp',
                  'etc/ssl/private', 'etc/credstore', 'etc/credstore.encrypted',
                  'etc/shadow-', 'etc/gshadow-', 'etc/passwd-', 'etc/group-',
                  'var/lib/NetworkManager', 'var/lib/iwd', 'var/lib/connman', 'var/lib/bluetooth',
