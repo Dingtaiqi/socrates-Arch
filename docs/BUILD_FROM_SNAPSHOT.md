@@ -4,7 +4,9 @@
 [`evox-full-source-20261110`](https://github.com/Dingtaiqi/socrates-Arch/releases/tag/evox-full-source-20261110)。
 206 个分卷共 36,885,685,305 B，远端大小和 SHA256 均已核对。
 `evox/full-source-snapshot.json` 已提交，并与 Release 内的清单逐字节一致。
-全部分组的独立还原检查正在 [GitHub 云端运行](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42879967081)。
+全部 160 个分组的独立还原检查已在 [GitHub 云端通过](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42879967081)：
+1267 个仓库、31 个 LFS 文件、5683 个 manifest 外文件均已验证。
+逐组结果见 [还原报告](https://github.com/Dingtaiqi/socrates-Arch/releases/tag/evox-restore-1be903e5889a8414)。
 
 ## EvoX
 
@@ -53,6 +55,10 @@ python3 evox/restore-source.py ../evox-test-restore --groups 0,1
 源码快照用于固定版本构建；需要更新上游时另建正常的 repo sync 工作区。
 
 ## 验证范围
+
+完整快照的每个分组均已在新的 Linux runner 上独立还原，校验 Git 对象、LFS 实际内容、
+本地补丁和文件、manifest 复制/链接规则及额外输入；全量检查耗时 2001 秒。
+这不代表在全新环境中完成了一次完整 ROM 编译。
 
 原服务器已实际完成 11 个仓库的独立恢复，回放全部 7 份补丁并核对 17 个本地文件，
 重复恢复两次通过；`repo list` 正常列出已恢复的 9 个普通项目。

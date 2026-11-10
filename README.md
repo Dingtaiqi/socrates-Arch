@@ -4,7 +4,7 @@
 `ubuntu-24.04` 运行，不依赖原构建服务器或连接手机。
 
 当前支持已验证镜像归档、公开 Arch 底包上的 native init 重建，以及 Mesa Turnip
-ARM64 KGSL 驱动的源码编译。EvoX 完整构建树快照已公开保存，逐组还原验证正在进行。
+ARM64 KGSL 驱动的源码编译。EvoX 完整构建树快照已公开保存，1267 个仓库的逐组还原验证已通过。
 
 **2026-11-10：两条云端镜像流程已实际运行成功。**
 [Arch 重建记录](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42663629383) ·

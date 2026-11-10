@@ -45,9 +45,19 @@
       "release_and_git_index_byte_identical": true
     },
     "full_source_restoration": {
-      "result": "in_progress",
-      "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42879967081"
+      "result": "success",
+      "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42879967081",
+      "report": "https://github.com/Dingtaiqi/socrates-Arch/releases/tag/evox-restore-1be903e5889a8414",
+      "report_sha256": "3e5a321bfccbea84a30edc40eedc6cecefc0e0da17295717b5bbb779cc0d45c8",
+      "checker_commit": "ba2d0cd75a271edd478c25ea738eff5eebd33954",
+      "groups_verified": 160,
+      "repositories": 1267,
+      "lfs_files": 31,
+      "extra_input_files": 5683,
+      "seconds": 2001,
+      "scope": "Each group independently restored on a fresh Linux runner; not a fresh full ROM compilation"
     },
+    "temporary_build_host_secrets_removed": 5,
     "fresh_full_rom_build_verified": false,
     "current_checkout_systemimage_build": {
       "returncode": 0,
