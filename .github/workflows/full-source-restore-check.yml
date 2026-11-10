@@ -1,0 +1,49 @@
+name: Validate every source snapshot group
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['Upload complete offline source snapshot']
+    types: [completed]
+permissions:
+  contents: write
+concurrency:
+  group: full-source-restore-check
+  cancel-in-progress: false
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - id: ready
+        name: Check for a complete unvalidated snapshot
+        run: |
+          if [ ! -f evox/full-source-snapshot.json ]; then
+            echo 'check=false' >>"$GITHUB_OUTPUT"
+            exit 0
+          fi
+          tag="evox-restore-$(sha256sum evox/full-source-snapshot.json | cut -c1-16)"
+          echo "tag=$tag" >>"$GITHUB_OUTPUT"
+          if gh release view "$tag" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo 'check=false' >>"$GITHUB_OUTPUT"
+          else
+            echo 'check=true' >>"$GITHUB_OUTPUT"
+          fi
+      - if: steps.ready.outputs.check == 'true'
+        run: sudo apt-get update && sudo apt-get install -y git-lfs
+      - if: steps.ready.outputs.check == 'true'
+        run: python3 ci/check-full-source-restore.py
+      - if: steps.ready.outputs.check == 'true'
+        name: Keep restoration evidence
+        env:
+          RESULT_TAG: ${{ steps.ready.outputs.tag }}
+        run: |
+          gh release create "$RESULT_TAG" out/source-restore-check/RESTORE_VALIDATION.json \
+            --repo "$GITHUB_REPOSITORY" --target "$GITHUB_SHA" \
+            --title "Complete source restoration checks" \
+            --notes "All snapshot groups restored independently; Git objects, LFS and local overlays verified. A fresh full ROM compilation is not certified."
