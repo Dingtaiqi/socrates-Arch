@@ -17,7 +17,8 @@ try:
                    banner_timeout=30, auth_timeout=30)
     client.get_transport().set_keepalive(20)
     program = os.environ.get('SERVER_UPLOAD_PROGRAM', 'upload_sources_v2.py')
-    if program not in ('upload_sources_v2.py', 'upload_full_sources.py'):
+    if program not in ('upload_sources_v2.py', 'upload_full_sources.py', 'upload_full_sources_v2.py',
+                        'probe_server_upload.py'):
         raise SystemExit('Unsupported server upload program')
     stdin, stdout, stderr = client.exec_command(
         'python3 -u /home/qinghuo/source_exports_20261110/' + program, timeout=180)
