@@ -14,7 +14,7 @@ try:
     client.connect(os.environ['BUILD_HOST'], port=int(os.environ['BUILD_PORT']),
                    username=os.environ['BUILD_USER'], password=os.environ['BUILD_PASSWORD'],
                    allow_agent=False, look_for_keys=False, timeout=15,
-                   banner_timeout=30, auth_timeout=30, channel_timeout=180)
+                   banner_timeout=30, auth_timeout=30)
     client.get_transport().set_keepalive(20)
     stdin, stdout, stderr = client.exec_command(
         'python3 -u /home/qinghuo/source_exports_20261110/upload_sources_v2.py', timeout=180)
