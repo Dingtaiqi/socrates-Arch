@@ -1,0 +1,27 @@
+name: Package exact verified K60 Pro delivery
+on:
+  workflow_dispatch:
+    inputs:
+      kind:
+        type: choice
+        options: [arch, evox]
+        default: arch
+        required: true
+permissions:
+  contents: write
+concurrency:
+  group: socrates-delivery-${{ inputs.kind }}
+  cancel-in-progress: false
+jobs:
+  package:
+    if: github.repository == 'Dingtaiqi/socrates-Arch'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - name: Package the pinned image and reviewed Chinese documentation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 ci/package-socrates-delivery.py '${{ inputs.kind }}'
