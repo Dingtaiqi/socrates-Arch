@@ -12,7 +12,11 @@ case "$action" in
         shift
         destination=${1:?Usage: bash build.sh evox SOURCE_DIR [systemimage|evolution|init|check]}
         if [ ! -e "$destination/.source-restore/RESTORED.json" ]; then
-            python3 "$repo_dir/evox/restore-source.py" "$destination"
+            restore_options=()
+            if [ -n "${SOURCE_PARTS_DIR:-}" ]; then
+                restore_options=(--local-parts "$SOURCE_PARTS_DIR" --wait-local-parts 14400)
+            fi
+            python3 "$repo_dir/evox/restore-source.py" "$destination" "${restore_options[@]}"
         fi
         python3 - "$destination/.source-restore/RESTORED.json" <<'PY'
 import json,sys

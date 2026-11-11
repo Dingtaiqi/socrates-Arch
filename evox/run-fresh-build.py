@@ -29,7 +29,10 @@ jobs=os.environ.get('BUILD_JOBS','16')
 if not jobs.isdigit() or not 1<=int(jobs)<=32:raise SystemExit('Invalid BUILD_JOBS')
 proxy=os.environ.get('FRESH_DOWNLOAD_PROXY')
 network=['HTTPS_PROXY='+proxy,'HTTP_PROXY='+proxy,'NO_PROXY=localhost,127.0.0.1'] if proxy else []
-record.update(parallel_jobs=int(jobs),download_proxy_used=bool(proxy))
+relay=os.environ.get('FRESH_SOURCE_RELAY')=='1'
+if relay:network+=['SOURCE_PARTS_DIR=/workspace/source/.source-restore/downloads']
+record.update(parallel_jobs=int(jobs),download_proxy_used=bool(proxy),cloud_source_relay=relay)
+(work/'FULL_BUILD_RESULT.json').unlink(missing_ok=True)
 (work/'STARTED.json').write_text(json.dumps(record,indent=2)+'\n')
 command=['chroot',str(root),'/usr/sbin/runuser','-u','builder','--','/usr/bin/env','-i',
          'HOME=/home/builder','USER=builder','LOGNAME=builder','SHELL=/bin/bash',

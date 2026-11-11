@@ -1,0 +1,24 @@
+name: Prefetch EvoX source to the independent build host
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: evox-fresh-source-prefetch
+  cancel-in-progress: false
+jobs:
+  prefetch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    env:
+      BUILD_HOST: ${{ secrets.FRESH_BUILD_HOST_20261111 }}
+      BUILD_PORT: ${{ secrets.FRESH_BUILD_PORT_20261111 }}
+      BUILD_USER: ${{ secrets.FRESH_BUILD_USER_20261111 }}
+      BUILD_PASSWORD: ${{ secrets.FRESH_BUILD_PASSWORD_20261111 }}
+      BUILD_KNOWN_HOSTS: ${{ secrets.FRESH_BUILD_KNOWN_HOSTS_20261111 }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - run: sudo apt-get update && sudo apt-get install -y python3-paramiko
+      - run: /usr/bin/python3 ci/prefetch-evox-source.py

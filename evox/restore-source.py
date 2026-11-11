@@ -314,6 +314,8 @@ def main():
     parser.add_argument('--manifest', type=Path, default=Path(__file__).with_name('full-source-snapshot.json'))
     parser.add_argument('--cache', type=Path)
     parser.add_argument('--local-parts', type=Path, help='Use existing parts without network')
+    parser.add_argument('--wait-local-parts', type=int, default=0,
+                        help='Seconds to wait per local part delivered atomically by a relay')
     parser.add_argument('--groups', help='Comma-separated group numbers for selective restoration tests')
     parser.add_argument('--keep-downloads', action='store_true')
     args = parser.parse_args()
@@ -349,6 +351,13 @@ def main():
             if not args.local_parts:
                 url = 'https://github.com/Dingtaiqi/socrates-Arch/releases/download/' + snapshot['release_tag'] + '/' + part['name']
                 download(url, path, part)
+            elif args.wait_local_parts and not path.exists():
+                print('WAITING_FOR_LOCAL_SOURCE_PART', path.name, flush=True)
+                until = time.monotonic() + args.wait_local_parts
+                while not path.exists():
+                    if time.monotonic() >= until:
+                        raise TimeoutError('Local source relay did not deliver ' + path.name)
+                    time.sleep(1)
         verify_parts(paths, group)
         with tempfile.TemporaryDirectory(prefix='extract-', dir=state) as temporary:
             scratch = Path(temporary)
