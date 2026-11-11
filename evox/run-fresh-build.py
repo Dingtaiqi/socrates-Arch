@@ -11,6 +11,20 @@ import sys
 import time
 import zipfile
 
+
+def stop_chroot(root):
+    # runuser/PAM can create another session; killing one process group alone
+    # can leave compiler/download children orphaned inside this owned chroot.
+    for sig in (signal.SIGTERM, signal.SIGKILL):
+        for path in Path('/proc').glob('[0-9]*'):
+            try:
+                target=os.readlink(path/'root')
+                if target==str(root) or target.startswith(str(root)+'/'):
+                    os.kill(int(path.name),sig)
+            except OSError:
+                pass
+        time.sleep(1)
+
 work,recipe=map(lambda p:Path(p).resolve(),sys.argv[1:])
 assert (work/'.evox-fresh-workspace').read_text().strip()=='socrates-evox-fresh-v1'
 root=work/'ubuntu'
@@ -52,6 +66,7 @@ while process.poll() is None:
     if time.monotonic()-started>24*3600:reason='24_hour_runtime_limit'
     if reason:
         os.killpg(process.pid,signal.SIGTERM)
+        stop_chroot(root)
         try:process.wait(timeout=30)
         except subprocess.TimeoutExpired:
             os.killpg(process.pid,signal.SIGKILL);process.wait()
@@ -64,6 +79,8 @@ while process.poll() is None:
         print('FRESH_BUILD_PROGRESS',json.dumps(report),flush=True)
         reported=time.monotonic()
     time.sleep(5)
+if process.returncode:
+    stop_chroot(root)
 record.update(returncode=process.returncode,stop_reason=reason,
               elapsed_seconds=round(time.monotonic()-started),
               finished_at=datetime.datetime.now(datetime.timezone.utc).isoformat())
