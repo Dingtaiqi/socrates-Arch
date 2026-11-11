@@ -1,9 +1,9 @@
 name: Check image tooling
 on:
   push:
-    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/build-source.sh', 'build.sh', '.github/workflows/**']
+    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/build-source.sh', 'evox/fresh-build.sh', 'evox/run-fresh-build.py', 'build.sh', '.github/workflows/**']
   pull_request:
-    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/build-source.sh', 'build.sh', '.github/workflows/**']
+    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/build-source.sh', 'evox/fresh-build.sh', 'evox/run-fresh-build.py', 'build.sh', '.github/workflows/**']
   workflow_dispatch:
 permissions:
   contents: read

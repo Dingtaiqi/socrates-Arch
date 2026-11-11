@@ -1,7 +1,8 @@
 # K60 Pro / socrates：EvoX 与 Arch KDE 镜像保存
 
-目标仓库：`Dingtaiqi/socrates-Arch`。全部镜像工作流在 GitHub 的
-`ubuntu-24.04` 运行，不依赖原构建服务器或连接手机。
+目标仓库：`Dingtaiqi/socrates-Arch`。Arch 镜像构建、GPU 编译和已有镜像校验归档
+在 GitHub 的 `ubuntu-24.04` 运行，不连接手机。EvoX 全量 ROM 编译使用具备
+足够内存和磁盘的独立构建机，GitHub 提供源码中转及结果保存流程；首次全量验证正在进行。
 
 当前支持已验证镜像归档、公开 Arch 底包上的 native init 重建，以及 Mesa Turnip
 ARM64 KGSL 驱动的源码编译。EvoX 完整构建树快照已公开保存，1267 个仓库的逐组还原验证已通过。
@@ -77,6 +78,8 @@ BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 | Upload complete offline source snapshot | 检查完整源码快照；未发布时才连接迁出主机 | 已保存；移除服务器 secrets 后重跑通过 |
 | Validate every source snapshot group | 逐组还原并校验 Git、LFS 和本地改动 | 160 组、1267 个仓库通过 |
 | Preserve EvoX source build result | 私有保存 system 分区编译产物及日志，已保存则直接跳过 | 原树编译通过；不是合并的 DSU 镜像 |
+| Prefetch EvoX source to the independent build host | GitHub 下载固定分卷，经 SSH 中转到新工作区，原生恢复器逐组校验后清理中转缓存 | 正在用于首次完整独立编译 |
+| Archive independent EvoX full ROM build | 验证成功构建记录，保存分卷 ROM、环境清单和日志到草稿 Release | 归档入口已准备，等待实际全量编译结果 |
 | Check image tooling | 分卷往返、损坏检测、路径检查、脚本语法、ARM64 init 静态交叉编译 | 不操作手机 |
 
 Arch 桌面为 KWin / Zink / Turnip Adreno 740，1440×3200 @ 60 Hz；
