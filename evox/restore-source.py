@@ -328,6 +328,8 @@ def main():
     if root.exists() and any(root.iterdir()) and not (state / 'identity').is_file():
         raise ValueError('Destination must be new or owned by this restorer')
     state.mkdir(parents=True, exist_ok=True)
+    # Soong honors this marker; restore metadata/cache must not become modules.
+    (state / '.find-ignore').touch()
     marker = state / 'identity'
     if marker.exists() and marker.read_text() != identity:
         raise ValueError('Destination belongs to another source snapshot')
