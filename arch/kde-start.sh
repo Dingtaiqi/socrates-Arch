@@ -85,7 +85,7 @@ DESKTOP
 cat >"$log/session.sh" <<'SESSION'
 #!/bin/sh
 set -eu
-dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_RUNTIME_DIR HOME
+dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_TYPE XDG_RUNTIME_DIR XDG_MENU_PREFIX HOME
 kscreen-doctor -o >"$KDE_PROBE_LOG/outputs.txt" 2>&1
 qdbus6 org.kde.KWin /KWin org.kde.KWin.supportInformation >"$KDE_PROBE_LOG/kwin-support.txt" 2>&1
 env QT_QUICK_BACKEND=software QSG_INFO=1 plasmashell >"$KDE_PROBE_LOG/plasmashell.log" 2>&1 &
@@ -108,7 +108,7 @@ env -u HYBRIS_LD_LIBRARY_PATH -u WAYLAND_DISPLAY -u DISPLAY -u LIBGL_ALWAYS_SOFT
  SOCRATES_EVENT_TIMESTAMP_FALLBACK=1 SOCRATES_DIAGNOSTIC_CRTC0=1 SOCRATES_DIAGNOSTIC_XRGB8888=1 \
  LD_PRELOAD="$kit/diagnostics/libdrm_plane_xrgb_diagnostic.so:$kit/diagnostics/libdrm_timestamp_diagnostic.so" \
  XDG_RUNTIME_DIR="$log/runtime" HOME=/root KDE_PROBE_LOG="$log" \
- XDG_CURRENT_DESKTOP=KDE XDG_SESSION_TYPE=wayland QT_QPA_PLATFORM=wayland LANG=C.UTF-8 \
+ XDG_CURRENT_DESKTOP=KDE XDG_SESSION_TYPE=wayland XDG_MENU_PREFIX=plasma- QT_QPA_PLATFORM=wayland LANG=C.UTF-8 \
  KWIN_DRM_DEVICES=/dev/dri/card0 KWIN_USE_OVERLAYS=0 \
  dbus-run-session -- kwin_wayland --drm --no-lockscreen --no-global-shortcuts \
  --no-kactivities --socket=kde-plasma --exit-with-session="$log/session.sh" >"$log/kwin.log" 2>&1
