@@ -50,6 +50,10 @@ fi
 mkdir -p "$root"/{dev,proc,sys,workspace,recipes,tmp}
 mount --rbind /dev "$root/dev"
 mount --make-rslave "$root/dev"
+# Some hosts expose /dev/shm as root-only. Python's multiprocessing semaphore
+# creation must work for the unprivileged builder inside this private namespace.
+mkdir -p "$root/dev/shm"
+mount -t tmpfs -o mode=1777,nosuid,nodev,size=2G tmpfs "$root/dev/shm"
 mount -t proc proc "$root/proc"
 mount --rbind /sys "$root/sys"
 mount --make-rslave "$root/sys"
@@ -86,5 +90,7 @@ APT
 fi
 chown 1000:1000 "$work/build"
 chroot "$root" dpkg-query -W >"$work/logs/container-packages.tsv"
+chroot "$root" /usr/sbin/runuser -u builder -- python3 -c \
+    'import multiprocessing; p=multiprocessing.Pool(2); assert p.map(abs, [-1,-2]) == [1,2]; p.close(); p.join()'
 ulimit -n 65536
 exec python3 "$recipe/evox/run-fresh-build.py" "$work" "$recipe"
