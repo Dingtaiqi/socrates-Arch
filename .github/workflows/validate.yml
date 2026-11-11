@@ -25,6 +25,7 @@ jobs:
           python3 -m py_compile arch/wifi-start.py evox/run-fresh-build.py
           python3 -m py_compile ci/prepare-fresh-evox-proof.py ci/relay-evox-build-proof.py ci/upload-evox-build-proof.py ci/check-build-proof-archive.py
           python3 -m py_compile ci/prefetch-evox-source.py evox/restore-source.py
+          python3 -m py_compile ci/wait-fresh-evox-build.py
       - name: Cross-compile the ARM64 native init
         run: |
           sudo apt-get install -y gcc-aarch64-linux-gnu libdrm-dev
