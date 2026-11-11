@@ -20,6 +20,7 @@
 | 目录 | 内容与用途 |
 | --- | --- |
 | `arch/minit_kde.c`、`arch/kde-start.sh` | 当前 KDE native init 和桌面启动脚本 |
+| `arch/wifi-start.py` | 原厂 kiwi_v2/CNSS 与 NetworkManager 的 DSU 启动脚本；[实测说明](ARCH_WIFI.md) |
 | `arch/gpu/` | 显示格式/路由及时间戳兼容层、DRM/GBM 诊断、重启工具源码；当前启用项由 `kde-start.sh` 指定 |
 | `arch/turnip/` | Turnip KGSL 构建脚本、原构建环境配方、Meson 参数、工具链与 Python 版本记录 |
 | `arch/packages/` | Plasma 与桌面应用的包版本、下载地址及 SHA256；这些是二进制包清单 |

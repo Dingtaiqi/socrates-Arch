@@ -36,6 +36,7 @@ replace_file() {
 replace_file "$work/minit" /system/bin/init
 replace_file "$work/minit" /native_init
 replace_file "$work/launcher" /system/etc/arch/kde-start.sh
+replace_file arch/wifi-start.py /system/etc/arch/wifi-start.py 0644
 if [ -n "${PERSIST_UUID:-}" ]; then
     python3 - "$PERSIST_UUID" >"$work/new.uuid" <<'PY'
 import re,sys

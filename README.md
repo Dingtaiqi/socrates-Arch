@@ -84,6 +84,10 @@ Arch 桌面为 KWin / Zink / Turnip Adreno 740，1440×3200 @ 60 Hz；
 Gwenview、Okular；没有浏览器。Wi-Fi、扬声器、电源/音量键及亮度控制的后续
 适配尚未包含在这份已验收快照中。
 
+**2026-11-11：现有 DSU 的 Wi-Fi 已连接 5 GHz 热点，DHCP、DNS、HTTPS 和
+网络服务重启后的自动连接均通过。** 启动源码已补入后续镜像构建；完整重启后的
+自动启动待复验，历史底包保持原样，见 [Wi-Fi 实测与启动方式](docs/ARCH_WIFI.md)。
+
 ## 为什么保存在 Release
 
 Actions artifact 默认会过期；这里只用它临时留存失败日志。

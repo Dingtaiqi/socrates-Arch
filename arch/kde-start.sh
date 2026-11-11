@@ -39,7 +39,15 @@ for src in "$kit"/profile/*; do
     [ -f "$dest" ] || cp "$src" "$dest"
 done
 [ -s /etc/machine-id ] || dbus-uuidgen >/etc/machine-id
-[ -S /run/dbus/system_bus_socket ] || dbus-daemon --system --fork --nopidfile
+if ! timeout 5 dbus-send --system --print-reply --dest=org.freedesktop.DBus \
+    /org/freedesktop/DBus org.freedesktop.DBus.GetId >/dev/null 2>&1; then
+    # /run is currently in the persistent overlay; a socket can outlive its daemon.
+    rm -f /run/dbus/system_bus_socket
+    dbus-daemon --system --fork --nopidfile
+fi
+if ! timeout 90 python3 /proc/1/root/system/etc/arch/wifi-start.py >"$log/wifi-start.log" 2>&1; then
+    printf 'Wi-Fi startup failed; see %s/wifi-start.log\n' "$log"
+fi
 touch_pid=
 logger_pid=
 cleanup() {

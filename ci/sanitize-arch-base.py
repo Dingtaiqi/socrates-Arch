@@ -156,6 +156,9 @@ try:
     launcher = owned(mount, 'system/etc/arch/kde-start.sh')
     shutil.copyfile(repo / 'arch/kde-start.sh', launcher)
     launcher.chmod(0o755)
+    wifi = owned(mount, 'system/etc/arch/wifi-start.py')
+    shutil.copyfile(repo / 'arch/wifi-start.py', wifi)
+    wifi.chmod(0o644)
     run(['sync'])
 finally:
     run(['umount', str(mount)])
