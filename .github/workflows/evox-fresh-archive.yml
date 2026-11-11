@@ -1,0 +1,44 @@
+name: Archive independent EvoX full ROM build
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: evox-fresh-full-build-archive
+  cancel-in-progress: false
+jobs:
+  archive:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    env:
+      GH_TOKEN: ${{ github.token }}
+      BUILD_HOST: ${{ secrets.FRESH_BUILD_HOST_20261111 }}
+      BUILD_PORT: ${{ secrets.FRESH_BUILD_PORT_20261111 }}
+      BUILD_USER: ${{ secrets.FRESH_BUILD_USER_20261111 }}
+      BUILD_PASSWORD: ${{ secrets.FRESH_BUILD_PASSWORD_20261111 }}
+      BUILD_KNOWN_HOSTS: ${{ secrets.FRESH_BUILD_KNOWN_HOSTS_20261111 }}
+      EVOX_BUILD_PROOF_REMOTE_DIR: /home/qinghuo/evox-fresh-archive-20261111
+      EVOX_BUILD_PROOF_TAG: evox-fresh-socrates-20261111
+      EVOX_BUILD_PROOF_TITLE: EvoX socrates — independent Ubuntu full ROM build
+      EVOX_BUILD_PROOF_NOTES: Full evolution ROM target in a new Ubuntu root, source restored from the public pinned snapshot with empty output and no old checkout mounted. Package, CRC/hash checks and environment evidence included. Not device-tested; kept as draft.
+      EVOX_REQUIRE_FRESH_ROM: '1'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - id: existing
+        name: Check the saved result before contacting the build host
+        env:
+          EVOX_BUILD_PROOF_EXPECTED: evox/fresh-build-archive.json
+        run: |
+          if [ -f evox/fresh-build-archive.json ]; then
+            python3 ci/check-build-proof-archive.py
+          else
+            echo 'archived=false' >>"$GITHUB_OUTPUT"
+          fi
+      - if: steps.existing.outputs.archived != 'true'
+        run: sudo apt-get update && sudo apt-get install -y python3-paramiko
+      - if: steps.existing.outputs.archived != 'true'
+        name: Relay and verify the prepared full ROM result
+        run: /usr/bin/python3 ci/relay-evox-build-proof.py

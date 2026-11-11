@@ -12,7 +12,7 @@ base = Path(os.environ.get('EVOX_BUILD_PROOF_DIR', '/home/qinghuo/source_exports
 assets = json.loads((base / 'ASSETS.json').read_text())['assets']
 repository = request['repository']
 api_root = 'https://api.github.com/repos/' + repository
-tag = 'evox-systemimage-proof-20261110'
+tag = os.environ.get('EVOX_BUILD_PROOF_TAG', 'evox-systemimage-proof-20261110')
 urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler({})))
 
 def api(url, data=None, method=None, length=None):
@@ -29,10 +29,10 @@ if not release:
     # Resolving the current branch avoids workflow-write permission requirements
     # when the archiving job's commit is behind later workflow edits on main.
     release = api(api_root + '/releases', json.dumps({'tag_name': tag, 'target_commitish': 'main',
-        'draft': True, 'name': 'EvoX current source systemimage build proof',
-        'body': 'Current original checkout compiled systemimage successfully. Plain system partition build, '
+        'draft': True, 'name': os.environ.get('EVOX_BUILD_PROOF_TITLE', 'EvoX current source systemimage build proof'),
+        'body': os.environ.get('EVOX_BUILD_PROOF_NOTES', 'Current original checkout compiled systemimage successfully. Plain system partition build, '
                 'not a merged DSU image or historical b66 reproduction. Not device-tested. Kept private. '
-                'Archiving workflow commit: ' + request['commit'] + '. ' + request['run_url']}).encode())
+                'Archiving workflow commit: ' + request['commit'] + '. ' + request['run_url'])}).encode())
 if not release['draft']:
     raise SystemExit('Compiled partition archive must remain draft')
 for item in assets:

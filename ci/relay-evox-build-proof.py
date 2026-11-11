@@ -14,7 +14,7 @@ import paramiko
 
 remote = '''from pathlib import Path
 import json, shutil, sys
-base = Path('/home/qinghuo/source_exports_20261110/evox-build-proof-v1')
+base = Path(sys.argv[1])
 assets = json.loads((base / 'ASSETS.json').read_text())
 sys.stdout.buffer.write((json.dumps(assets) + '\\n').encode())
 sys.stdout.buffer.flush()
@@ -41,11 +41,20 @@ try:
                    allow_agent=False, look_for_keys=False, timeout=15,
                    banner_timeout=30, auth_timeout=30)
     client.get_transport().set_keepalive(20)
-    stdin, stdout, stderr = client.exec_command('python3 -u -c ' + shlex.quote(remote), timeout=180)
+    remote_base = os.environ.get('EVOX_BUILD_PROOF_REMOTE_DIR', '/home/qinghuo/source_exports_20261110/evox-build-proof-v1')
+    tag = os.environ.get('EVOX_BUILD_PROOF_TAG', 'evox-systemimage-proof-20261110')
+    stdin, stdout, stderr = client.exec_command('python3 -u -c ' + shlex.quote(remote) + ' ' + shlex.quote(remote_base), timeout=180)
     stdout.channel.settimeout(180)
     with tempfile.TemporaryDirectory(prefix='evox-build-proof-') as directory:
         base = Path(directory)
         manifest = json.loads(stdout.readline())
+        if os.environ.get('EVOX_REQUIRE_FRESH_ROM') == '1':
+            result = manifest['build_result']
+            expected = hashlib.sha256((Path(__file__).resolve().parents[1] / 'evox/full-source-snapshot.json').read_bytes()).hexdigest()
+            if not (result['success'] and result['fresh_output_started_empty'] and result['fresh_ubuntu_root']
+                    and result['target'] == 'evolution' and not result['original_checkout_mounted']
+                    and result['snapshot_sha256'] == expected and result['source_restore']['complete']):
+                raise ValueError('Archive is not a successful independent full ROM build')
         (base / 'ASSETS.json').write_text(json.dumps(manifest))
         request = urllib.request.Request('https://api.github.com/repos/' +
             os.environ['GITHUB_REPOSITORY'] + '/releases?per_page=100',
@@ -53,7 +62,7 @@ try:
                      'Accept': 'application/vnd.github+json'})
         with urllib.request.urlopen(request, timeout=60) as response:
             releases = json.load(response)
-        release = next((r for r in releases if r['tag_name'] == 'evox-systemimage-proof-20261110'), {})
+        release = next((r for r in releases if r['tag_name'] == tag), {})
         existing = {item['name']: item for item in release.get('assets', [])}
         requested = {item['name'] for item in manifest['assets']
                      if existing.get(item['name'], {}).get('digest') != 'sha256:' + item['sha256']}

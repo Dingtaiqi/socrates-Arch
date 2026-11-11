@@ -6,7 +6,7 @@ import urllib.error
 import urllib.request
 
 root = Path(__file__).resolve().parents[1]
-expected = json.loads((root / 'evox/build-proof-assets.json').read_text())
+expected = json.loads((root / os.environ.get('EVOX_BUILD_PROOF_EXPECTED', 'evox/build-proof-assets.json')).read_text())
 request = urllib.request.Request('https://api.github.com/repos/' +
     os.environ['GITHUB_REPOSITORY'] + '/releases/' + str(expected['release_id']),
     headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
