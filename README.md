@@ -189,10 +189,9 @@ EvoX 原工程来自 Evolution-X manifest `cnb`，设备为 socrates，历史 lu
 本地和服务器现有的历史脚本、当前 checkout 的固定 revision 清单及本地改动现已保存。
 这些材料尚未经过完整历史镜像重建验证；只运行 `m evolution` 不会自动生成等价 b66。
 
-完整 Android 构建的官方基准至少需要 400 GB 可用磁盘；普通 GitHub Linux
-runner 标称存储 14 GB，托管作业最长 6 小时。因此这里没有添加一个必然资源不足的
-全量 EvoX 编译作业。以后要从源码更新 ROM，需要补齐补丁仓库，并用资源足够的
-付费托管 runner 或自托管机器。Arch 已能从公开的固定底包编译 native init，并独立
+本次完整 EvoX 构建使用约 64 GB 内存的独立 Linux 主机，GitHub 作业负责源码和结果归档。
+固定源码和所需本地补丁均已保存并通过独立构建验证；以后更新 ROM 时使用具备足够
+内存、磁盘的 Linux 构建机，再用现有 Actions 保存结果。Arch 已能从公开的固定底包编译 native init，并独立
 从 Mesa 源码编译驱动；完整 KDE/Qt 用户空间仍使用已经保存的二进制发行版快照。
 
 参考：[GitHub runner 资源](https://docs.github.com/en/actions/reference/runners/github-hosted-runners)、
