@@ -25,14 +25,17 @@ record={'started_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),
         'fresh_ubuntu_root':True,'original_checkout_mounted':False,
         'ubuntu_base_sha256':'242cd8898b33ea806ef5f13b1076ed7c76f9f989d18384452f7166692438ff1a',
         'phone_operations':False,'success':False}
-(work/'STARTED.json').write_text(json.dumps(record,indent=2)+'\n')
 jobs=os.environ.get('BUILD_JOBS','16')
 if not jobs.isdigit() or not 1<=int(jobs)<=32:raise SystemExit('Invalid BUILD_JOBS')
+proxy=os.environ.get('FRESH_DOWNLOAD_PROXY')
+network=['HTTPS_PROXY='+proxy,'HTTP_PROXY='+proxy,'NO_PROXY=localhost,127.0.0.1'] if proxy else []
+record.update(parallel_jobs=int(jobs),download_proxy_used=bool(proxy))
+(work/'STARTED.json').write_text(json.dumps(record,indent=2)+'\n')
 command=['chroot',str(root),'/usr/sbin/runuser','-u','builder','--','/usr/bin/env','-i',
          'HOME=/home/builder','USER=builder','LOGNAME=builder','SHELL=/bin/bash',
          'PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin',
          'LANG=C.UTF-8','LC_ALL=C.UTF-8','TMPDIR=/tmp','BUILD_JOBS='+jobs,
-         'GIT_CONFIG_NOSYSTEM=1','GIT_CONFIG_GLOBAL=/dev/null','CCACHE_DISABLE=1',
+         'GIT_CONFIG_NOSYSTEM=1','GIT_CONFIG_GLOBAL=/dev/null','CCACHE_DISABLE=1',*network,
          '/bin/bash','/recipes/build.sh','evox','/workspace/source','evolution']
 print('FRESH_RESTORE_AND_FULL_BUILD_STARTED',flush=True)
 started=time.monotonic()
