@@ -1,7 +1,8 @@
 # 镜像源码和补丁
 
 本仓库已补入本地保存的 **Arch/EvoX 移植源码与补丁历史**。
-逐文件来源、内容 SHA256、脱敏计数见 [source-catalog.json](source-catalog.json)。
+首批导入文件的逐文件来源、内容 SHA256、脱敏计数见 [source-catalog.json](source-catalog.json)。
+后续新增源码由各自的 Git 提交、固定输入和验收记录追踪，不改写历史导入清单。
 目录中的历史脚本用于追溯，不是按字典序运行就能复现最终镜像的流水线。
 
 完整 Android 构建树和 Arch 编译环境均已迁出。完整 Android 快照含 1267 个仓库、
@@ -27,6 +28,7 @@
 | `arch/runtime/` | 60 Hz 屏幕配置、触摸运行时部署与 rootfs 快照脚本 |
 | `archive/libhybris/` | 早期 libhybris 路线的试验源码及 C13 镜像配方；当前 KDE 使用 Turnip/Zink |
 | `evox/porting/` | EvoX 同步、socrates 设备树适配、DSU 兼容补丁脚本 |
+| `evox/dsu/` | 2026-11-11 真机运行时修复：KernelSU 域兼容、只读 OMX 清单覆盖、固定 b66 离线镜像补丁入口；[范围与复现](../evox/dsu/README.md) |
 | `evox/image-tools/` | 镜像注入、ext4 元数据捕获与钉扎、差分生成工具 |
 | `evox/history/` | b3–b66 / host-policy 等迭代脚本、init 补丁、uicap 历史；包含已放弃的实验 |
 | `evox/diagnostics/` | 早期 native init / zygote / 日志诊断源码 |

@@ -66,6 +66,10 @@ BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 完整快照的逐组还原已通过；原工作树的 `init`、`systemimage` 编译已通过。
 全新环境完整 ROM 编译尚未验证。
 
+2026-11-11 已在独立 Ubuntu 环境、固定源码输入和空输出目录下启动完整编译。
+首次尝试暴露的 `/dev/shm` 权限问题已修复并从空输出重跑；最终 ROM 结果仍待核验，
+对应[构建结果归档任务](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42980982027)。
+
 ## 工作流
 
 | Actions 名称 | 做什么 | 真机验证状态 |
@@ -78,7 +82,7 @@ BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 | Upload complete offline source snapshot | 检查完整源码快照；未发布时才连接迁出主机 | 已保存；移除服务器 secrets 后重跑通过 |
 | Validate every source snapshot group | 逐组还原并校验 Git、LFS 和本地改动 | 160 组、1267 个仓库通过 |
 | Preserve EvoX source build result | 私有保存 system 分区编译产物及日志，已保存则直接跳过 | 原树编译通过；不是合并的 DSU 镜像 |
-| Prefetch EvoX source to the independent build host | GitHub 下载固定分卷，经 SSH 中转到新工作区，原生恢复器逐组校验后清理中转缓存 | 正在用于首次完整独立编译 |
+| Prefetch EvoX source to the independent build host | GitHub 下载固定分卷，经 SSH 中转到新工作区，原生恢复器逐组校验后清理中转缓存 | 可用的传输入口；本次后续输入改用逐仓校验的独立本地 Git 检出 |
 | Archive independent EvoX full ROM build | 验证成功构建记录，保存分卷 ROM、环境清单和日志到草稿 Release | 归档入口已准备，等待实际全量编译结果 |
 | Check image tooling | 分卷往返、损坏检测、路径检查、脚本语法、ARM64 init 静态交叉编译 | 不操作手机 |
 
@@ -96,6 +100,14 @@ Gwenview、Okular；没有浏览器。Wi-Fi、扬声器、电源/音量键及亮
 草稿 Release `arch-source-42955356827-1`。3 GiB 镜像分为两卷保存，远端大小和摘要
 已核对，现有数据卷 UUID 已写入；未安装到手机做新镜像启动验证。
 详细校验记录见 [Wi-Fi 镜像构建结果](docs/arch-wifi-build-2026-11-11.json)。
+
+## 当前 EvoX DSU 修复
+
+2026-11-11 已在手机上验证 EvoX 启动、scrcpy 投屏及前后摄预览，并恢复原生 Aperture，
+用户确认相机可用。相关源码、固定输入和离线构建入口已单独整理到
+[`evox/dsu/`](evox/dsu/README.md)，[验收记录](docs/evox-dsu-runtime-2026-11-11.json)
+区分人工修补的已测镜像、新生成文件和仍在进行的完整 ROM 编译。
+历史 b66 草稿仍保留原样；离线入口只生成文件，相机 APK 安装另行进行。
 
 ## 为什么保存在 Release
 

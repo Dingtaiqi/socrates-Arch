@@ -1,0 +1,16 @@
+{
+  "device": "socrates",
+  "vendor_version": "OS3.0.304.0.WMKCNXM",
+  "vendor_sdk": 33,
+  "vendor_manifest_sha256": "53a490b7612fc2ca90bf4de3cf027c0799826a558b70b848e1f539a667e42d00",
+  "filtered_manifest_sha256": "3479bbd1fc774f47a400e8bb563d351c7028e191f6fd95f459978fb4660c150e",
+  "vendor_manifest_origin": "Read-only stock /vendor/etc/vintf/manifest_kalama.xml; contains HAL declarations, no user settings",
+  "aperture": {
+    "package": "org.lineageos.aperture",
+    "bytes": 8232204,
+    "sha256": "e93c7cfaaaa4b45a0986bbe9a30e31f6d043aeb505a6c95ea3f698abd5ee920d",
+    "origin": "Existing workspace APK retained from the earlier porting session",
+    "exact_source_build_identity_verified": false,
+    "distribution": "Not included in Git; supply a trusted APK or build Aperture from the preserved source"
+  }
+}

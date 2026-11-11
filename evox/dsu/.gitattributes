@@ -1,0 +1,2 @@
+*.rc text eol=lf
+stock/*.xml text eol=lf

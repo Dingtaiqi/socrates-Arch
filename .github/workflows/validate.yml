@@ -1,9 +1,9 @@
 name: Check image tooling
 on:
   push:
-    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/restore-from-git-cache.py', 'evox/build-source.sh', 'evox/fresh-build.sh', 'evox/run-fresh-build.py', 'build.sh', '.github/workflows/**']
+    paths: ['ci/**', 'arch/**', 'evox/dsu/**', 'evox/restore-source.py', 'evox/restore-from-git-cache.py', 'evox/build-source.sh', 'evox/fresh-build.sh', 'evox/run-fresh-build.py', 'build.sh', '.github/workflows/**']
   pull_request:
-    paths: ['ci/**', 'arch/**', 'evox/restore-source.py', 'evox/restore-from-git-cache.py', 'evox/build-source.sh', 'evox/fresh-build.sh', 'evox/run-fresh-build.py', 'build.sh', '.github/workflows/**']
+    paths: ['ci/**', 'arch/**', 'evox/dsu/**', 'evox/restore-source.py', 'evox/restore-from-git-cache.py', 'evox/build-source.sh', 'evox/fresh-build.sh', 'evox/run-fresh-build.py', 'build.sh', '.github/workflows/**']
   workflow_dispatch:
 permissions:
   contents: read
@@ -17,7 +17,7 @@ jobs:
           persist-credentials: false
       - run: |
           sudo apt-get update
-          sudo apt-get install -y git-lfs
+          sudo apt-get install -y git-lfs e2fsprogs
           python3 -m unittest discover -s ci -p 'test_*.py'
           bash -n ci/rebuild-arch.sh ci/release.sh build.sh evox/build-source.sh arch/build-turnip-portable.sh
           sh -n arch/kde-start.sh
@@ -27,6 +27,7 @@ jobs:
           python3 -m py_compile ci/prefetch-evox-source.py evox/restore-source.py
           python3 -m py_compile ci/wait-fresh-evox-build.py
           python3 -m py_compile evox/restore-from-git-cache.py
+          python3 -m py_compile evox/dsu/patch-b66.py
       - name: Cross-compile the ARM64 native init
         run: |
           sudo apt-get install -y gcc-aarch64-linux-gnu libdrm-dev

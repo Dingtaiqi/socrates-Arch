@@ -1,0 +1,14 @@
+# This compatibility setting runs only inside this EvoX DSU.
+on early-init
+    write /metadata/gsi/dsu/ksu_compat_attempt 1
+    exec u:r:ksu:s0 root root -- /system/bin/setenforce 0
+    write /metadata/gsi/dsu/ksu_compat_returned 1
+
+on boot
+    exec_background u:r:ksu:s0 root root -- /system/bin/sh -c "getenforce > /mnt/vendor/persist/dsu/ksu_mode.txt; logcat -b crash -d -t 100 > /mnt/vendor/persist/dsu/ksu_crash.txt 2>&1"
+
+# The vendor declares legacy OMX even though its 32-bit service cannot run in
+# this ARM64-only DSU. Hide only that HAL before hwservicemanager reads VINTF;
+# Codec2 remains available. This bind mount disappears on reboot to HyperOS.
+on early-init
+    mount none /system/etc/dsu-manifest-kalama-no-omx.xml /vendor/etc/vintf/manifest_kalama.xml bind

@@ -31,6 +31,10 @@ PY
         cd "$repo_dir"
         exec bash arch/build-support.sh "$@"
         ;;
+    evox-compat)
+        shift
+        exec python3 "$repo_dir/evox/dsu/patch-b66.py" "$@"
+        ;;
     arch-turnip)
         shift
         inputs=${1:?Usage: bash build.sh arch-turnip INPUTS_WORK_DIR OUTPUT_DIR}
@@ -46,6 +50,7 @@ PY
         printf '%s\n' \
             'bash build.sh evox /path/to/new/source [systemimage|evolution|init|check]' \
             'bash build.sh restore-evox /path/to/new/source [restore options]' \
+            'bash build.sh evox-compat /path/to/pinned-b66.img /path/to/new-compat.img' \
             'bash build.sh arch-support /path/to/output' \
             'bash build.sh arch-turnip /path/to/build-inputs /path/to/output' \
             'PERSIST_UUID=<existing-data-volume-uuid> bash build.sh arch-image /path/to/new.img'
