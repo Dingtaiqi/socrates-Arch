@@ -30,7 +30,7 @@ report={'snapshot_sha256':identity,'groups':[],'bytes_sent':0,'complete':False,
 try:
     client.connect(os.environ['BUILD_HOST'],port=int(os.environ['BUILD_PORT']),username=os.environ['BUILD_USER'],
                    password=os.environ['BUILD_PASSWORD'],allow_agent=False,look_for_keys=False,
-                   timeout=15,banner_timeout=30,auth_timeout=30,channel_timeout=180)
+                   timeout=15,banner_timeout=30,auth_timeout=30)
     client.get_transport().set_keepalive(15)
     sftp=client.open_sftp();sftp.get_channel().settimeout(180)
     assert sftp.open(state+'/identity').read().decode()==identity
