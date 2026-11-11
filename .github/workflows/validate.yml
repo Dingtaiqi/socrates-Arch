@@ -21,7 +21,8 @@ jobs:
           python3 -m unittest discover -s ci -p 'test_*.py'
           bash -n ci/rebuild-arch.sh ci/release.sh build.sh evox/build-source.sh arch/build-turnip-portable.sh
           sh -n arch/kde-start.sh
-          python3 -m py_compile arch/wifi-start.py
+          bash -n evox/fresh-build.sh
+          python3 -m py_compile arch/wifi-start.py evox/run-fresh-build.py
       - name: Cross-compile the ARM64 native init
         run: |
           sudo apt-get install -y gcc-aarch64-linux-gnu libdrm-dev

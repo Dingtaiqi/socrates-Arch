@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-11",
+  "run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42955356827",
+  "release_id": 441218273,
+  "release_tag": "arch-source-42955356827-1",
+  "draft": true,
+  "source_commit": "c70f4be8c24303786c0dc5d9ed6f4523bfe5e6ac",
+  "raw_image": {
+    "schema": 1,
+    "name": "arch-source-build.img",
+    "bytes": 3221225472,
+    "sha256": "6644c0f0a07c546ae27fd87dcf1608286b850529d9711cd24d8f2a087e7e06ce",
+    "compression": "gzip",
+    "parts": [
+      {
+        "name": "arch-source-build.img.gz.part000",
+        "bytes": 1073741824,
+        "sha256": "ce15c8147011b5109f2a2bcc9c052edc6771dcee238907d2f50c90ce36fa9dae"
+      },
+      {
+        "name": "arch-source-build.img.gz.part001",
+        "bytes": 302813306,
+        "sha256": "fc25bc08eb47c0b87d70b036797f3083c03e9f48ce5df8bff855b29410260efe"
+      }
+    ]
+  },
+  "persist_uuid": "fad4bd59-96f1-4c6c-8791-d31c87b82264",
+  "includes": [
+    "stock kiwi_v2 CNSS Wi-Fi startup",
+    "Plasma application menu prefix"
+  ],
+  "remote_asset_sizes_and_digests_verified": true,
+  "offline_rebuild_checks": "passed",
+  "phone_operations": false,
+  "fresh_image_device_tested": false
+}

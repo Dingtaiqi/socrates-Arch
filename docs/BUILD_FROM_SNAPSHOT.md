@@ -71,6 +71,19 @@ python3 evox/restore-source.py ../evox-test-restore --groups 0,1
 986,390,528 B；SHA256 和范围见源码构建验证记录。该产物为普通 system 分区，
 并非已合并的 DSU 镜像，也未验证完整 `m evolution` 或全新环境全量编译。
 
+提供了用于独立验证的干净 Ubuntu 环境入口；它不挂载原源码树，不使用旧 out 或 ccache：
+
+```bash
+# 需要独立工作目录、约 64 GiB RAM，以及至少 320 GiB 可用磁盘。
+# 仅在已有足够资源的 Linux 构建机运行；普通 GitHub 托管 runner 不满足要求。
+sudo BUILD_JOBS=16 bash evox/fresh-build.sh /path/to/new/evox-build
+```
+
+入口下载并核对 Ubuntu Base 22.04.5，安装依赖，在独立挂载命名空间内以普通用户
+从公开 Release 恢复全部锁定源码，再执行 `evolution` 全量 ROM 目标。
+工作目录保存 OS 包版本、源码恢复记录、进度和实际结果；磁盘低于 8 GiB 时停止构建。
+此入口正在真机服务器上验证，不能把脚本存在或语法检查通过当作全量编译已通过。
+
 ## Arch
 
 以下编译环境面向 x86-64 Ubuntu 22.04/24.04 主机，输出 ARM64 产物。

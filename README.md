@@ -88,6 +88,12 @@ Gwenview、Okular；没有浏览器。Wi-Fi、扬声器、电源/音量键及亮
 网络服务重启后的自动连接均通过。** 启动源码已补入后续镜像构建；完整重启后的
 自动启动待复验，历史底包保持原样，见 [Wi-Fi 实测与启动方式](docs/ARCH_WIFI.md)。
 
+**包含 Wi-Fi 和应用菜单修复的新 Arch 镜像已完成云端构建**：
+[构建运行 42955356827](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42955356827)，
+草稿 Release `arch-source-42955356827-1`。3 GiB 镜像分为两卷保存，远端大小和摘要
+已核对，现有数据卷 UUID 已写入；未安装到手机做新镜像启动验证。
+详细校验记录见 [Wi-Fi 镜像构建结果](docs/arch-wifi-build-2026-11-11.json)。
+
 ## 为什么保存在 Release
 
 Actions artifact 默认会过期；这里只用它临时留存失败日志。

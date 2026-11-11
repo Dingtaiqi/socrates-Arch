@@ -34,6 +34,12 @@ NetworkManager。`usb0` 保持不受 NetworkManager 管理。
 并由 `arch/kde-start.sh` 在桌面启动前调用。失败会记日志并继续启动桌面。
 当前已验收的历史底包本身未改写；需要重新构建才包含这些源码更新。
 
+2026-11-11 已完成这次重建：[Actions 42955356827](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42955356827)。
+草稿 Release 为 `arch-source-42955356827-1`，原始镜像 SHA256
+`6644c0f0a07c546ae27fd87dcf1608286b850529d9711cd24d8f2a087e7e06ce`。
+构建脚本对启动文件执行 debugfs 写入/回读比较，EROFS 和 ext4 离线检查通过；
+两卷上传后的大小/SHA256 与清单一致。新镜像仍需独立真机启动验证。
+
 手机运行日志在 `/dev/kde_dsu/wifi-live/`，新镜像启动日志在桌面日志目录的
 `wifi-start.log`。网络选择和密码由 NetworkManager 管理，保存在本机可写数据卷；
 仓库不包含 SSID、密码、网络配置文件或设备校准文件。
