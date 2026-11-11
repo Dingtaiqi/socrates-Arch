@@ -17,6 +17,33 @@ ROOT = Path(__file__).resolve().parents[1]
 CHUNK = 4 * 1024 * 1024
 LIMIT = 2 * 1024 ** 3
 PINS = {
+    'evox': {
+            "repo": "Dingtaiqi/socrates-Arch",
+            "release": 441999740,
+            "manifest_id": 736470757,
+            "manifest_sha256": "324d6b827968b675d843d31a374bb18ec602edede13aee01dafc4f5007f02b0f",
+            "source_name": "evox-b66-verified-648b759526ad.img",
+            "image": "images/system.img",
+            "bytes": 2791727104,
+            "sha256": "648b759526ad703f88d5001c3711f5b28773d429165e1a5cef6d508c741ade3f",
+            "seed_records": [
+                    {
+                            "name": "PROVENANCE.json",
+                            "bytes": 607,
+                            "sha256": "ecd521b1676b760ae8e67c9e610051be9812092b6e9d3f6ee05ca69d1248c1b7",
+                            "id": 736470889
+                    },
+                    {
+                            "name": "SHA256SUMS",
+                            "bytes": 2773,
+                            "sha256": "b57b8b21fd46415ad774fa808a66f85fbc7d925716295399afd3252c9f4ab8a9",
+                            "id": 736471022
+                    }
+            ],
+            "seed_asset_count": 26,
+            "runtime_record": "https://github.com/Dingtaiqi/socrates-Arch/blob/7950ae73838c2f3bcdf053c87483d435065fc94d/docs/evox-dsu-runtime-2026-11-11.json",
+            "scope": "Exact historically device-tested manual b66 runtime patch, including KSU/OMX compatibility; no image rebuild, original userdata or restored Aperture APK included."
+    },
     'arch': {
         'repo': 'Dingtaiqi/socrates-Arch', 'release': 439398957,
         'manifest_id': 728303125,
@@ -91,7 +118,7 @@ def fetch_image(kind, pin, work):
     assert release['id'] == pin['release'] and release['draft']
     assets = {a['name']: a for a in release['assets']}
     image = work / 'exact-input.img'
-    if kind == 'arch':
+    if 'manifest_id' in pin:
         manifest_asset = next(a for a in assets.values() if a['id'] == pin['manifest_id'])
         manifest_path = work / 'seed-manifest.json'
         checked_asset(pin['repo'], manifest_asset, manifest_path, manifest_asset['size'], pin['manifest_sha256'])
@@ -99,9 +126,17 @@ def fetch_image(kind, pin, work):
         assert manifest['schema'] == 1 and manifest['compression'] == 'gzip'
         assert all(manifest[k] == pin[v] for k, v in [('name', 'source_name'), ('bytes', 'bytes'), ('sha256', 'sha256')])
         assert manifest['parts'] and len({p['name'] for p in manifest['parts']}) == len(manifest['parts'])
+        records = work / 'source-seed-records'
+        if pin.get('seed_records'):
+            records.mkdir()
+            shutil.copyfile(manifest_path, records / 'image.manifest.json')
+            for record in pin['seed_records']:
+                asset = assets[record['name']]
+                assert asset['id'] == record['id']
+                checked_asset(pin['repo'], asset, records / record['name'], record['bytes'], record['sha256'])
         with tempfile.TemporaryFile(dir=work) as joined:
             for part in manifest['parts']:
-                assert re.fullmatch(r'arch-kde-v4\.img\.gz\.part[0-9]{3}', part['name'])
+                assert re.fullmatch(re.escape(pin['source_name']) + r'\.gz\.part[0-9]{3}', part['name'])
                 path = work / part['name']
                 checked_asset(pin['repo'], assets[part['name']], path, part['bytes'], part['sha256'])
                 with path.open('rb') as stream:
@@ -110,6 +145,12 @@ def fetch_image(kind, pin, work):
             joined.seek(0)
             with gzip.GzipFile(fileobj=joined) as stream, image.open('xb') as output:
                 bounded_copy(stream, output, pin['bytes'])
+        if pin.get('seed_records'):
+            assert len(manifest['parts']) + 1 + len(pin['seed_records']) == pin['seed_asset_count']
+            (records / 'CLOUD_SOURCE_VERIFICATION.json').write_text(json.dumps({
+                'source_release_id': pin['release'], 'source_assets_full_byte_sha256_verified': pin['seed_asset_count'],
+                'raw_gzip_crc_bytes_and_sha256_checked_by_packaging': True,
+                'server_full_hosted_byte_readback_claimed': False}, indent=2) + '\n')
     else:
         asset = assets[pin['asset_name']]
         assert asset['id'] == pin['asset']
@@ -191,6 +232,11 @@ def main():
             'original_userdata_included': False, 'release_must_remain_draft': True,
             'documentation_sha256': {n: digest(p) for n, p in docs.items()}}
         render_files = {}
+        source_records = work / 'source-seed-records'
+        if source_records.exists():
+            provenance['source_seed_cloud_verification'] = json.loads((source_records / 'CLOUD_SOURCE_VERIFICATION.json').read_text())
+            for record in source_records.iterdir():
+                render_files['packaging/source-seed/' + record.name] = record.read_bytes()
         if kind == 'recovery':
             evidence = Path(os.environ['RUNNER_TEMP']) / 'recovery-preview-proof'
             record = json.loads((evidence / 'RENDER_PROVENANCE.json').read_text())
