@@ -32,6 +32,8 @@ for source,name in [(work/'FULL_BUILD_RESULT.json','FULL_BUILD_RESULT.json'),
     shutil.copyfile(source,output/name)
 prefetch=work/'build/source/.source-restore/PREFETCH_RESULT.json'
 if prefetch.exists():shutil.copyfile(prefetch,output/'PREFETCH_RESULT.json')
+cache=work/'build/source/.source-restore/GIT_CACHE_VALIDATION.json'
+if cache.exists():shutil.copyfile(cache,output/'GIT_CACHE_VALIDATION.json')
 with console.open('rb') as source,(output/'full-build.console.log.gz').open('wb') as target:
     with gzip.GzipFile(filename='',mode='wb',fileobj=target,compresslevel=1,mtime=0) as compressed:
         shutil.copyfileobj(source,compressed,1024*1024)
