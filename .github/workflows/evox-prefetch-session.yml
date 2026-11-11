@@ -1,0 +1,31 @@
+name: Resumable independent EvoX source transfer session
+on:
+  workflow_call:
+    outputs:
+      complete:
+        value: ${{ jobs.prefetch.outputs.complete }}
+permissions:
+  contents: read
+jobs:
+  prefetch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 355
+    outputs:
+      complete: ${{ steps.result.outputs.complete }}
+    env:
+      BUILD_HOST: ${{ secrets.FRESH_BUILD_HOST_20261111 }}
+      BUILD_PORT: ${{ secrets.FRESH_BUILD_PORT_20261111 }}
+      BUILD_USER: ${{ secrets.FRESH_BUILD_USER_20261111 }}
+      BUILD_PASSWORD: ${{ secrets.FRESH_BUILD_PASSWORD_20261111 }}
+      BUILD_KNOWN_HOSTS: ${{ secrets.FRESH_BUILD_KNOWN_HOSTS_20261111 }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          persist-credentials: false
+      - run: sudo apt-get update && sudo apt-get install -y python3-paramiko
+      - id: relay
+        continue-on-error: true
+        run: /usr/bin/python3 ci/prefetch-evox-source.py
+      - id: result
+        run: echo "complete=${{ steps.relay.outputs.complete == 'true' }}" >>"$GITHUB_OUTPUT"

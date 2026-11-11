@@ -7,18 +7,31 @@ concurrency:
   group: evox-fresh-source-prefetch
   cancel-in-progress: false
 jobs:
-  prefetch:
+  session_1:
+    uses: ./.github/workflows/evox-prefetch-session.yml
+    secrets: inherit
+  session_2:
+    needs: session_1
+    if: ${{ !cancelled() && !contains(needs.*.outputs.complete, 'true') }}
+    uses: ./.github/workflows/evox-prefetch-session.yml
+    secrets: inherit
+  session_3:
+    needs: [session_1, session_2]
+    if: ${{ !cancelled() && !contains(needs.*.outputs.complete, 'true') }}
+    uses: ./.github/workflows/evox-prefetch-session.yml
+    secrets: inherit
+  session_4:
+    needs: [session_1, session_2, session_3]
+    if: ${{ !cancelled() && !contains(needs.*.outputs.complete, 'true') }}
+    uses: ./.github/workflows/evox-prefetch-session.yml
+    secrets: inherit
+  complete:
+    needs: [session_1, session_2, session_3, session_4]
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-24.04
-    timeout-minutes: 355
-    env:
-      BUILD_HOST: ${{ secrets.FRESH_BUILD_HOST_20261111 }}
-      BUILD_PORT: ${{ secrets.FRESH_BUILD_PORT_20261111 }}
-      BUILD_USER: ${{ secrets.FRESH_BUILD_USER_20261111 }}
-      BUILD_PASSWORD: ${{ secrets.FRESH_BUILD_PASSWORD_20261111 }}
-      BUILD_KNOWN_HOSTS: ${{ secrets.FRESH_BUILD_KNOWN_HOSTS_20261111 }}
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          persist-credentials: false
-      - run: sudo apt-get update && sudo apt-get install -y python3-paramiko
-      - run: /usr/bin/python3 ci/prefetch-evox-source.py
+      - env:
+          COMPLETE: ${{ contains(needs.*.outputs.complete, 'true') }}
+        run: |
+          test "$COMPLETE" = true || { echo 'Source transfer remains incomplete; rerun resumes verified checkpoints.' >&2; exit 1; }
+          echo 'All source groups delivered and restored successfully.'
