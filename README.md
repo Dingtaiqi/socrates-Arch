@@ -2,7 +2,7 @@
 
 目标仓库：`Dingtaiqi/socrates-Arch`。Arch 镜像构建、GPU 编译和已有镜像校验归档
 在 GitHub 的 `ubuntu-24.04` 运行，不连接手机。EvoX 全量 ROM 编译使用具备
-足够内存和磁盘的独立构建机，GitHub 提供源码中转及结果保存流程；首次全量验证正在进行。
+足够内存和磁盘的独立构建机，GitHub 提供源码中转及结果保存流程；独立全量编译及结果归档已通过。
 
 当前支持已验证镜像归档、公开 Arch 底包上的 native init 重建，以及 Mesa Turnip
 ARM64 KGSL 驱动的源码编译。EvoX 完整构建树快照已公开保存，1267 个仓库的逐组还原验证已通过。
@@ -63,12 +63,13 @@ BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 ```
 
 入口会下载并校验完整快照、恢复源码，再配置 socrates 并构建 system 分区。
-完整快照的逐组还原已通过；原工作树的 `init`、`systemimage` 编译已通过。
-全新环境完整 ROM 编译尚未验证。
-
-2026-11-11 已在独立 Ubuntu 环境、固定源码输入和空输出目录下启动完整编译。
-首次尝试暴露的 `/dev/shm` 权限问题已修复并从空输出重跑；最终 ROM 结果仍待核验，
-对应[构建结果归档任务](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42980982027)。
+2026-11-11 已在独立 Ubuntu 环境、固定源码输入和空输出目录下完成 `evolution` 全量编译，
+耗时 4 小时 12 分；未挂载原工作树，也未使用旧 out 或 ccache。源码逐仓从独立、不可变
+Git 缓存检出，并校验全部对象及快照额外输入；这轮编译未重新下载所有公开分卷。
+生成的 ROM 为 3,349,406,382 B，ZIP CRC 及分卷 SHA256 均通过，
+[构建及归档任务](https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42980982027)已成功。
+镜像与环境、日志共 11 项保存在[草稿 Release](https://github.com/Dingtaiqi/socrates-Arch/releases/tag/untagged-fc53e1560fb708500099)，
+校验索引见 [fresh-build-archive.json](evox/fresh-build-archive.json)。这份全新 ROM 尚未在手机上引导验证。
 
 ## 工作流
 
@@ -83,7 +84,7 @@ BUILD_JOBS=8 bash build.sh evox ../evox-source systemimage
 | Validate every source snapshot group | 逐组还原并校验 Git、LFS 和本地改动 | 160 组、1267 个仓库通过 |
 | Preserve EvoX source build result | 私有保存 system 分区编译产物及日志，已保存则直接跳过 | 原树编译通过；不是合并的 DSU 镜像 |
 | Prefetch EvoX source to the independent build host | GitHub 下载固定分卷，经 SSH 中转到新工作区，原生恢复器逐组校验后清理中转缓存 | 可用的传输入口；本次后续输入改用逐仓校验的独立本地 Git 检出 |
-| Archive independent EvoX full ROM build | 验证成功构建记录，保存分卷 ROM、环境清单和日志到草稿 Release | 归档入口已准备，等待实际全量编译结果 |
+| Archive independent EvoX full ROM build | 验证成功构建记录，保存分卷 ROM、环境清单和日志到草稿 Release | 独立全量编译与 11 项结果归档通过；新 ROM 尚未真机引导 |
 | Check image tooling | 分卷往返、损坏检测、路径检查、脚本语法、ARM64 init 静态交叉编译 | 不操作手机 |
 
 Arch 桌面为 KWin / Zink / Turnip Adreno 740，1440×3200 @ 60 Hz；

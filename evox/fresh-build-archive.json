@@ -1,0 +1,73 @@
+{
+  "release_tag": "evox-fresh-socrates-20261111",
+  "release_id": 441675008,
+  "draft": true,
+  "assets": [
+    {
+      "name": "FULL_BUILD_RESULT.json",
+      "bytes": 1823,
+      "sha256": "7c5640d4534cf50cb5df31ee36fa41befbc2ea8e7c819f1e7559bab62797c352"
+    },
+    {
+      "name": "GIT_CACHE_VALIDATION.json",
+      "bytes": 252257,
+      "sha256": "d51ff58f3ee44820519ab4de216e4128adc11874d07806e9eee0d6d6c416a579"
+    },
+    {
+      "name": "SOURCE_RESTORED.json",
+      "bytes": 703,
+      "sha256": "fe2f608d8cab37720fe60a6a116770d4905f0ee260f7235f4afc28f829a87bc0"
+    },
+    {
+      "name": "STARTED.json",
+      "bytes": 588,
+      "sha256": "fe87c7715a89051a90bd88731db3c1e57f65c3c53cc4194f75cf88534048f809"
+    },
+    {
+      "name": "container-packages.tsv",
+      "bytes": 11412,
+      "sha256": "fdd68fe0f74313de234da37a7a2300bd09704a23967e41959ebb74f17df80dc6"
+    },
+    {
+      "name": "evox-fresh-rom.zip.gz.part000",
+      "bytes": 1073741824,
+      "sha256": "02c148c7e748fb68aef50bc5c25fedf4d4e1e7df68ad1ae470c768017cac8154"
+    },
+    {
+      "name": "evox-fresh-rom.zip.gz.part001",
+      "bytes": 1073741824,
+      "sha256": "78664bb151f61d4b9777ccb9be041ec98bf566350b87fbe65c98f785e73e6ab8"
+    },
+    {
+      "name": "evox-fresh-rom.zip.gz.part002",
+      "bytes": 1073741824,
+      "sha256": "d64f809fdb8940a3b5ca5e1d38161315450c7f7cb6ff951178a5f70d5bfad46d"
+    },
+    {
+      "name": "evox-fresh-rom.zip.gz.part003",
+      "bytes": 128810110,
+      "sha256": "4100192c86dc71f0103c10385e7114cd24d79184b4ac793cd5e1a13d92b5983e"
+    },
+    {
+      "name": "evox-fresh-rom.zip.manifest.json",
+      "bytes": 874,
+      "sha256": "16850a4060152cb67ca14e6c2548a80ca544fcd653c90ec0fb22c608854e93f6"
+    },
+    {
+      "name": "full-build.console.log.gz",
+      "bytes": 5541547,
+      "sha256": "c9528a8f2530b75324d220bcf7440d9b886383d1a1d55f6eb94a3f77b1f42627"
+    }
+  ],
+  "archive_run": "https://github.com/Dingtaiqi/socrates-Arch/actions/runs/42980982027",
+  "recipe_commit": "d41c272eae4f801a348339695447bbfb95e77219",
+  "snapshot_sha256": "1be903e5889a841416c2fb1e88fbb1a665abc68c16ec8582120ec347d606db0e",
+  "rom": {
+    "path": "build/source/out/target/product/socrates/EvolutionX-17.0-20261111-socrates-12.4-Unofficial.zip",
+    "bytes": 3349406382,
+    "sha256": "11c74ca99e36e745543ad027073489b6945a066a567c7800fba09ece5665a362",
+    "zip_crc_verified": true
+  },
+  "elapsed_seconds": 15144,
+  "device_tested": false
+}
